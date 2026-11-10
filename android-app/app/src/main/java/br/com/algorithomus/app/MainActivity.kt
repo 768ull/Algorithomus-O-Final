@@ -11,19 +11,25 @@ import android.webkit.WebView
 import android.webkit.WebViewClient
 import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.WindowCompat
+import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.WindowInsetsControllerCompat
 import androidx.webkit.WebViewAssetLoader
 
+/**
+ * Android-native host for the official Algorithomus experience.
+ * The game itself remains in the web runtime until its original source is
+ * integrated into app/src/main/assets/site.
+ */
 class MainActivity : AppCompatActivity() {
     private lateinit var webView: WebView
-    private var showingOfflinePage = false
-
-    private val officialSite = "https://algorithomus.com.br/"
     private lateinit var assetLoader: WebViewAssetLoader
+    private var offlineFallbackVisible = false
 
     @SuppressLint("SetJavaScriptEnabled")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enterImmersiveMode()
+        enableImmersiveMode()
 
         assetLoader = WebViewAssetLoader.Builder()
             .addPathHandler("/assets/", WebViewAssetLoader.AssetsPathHandler(this))
@@ -31,23 +37,37 @@ class MainActivity : AppCompatActivity() {
 
         webView = WebView(this).apply {
             setBackgroundColor(Color.BLACK)
-            settings.javaScriptEnabled = true
-            settings.domStorageEnabled = true
-            settings.databaseEnabled = true
-            settings.mediaPlaybackRequiresUserGesture = false
-            settings.allowFileAccess = false
-            settings.allowContentAccess = true
-            settings.setSupportZoom(false)
-            settings.builtInZoomControls = false
-            settings.displayZoomControls = false
-            settings.loadsImagesAutomatically = true
-            settings.javaScriptCanOpenWindowsAutomatically = false
-            settings.mixedContentMode = android.webkit.WebSettings.MIXED_CONTENT_NEVER_ALLOW
+            settings.apply {
+                javaScriptEnabled = true
+                domStorageEnabled = true
+                databaseEnabled = true
+                mediaPlaybackRequiresUserGesture = false
+                allowFileAccess = false
+                allowContentAccess = true
+                setSupportZoom(false)
+                builtInZoomControls = false
+                displayZoomControls = false
+                loadsImagesAutomatically = true
+                javaScriptCanOpenWindowsAutomatically = false
+                mixedContentMode = android.webkit.WebSettings.MIXED_CONTENT_NEVER_ALLOW
+                safeBrowsingEnabled = true
+            }
+
             webViewClient = object : WebViewClient() {
                 override fun shouldInterceptRequest(
                     view: WebView,
                     request: WebResourceRequest
                 ) = assetLoader.shouldInterceptRequest(request.url)
+
+                override fun shouldOverrideUrlLoading(
+                    view: WebView,
+                    request: WebResourceRequest
+                ): Boolean {
+                    // Keep HTTPS pages in the game WebView. Do not open arbitrary
+                    // non-web schemes from untrusted page content.
+                    val scheme = request.url.scheme?.lowercase()
+                    return scheme != "https" && scheme != "http"
+                }
 
                 override fun onReceivedError(
                     view: WebView,
@@ -55,8 +75,8 @@ class MainActivity : AppCompatActivity() {
                     error: WebResourceError
                 ) {
                     super.onReceivedError(view, request, error)
-                    if (request.isForMainFrame && !showingOfflinePage) {
-                        showOfflinePage()
+                    if (request.isForMainFrame && !offlineFallbackVisible) {
+                        showLocalOfflineShell()
                     }
                 }
             }
@@ -64,9 +84,10 @@ class MainActivity : AppCompatActivity() {
         }
 
         setContentView(webView)
+
         onBackPressedDispatcher.addCallback(this, object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
-                if (webView.canGoBack() && !showingOfflinePage) {
+                if (webView.canGoBack()) {
                     webView.goBack()
                 } else {
                     finish()
@@ -77,35 +98,37 @@ class MainActivity : AppCompatActivity() {
         if (savedInstanceState != null) {
             webView.restoreState(savedInstanceState)
         } else {
-            webView.loadUrl(officialSite)
+            webView.loadUrl(BuildConfig.OFFICIAL_SITE_URL)
         }
     }
 
-    private fun showOfflinePage() {
-        showingOfflinePage = true
-        webView.loadUrl("https://appassets.androidplatform.net/assets/offline.html")
+    private fun showLocalOfflineShell() {
+        offlineFallbackVisible = true
+        webView.loadUrl(BuildConfig.OFFLINE_ASSET_URL)
     }
 
-    private fun enterImmersiveMode() {
-        window.decorView.systemUiVisibility = (
-            View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
-                or View.SYSTEM_UI_FLAG_FULLSCREEN
-                or View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-                or View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                or View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                or View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-            )
+    private fun enableImmersiveMode() {
+        WindowCompat.setDecorFitsSystemWindows(window, false)
+        WindowInsetsControllerCompat(window, window.decorView).apply {
+            hide(WindowInsetsCompat.Type.systemBars())
+            systemBarsBehavior =
+                WindowInsetsControllerCompat.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE
+        }
+        @Suppress("DEPRECATION")
+        window.decorView.systemUiVisibility =
+            (View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY or View.SYSTEM_UI_FLAG_FULLSCREEN or
+                View.SYSTEM_UI_FLAG_HIDE_NAVIGATION)
     }
 
     override fun onSaveInstanceState(outState: Bundle) {
-        webView.saveState(outState)
+        if (::webView.isInitialized) webView.saveState(outState)
         super.onSaveInstanceState(outState)
     }
 
     override fun onResume() {
         super.onResume()
         if (::webView.isInitialized) webView.onResume()
-        enterImmersiveMode()
+        enableImmersiveMode()
     }
 
     override fun onPause() {
