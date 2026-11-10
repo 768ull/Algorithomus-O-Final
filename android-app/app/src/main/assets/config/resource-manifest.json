@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "status": "scaffold",
+  "description": "Local resource map for the Algorithomus Android package.",
+  "officialSite": "https://algorithomus.com.br/",
+  "bundledSiteEntry": "site/index.html",
+  "mediaDirectories": [
+    "media/images/",
+    "media/audio/",
+    "media/video/",
+    "media/frames/",
+    "media/gallery/",
+    "media/profiles/",
+    "media/app-icons/",
+    "media/secret/"
+  ],
+  "notes": [
+    "This manifest intentionally contains no invented game assets.",
+    "Populate resource paths only after the original game files have been inspected."
+  ]
+}
