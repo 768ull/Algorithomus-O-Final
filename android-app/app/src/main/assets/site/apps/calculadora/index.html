@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#0a0a10">
+    <title>Calculadora</title>
+
+    <link rel="stylesheet" href="css/tokens.css">
+    <link rel="stylesheet" href="css/calc.css">
+</head>
+<body>
+
+<main class="app" aria-label="Calculadora">
+
+    <header class="bar">
+        <div>
+            <h1 class="bar__title">Calculadora</h1>
+            <p class="bar__sub" id="barSub">pronto</p>
+        </div>
+    </header>
+
+    <div class="screen">
+        <div class="screen__expr" id="expr">&nbsp;</div>
+        <div class="screen__value" id="value" role="status" aria-live="polite" aria-atomic="true">0</div>
+    </div>
+
+    <div class="keys" id="keys" role="group" aria-label="Teclado da calculadora"></div>
+
+</main>
+
+<script src="js/dom.js?v=protected-dia6-4"></script>
+<script src="../../js/app-theme.js?v=protected-dia6-4"></script>
+<script src="js/bridge.js?v=protected-dia6-4"></script>
+<script src="js/calc.js?v=protected-dia6-4"></script>
+<script src="../ghost-touch.js?v=protected-dia6-4"></script>
+<script src="js/main.js?v=protected-dia6-4"></script>
+
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon='{"version":"2024.11.0","token":"451128a797b846018b2b107a2f794d60","r":1,"spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>

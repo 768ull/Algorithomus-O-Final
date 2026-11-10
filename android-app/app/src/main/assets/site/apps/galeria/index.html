@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>Galeria</title>
+
+    <link rel="stylesheet" href="css/tokens.css">
+    <link rel="stylesheet" href="css/folders.css">
+    <link rel="stylesheet" href="css/grid.css?v=3">
+    <link rel="stylesheet" href="css/viewer.css?v=7">
+</head>
+<body>
+
+<div class="app">
+
+    <header class="bar">
+        <button class="bar__back" id="barBack" data-action="back" hidden aria-label="Voltar">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+        </button>
+        <div class="bar__titles">
+            <h1 class="bar__title" id="barTitle">Galeria</h1>
+            <p class="bar__sub" id="barSub">—</p>
+        </div>
+    </header>
+
+    <div class="view" id="view"></div>
+
+
+    <section class="viewer" id="viewer" hidden>
+        <header class="viewer__bar">
+            <button class="viewer__close" data-action="close-viewer" aria-label="Fechar">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+            </button>
+            <span class="viewer__name" id="viewerName">foto</span>
+            <span class="viewer__zoom" id="viewerZoom">100%</span>
+        </header>
+
+        <div class="viewer__stage" id="viewerStage">
+            <img class="viewer__img" id="viewerImg" alt="" draggable="false">
+            <canvas class="viewer__img" id="viewerCanvas" hidden aria-label="Foto com ajustes"></canvas>
+            <div class="viewer__media-status" id="viewerMediaStatus" role="status" aria-live="polite" hidden>
+                <span id="viewerMediaMessage">Carregando foto…</span>
+                <button id="viewerMediaRetry" type="button" hidden>Tentar novamente</button>
+            </div>
+        </div>
+
+        <nav class="filmstrip" aria-label="Fotos deste álbum">
+            <span class="filmstrip__position" id="viewerPosition" aria-live="polite"></span>
+            <div class="filmstrip__photos" id="viewerThumbnails"></div>
+        </nav>
+
+        <div class="editor" id="editor">
+            <div class="editor__bar">
+                <button class="editor__handle" id="editorToggle" type="button" data-action="toggle-editor" aria-expanded="false" aria-controls="editorRows">
+                    <svg class="editor__gear" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="m9 3-.6 2.4-2 .9L4.2 6l-2 3.5L4 11v2l-1.8 1.5 2 3.5 2.2-.3 2 .9L9 21h6l.6-2.4 2-.9 2.2.3 2-3.5L20 13v-2l1.8-1.5-2-3.5-2.2.3-2-.9L15 3Z"/><circle cx="12" cy="12" r="3"/></svg>
+                    <span class="editor__label">ajustes</span>
+                </button>
+                <button class="editor__reset" data-action="reset-filters">restaurar</button>
+            </div>
+
+            <div class="editor__rows" id="editorRows">
+                <button class="wallpaper-button" id="wallpaperButton" data-action="set-wallpaper" type="button">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="m3 17 6-6 4 4 3-3 5 5"/></svg>
+                    Usar como papel de parede
+                </button>
+                <p class="wallpaper-status" id="wallpaperStatus" role="status" aria-live="polite"></p>
+                <label class="slider"><span>luz</span><input type="range" data-filter="brightness" min="20" max="200" value="100"></label>
+                <label class="slider"><span>contraste</span><input type="range" data-filter="contrast" min="20" max="200" value="100"></label>
+                <label class="slider"><span>saturação</span><input type="range" data-filter="saturate" min="0" max="300" value="100"></label>
+                <label class="slider"><span>matiz</span><input type="range" data-filter="hue" min="0" max="360" value="0"></label>
+            </div>
+        </div>
+    </section>
+
+    <section class="crop" id="crop" hidden role="dialog" aria-modal="true" aria-labelledby="cropTitle">
+        <header class="viewer__bar">
+            <button class="viewer__close" data-action="cancel-crop" aria-label="Voltar para a foto">←</button>
+            <h2 class="viewer__name" id="cropTitle">Recortar papel de parede</h2>
+        </header>
+        <p class="crop__hint">Arraste a imagem ou use os controles para enquadrar.</p>
+        <div class="crop__preview">
+            <div class="crop__frame" id="cropFrame">
+                <img id="cropImg" alt="Prévia do papel de parede" draggable="false">
+                <div class="crop__guides" aria-hidden="true"></div>
+            </div>
+        </div>
+        <div class="crop__controls">
+            <label class="slider"><span>zoom</span><input id="cropZoom" type="range" min="1" max="4" step="0.01" value="1"></label>
+            <label class="slider"><span>horizontal</span><input id="cropX" type="range" min="0" max="100" step="0.1" value="50"></label>
+            <label class="slider"><span>vertical</span><input id="cropY" type="range" min="0" max="100" step="0.1" value="50"></label>
+            <p class="wallpaper-status" id="cropStatus" role="status" aria-live="polite"></p>
+            <div class="crop__actions">
+                <button class="editor__reset" data-action="reset-crop">Centralizar</button>
+                <button class="wallpaper-button" id="cropApply" data-action="apply-crop" disabled="disabled">Aplicar</button>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<script src="js/dom.js?v=protected-dia6-4"></script>
+<script src="../../js/app-theme.js?v=protected-dia6-4"></script>
+<script src="js/bridge.js?v=protected-dia6-4"></script>
+<script src="js/catalog.js?v=protected-dia6-4"></script>
+<script src="js/data.js?v=protected-dia6-4"></script>
+<script src="js/folders.js?v=protected-dia6-4"></script>
+<script src="js/grid.js?v=protected-dia6-4"></script>
+<script src="js/pager.js?v=protected-dia6-4"></script>
+<script src="js/clue-image.js?v=protected-dia6-4"></script>
+<script src="js/viewer.js?v=protected-dia6-4"></script>
+<script src="js/crop.js?v=protected-dia6-4"></script>
+<script src="js/sync.js?v=protected-dia6-4"></script>
+<script src="../ghost-touch.js?v=protected-dia6-4"></script>
+<script src="js/main.js?v=protected-dia6-4"></script>
+
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon='{"version":"2024.11.0","token":"451128a797b846018b2b107a2f794d60","r":1,"spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,321 @@
+{
+  "schemaVersion": 1,
+  "sourcePdf": "Image to PDF 20261110 18.41.13.pdf",
+  "sourcePdfSha256": "a5a37c5f1d01b074cace4c17e8d98d181e2fcfb61da18cebefa2ce9e7ef835d6",
+  "extraction": "pdfimages -j (embedded JPEG streams copied without recompression)",
+  "imageCount": 39,
+  "images": [
+    {
+      "sourcePage": 1,
+      "assetPath": "media/images/branding/pdf-page-01.jpg",
+      "sha256": "5b05e8ac416eb1cd12db42821de3334a5a1183a87fed11ba717049129a071273",
+      "bytes": 52955,
+      "width": 1920,
+      "height": 1080
+    },
+    {
+      "sourcePage": 2,
+      "assetPath": "media/app-icons/pdf-page-02.jpg",
+      "sha256": "05904273a2c3aaf43589c8e2fc3a7f8958a55c11f2972a3088e6abaafeb2680f",
+      "bytes": 22347,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "sourcePage": 3,
+      "assetPath": "media/app-icons/pdf-page-03.jpg",
+      "sha256": "155d3dae74264ab20b393056d7c11c623ddc5ff25b21c6ceebd57d8231524c02",
+      "bytes": 25499,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "sourcePage": 4,
+      "assetPath": "media/app-icons/pdf-page-04.jpg",
+      "sha256": "7dd73b26c54d3573e004e7fbd932c57c8ea34c6b67d397d8fa154d126a783698",
+      "bytes": 21234,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "sourcePage": 5,
+      "assetPath": "media/app-icons/pdf-page-05.jpg",
+      "sha256": "b50026252ce716ec2f4c0b835efc1254ff399fc4961eb40bb3b4c40b6a1fed0d",
+      "bytes": 19062,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "sourcePage": 6,
+      "assetPath": "media/app-icons/pdf-page-06.jpg",
+      "sha256": "6c0da5594a1e04962b10a2db42e2cbbfcf3a21dec6e86c2cbba648fbafe6ff61",
+      "bytes": 20301,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "sourcePage": 7,
+      "assetPath": "media/app-icons/pdf-page-07.jpg",
+      "sha256": "38e3a7df91686360ed12ae76ba3ecd973957dba9f212029be735f6b29c59e5f0",
+      "bytes": 23121,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "sourcePage": 8,
+      "assetPath": "media/app-icons/pdf-page-08.jpg",
+      "sha256": "22d6f030837356e1c21a6686243f094bca2a1237e2295ec139c937d2d543f4f1",
+      "bytes": 17392,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "sourcePage": 9,
+      "assetPath": "media/app-icons/pdf-page-09.jpg",
+      "sha256": "a8c27c5741a5ce62a5dc9c54594fe7721caa75f5c806524a20b096a3ddb7bbb7",
+      "bytes": 5615,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "sourcePage": 10,
+      "assetPath": "media/app-icons/pdf-page-10.jpg",
+      "sha256": "f8f57bdd016c8287e1482d64f384b7cd53a269c233325221945e3846bc95f763",
+      "bytes": 6901,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "sourcePage": 11,
+      "assetPath": "media/app-icons/pdf-page-11.jpg",
+      "sha256": "fc9ee2c84ec130aaa125e5ce607541d34103446e739c15ede83352638a72c124",
+      "bytes": 19105,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "sourcePage": 12,
+      "assetPath": "media/app-icons/pdf-page-12.jpg",
+      "sha256": "bce820bcc6a1362d9c7d833dd56d538a6bbe892c4f8d8b73b3f3b3b076697466",
+      "bytes": 19101,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "sourcePage": 13,
+      "assetPath": "media/app-icons/pdf-page-13.jpg",
+      "sha256": "5df045cee691d4036a92802ebabd2bf5820ac84d7f337cf0cf09bc633e36deec",
+      "bytes": 21481,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "sourcePage": 14,
+      "assetPath": "media/images/characters/pdf-page-14.jpg",
+      "sha256": "fa1cadeb3a358d7c6ca205760aef7534b249a64553f968dc800cb0b3d9cebfb6",
+      "bytes": 102774,
+      "width": 720,
+      "height": 720
+    },
+    {
+      "sourcePage": 15,
+      "assetPath": "media/images/characters/pdf-page-15.jpg",
+      "sha256": "3c6b7003f208a0a4db1b10c090d48d8b1d1f5017d353acd2240ca2c757fbeb07",
+      "bytes": 77194,
+      "width": 720,
+      "height": 720
+    },
+    {
+      "sourcePage": 16,
+      "assetPath": "media/images/characters/pdf-page-16.jpg",
+      "sha256": "bae401058ef7dfad8883fdb4bf350cf55167be6434a8dcb6a8ab98d59888a7ac",
+      "bytes": 83951,
+      "width": 720,
+      "height": 720
+    },
+    {
+      "sourcePage": 17,
+      "assetPath": "media/images/characters/pdf-page-17.jpg",
+      "sha256": "24b444197cac2c0ec65ce3618622fdf8447a5c98064eaa5eccae5aa09e33009f",
+      "bytes": 94865,
+      "width": 720,
+      "height": 720
+    },
+    {
+      "sourcePage": 18,
+      "assetPath": "media/images/characters/pdf-page-18.jpg",
+      "sha256": "1d4b75e2b47537c2d2d0e42deb91752eaf2e9456d9aefb15dabe316689b97145",
+      "bytes": 108567,
+      "width": 720,
+      "height": 720
+    },
+    {
+      "sourcePage": 19,
+      "assetPath": "media/images/characters/pdf-page-19.jpg",
+      "sha256": "09f1b759b438cb4f0017605965b1d79b0291cc95fc0aed0665fa80c91adfa994",
+      "bytes": 143496,
+      "width": 1000,
+      "height": 1000
+    },
+    {
+      "sourcePage": 20,
+      "assetPath": "media/images/characters/pdf-page-20.jpg",
+      "sha256": "c8339bcc831b41aa6ac9eaff5d67093c418928135da9b814216e6a59f8b721b4",
+      "bytes": 79298,
+      "width": 1000,
+      "height": 719
+    },
+    {
+      "sourcePage": 21,
+      "assetPath": "media/images/scenes/pdf-page-21.jpg",
+      "sha256": "7c2bf79849d094dc29f48a8a23cd9f6899f1c63d39fc20200b18831222baddc4",
+      "bytes": 87700,
+      "width": 640,
+      "height": 1280
+    },
+    {
+      "sourcePage": 22,
+      "assetPath": "media/images/scenes/pdf-page-22.jpg",
+      "sha256": "7b6bd96e2501b3afa832fe7e854748f23ba589cac8df67b9420f22f094dc43e9",
+      "bytes": 692091,
+      "width": 3840,
+      "height": 2160
+    },
+    {
+      "sourcePage": 23,
+      "assetPath": "media/images/characters/pdf-page-23.jpg",
+      "sha256": "c2044287d7b871c8be6c9c3c782e4bf669dcc88df44909f2d0c6e2e86da3b588",
+      "bytes": 385520,
+      "width": 1080,
+      "height": 1920
+    },
+    {
+      "sourcePage": 24,
+      "assetPath": "media/images/scenes/pdf-page-24.jpg",
+      "sha256": "d81da88323e5d8ad81851010c7343575ec3b2123158aeb9989f4f4185f54832f",
+      "bytes": 442880,
+      "width": 3840,
+      "height": 2160
+    },
+    {
+      "sourcePage": 25,
+      "assetPath": "media/images/scenes/pdf-page-25.jpg",
+      "sha256": "ef21caea0ee9b8ff687d79a4a6c5ac8da3c0a89633726488f0f445cc21adf4d9",
+      "bytes": 88827,
+      "width": 708,
+      "height": 1082
+    },
+    {
+      "sourcePage": 26,
+      "assetPath": "media/images/scenes/pdf-page-26.jpg",
+      "sha256": "3b5da690d5f56321fb725d0ed853eae75cedb2813b3be7b6f8ab9726251ba9ad",
+      "bytes": 714670,
+      "width": 3840,
+      "height": 2160
+    },
+    {
+      "sourcePage": 27,
+      "assetPath": "media/images/scenes/pdf-page-27.jpg",
+      "sha256": "0556f0064d1d794b4015035f9f09d3c8b9dc59770f345c1b63c4bcfc818efbf4",
+      "bytes": 91007,
+      "width": 708,
+      "height": 1082
+    },
+    {
+      "sourcePage": 28,
+      "assetPath": "media/images/characters/pdf-page-28.jpg",
+      "sha256": "e875a23239da790247e21b65093272458e2df733659e89ba67ca0e7668868045",
+      "bytes": 56623,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "sourcePage": 29,
+      "assetPath": "media/images/characters/pdf-page-29.jpg",
+      "sha256": "47368bd842fa46ac7ea30284385db5375b623bb114413d4d161c4dd52a819bc3",
+      "bytes": 53255,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "sourcePage": 30,
+      "assetPath": "media/images/characters/pdf-page-30.jpg",
+      "sha256": "ae6f90ecd99940cffe697cee92e74cc5f709070c96b9fca48f2e1bda5d62e498",
+      "bytes": 30470,
+      "width": 512,
+      "height": 374
+    },
+    {
+      "sourcePage": 31,
+      "assetPath": "media/images/objects/pdf-page-31.jpg",
+      "sha256": "de725ef5f584105c0b9cb21368a50e2aa958c6997a08a292f2e6d37cdeba6f44",
+      "bytes": 23910,
+      "width": 512,
+      "height": 497
+    },
+    {
+      "sourcePage": 32,
+      "assetPath": "media/images/characters/pdf-page-32.jpg",
+      "sha256": "37765537c77a6606aa4894a72549c9ce431421527aae7641e90d35a30d552726",
+      "bytes": 47902,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "sourcePage": 33,
+      "assetPath": "media/images/characters/pdf-page-33.jpg",
+      "sha256": "6839c1d4af21f7da9d25ce6d279639aec59987c13338f353b85b9f68bdd6113e",
+      "bytes": 27285,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "sourcePage": 34,
+      "assetPath": "media/images/characters/pdf-page-34.jpg",
+      "sha256": "ac2f64dd58597cd5d6182749e2cf955f6ae041f3fc650a3027d18ad91ccedba4",
+      "bytes": 48130,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "sourcePage": 35,
+      "assetPath": "media/images/characters/pdf-page-35.jpg",
+      "sha256": "02c5654f8202cfe2bb9e1da61fca352c61655657c571e0d0b8d9a11781bb9ae1",
+      "bytes": 47235,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "sourcePage": 36,
+      "assetPath": "media/images/characters/pdf-page-36.jpg",
+      "sha256": "8932a228ae4249412d97e633021c759471070636ddc146e442ce9110ddee06d4",
+      "bytes": 40844,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "sourcePage": 37,
+      "assetPath": "media/images/branding/pdf-page-37.jpg",
+      "sha256": "015f0b0b6454f43a32ba18b80c7988e0b33e0045077d0fb17cefb6b1ef88d5c8",
+      "bytes": 16878,
+      "width": 512,
+      "height": 288
+    },
+    {
+      "sourcePage": 38,
+      "assetPath": "media/images/characters/pdf-page-38.jpg",
+      "sha256": "5431b76ddda312eac80660745bea6de3e214124294d7793e6c827c65a345e97b",
+      "bytes": 42680,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "sourcePage": 39,
+      "assetPath": "media/images/characters/pdf-page-39.jpg",
+      "sha256": "2678740fdcbc4089c0d80e4d0d0e1dc0ef4bf3bb7c9aeafda582a024d78481da",
+      "bytes": 37011,
+      "width": 380,
+      "height": 380
+    }
+  ]
+}

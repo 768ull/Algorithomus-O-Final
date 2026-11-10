@@ -1,0 +1,166 @@
+.app-layer {
+  position: absolute;
+  top: var(--status-h);
+  bottom: var(--nav-h);
+  left: 0;
+  right: 0;
+  z-index: var(--z-app);
+  pointer-events: none
+}
+.screen.is-recents .app-layer {
+  z-index: var(--z-recents-shot)
+}
+.app-window {
+  position: absolute;
+  inset: 0;
+  display: none;
+  background: var(--surface-1);
+  overflow: hidden;
+  transform-origin: var(--ox, 50%) var(--oy, 50%);
+  will-change: transform,opacity;
+  box-shadow: 0 -1px 0 var(--glass-line)
+}
+.app-window.is-open {
+  display: block;
+  pointer-events: auto;
+  animation: app-in var(--dur-app) var(--spring) both
+}
+.app-window.is-open.is-silent {
+  animation: none
+}
+.app-window.is-closing {
+  display: block;
+  pointer-events: auto;
+  animation: app-out var(--dur) var(--ease-in) both
+}
+.app-window.is-snapshot {
+  display: block;
+  pointer-events: none;
+  animation: fade-in var(--dur-slow) var(--ease-out) both;
+  transform-origin: 0 0;
+  transform: translate(var(--sx, 0), calc(var(--sy, 0px) + var(--lift-y, 0px))) scale(var(--ss, 1));
+  opacity: var(--lift-a, 1);
+  filter: brightness(calc(1 - 0.38 * var(--shot-dim, 0)));
+  border-radius: var(--snap-radius, 0);
+  overflow: hidden;
+  box-shadow: none;
+  transition: transform var(--dur-snap) var(--ease-snap),filter var(--dur-snap) var(--ease-out),opacity var(--dur) var(--ease-out)
+}
+.app-window.is-snapshot.is-snapshot-out {
+  --shot-dim: 0;
+  filter: brightness(1)
+}
+.app-window.is-snapshot.is-lifting {
+  animation: none;
+  transition: none
+}
+.app-window.is-snapshot.is-lifting.is-returning {
+  transition: transform 240ms var(--spring-soft),opacity 200ms var(--ease-out)
+}
+.app-window.is-snapshot.is-lifting.is-flinging {
+  transition: transform 210ms var(--ease-in),opacity 210ms var(--ease-in)
+}
+.app-window.is-snapshot.is-frozen {
+  pointer-events: none
+}
+.app-window.is-snapshot.is-frozen .app-frame {
+  pointer-events: none;
+  filter: none
+}
+@keyframes app-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.24);
+    border-radius: 26px
+  }
+  55% {
+    opacity: 1
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    border-radius: 0
+  }
+}
+@keyframes app-out {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+    border-radius: 0
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.3);
+    border-radius: 26px
+  }
+}
+.app-frame {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: var(--surface-1);
+  transition: opacity var(--dur) var(--ease-out);
+  touch-action: none
+}
+.app-window[data-app="mensagens"] .app-frame {
+  touch-action: pan-y
+}
+.app-window.is-preloading {
+  display: block;
+  visibility: hidden;
+  pointer-events: none
+}
+.app-window[data-app="sem-nome"] .app-frame {
+  touch-action: pan-y
+}
+.app-boot {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  background: var(--surface-1);
+  color: var(--text-faint);
+  font-size: 10px;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  transition: opacity var(--dur) var(--ease-out)
+}
+.app-window.is-ready .app-boot {
+  opacity: 0;
+  pointer-events: none
+}
+.app-boot__ring {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 2px solid var(--line);
+  border-top-color: var(--app-accent, var(--accent));
+  animation: spin 720ms linear infinite
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg)
+  }
+}
+.app-boot__bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 40%;
+  background: var(--app-accent, var(--accent));
+  box-shadow: 0 0 10px var(--app-accent, var(--accent));
+  animation: boot-bar 1.1s var(--ease-in-out) infinite
+}
+@keyframes boot-bar {
+  0% {
+    transform: translateX(-100%)
+  }
+  100% {
+    transform: translateX(350%)
+  }
+}

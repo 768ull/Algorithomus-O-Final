@@ -1,0 +1,46 @@
+.net--corrupted.device {
+  --px: 1px;
+  --screen-h: 76px;
+  --glitch-r: 170 170 170;
+  --glitch-g: 150 150 150;
+  --glitch-b: 210 210 210;
+  overflow: hidden;
+  contain: paint
+}
+.net--corrupted.device.is-frying {
+  animation: device-glitch var(--glitch-burst, 320ms) linear 1;
+  filter: none
+}
+.net--corrupted.device .screen__glitch {
+  z-index: 2;
+  border-radius: inherit
+}
+.net--corrupted.device.is-frying .screen__glitch {
+  opacity: 0.32
+}
+.net--corrupted .glitch__static {
+  mix-blend-mode: soft-light
+}
+@media (prefers-reduced-motion: reduce) {
+  .net--corrupted.device.is-frying {
+    animation: none
+  }
+  .net--corrupted.device.is-frying .screen__glitch {
+    opacity: 0.2
+  }
+  .net--corrupted.device.is-frying .glitch__static {
+    animation: static-shimmer 900ms steps(1, end) infinite
+  }
+  .net--corrupted.device.is-frying .glitch__slice--1 {
+    animation: slice-a 900ms steps(1, end) infinite
+  }
+  .net--corrupted.device.is-frying .glitch__slice--2 {
+    animation: slice-b 750ms steps(1, end) infinite
+  }
+  .net--corrupted.device.is-frying .glitch__slice--3 {
+    animation: slice-c 1.1s steps(1, end) infinite
+  }
+  .net--corrupted.device.is-frying .glitch__slice--4 {
+    animation: slice-d 620ms steps(1, end) infinite
+  }
+}

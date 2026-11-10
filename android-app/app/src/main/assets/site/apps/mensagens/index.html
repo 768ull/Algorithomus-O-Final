@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>Mensagens</title>
+
+    <link rel="stylesheet" href="css/tokens.css">
+    <link rel="stylesheet" href="css/list.css">
+    <link rel="stylesheet" href="css/chat.css?v=4">
+    <link rel="stylesheet" href="css/profile.css">
+    <style>.offline{min-height:100%;display:grid;place-content:center;gap:10px;padding:32px;text-align:center}.app[hidden],.offline[hidden]{display:none}.offline__icon{font-size:36px}.offline h1{font-size:18px}.offline p{color:var(--text-dim);font-size:14px}</style>
+</head>
+<body>
+
+<main class="offline" id="offline" role="status">
+    <span class="offline__icon" aria-hidden="true">⌁</span>
+    <h1>Sem internet</h1>
+    <p>Sem internet, falha a carregar mensagens</p>
+</main>
+
+<div class="app" id="app" hidden>
+
+
+    <header class="bar">
+        <div class="bar__titles">
+            <h1 class="bar__title">Mensagens</h1>
+            <p class="bar__sub" id="barSub">—</p>
+        </div>
+        <button class="bar__me" data-action="open-profile" data-contact="me" aria-label="Meu perfil">
+            <span class="bar__me-avatar" id="barMeAvatar">👤</span>
+        </button>
+    </header>
+
+    <div class="list" id="list"></div>
+
+
+    <section class="chat" id="chat" hidden>
+        <header class="chat__head" id="chatHead">
+            <button class="chat__back" data-action="close-chat" aria-label="Voltar">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+            </button>
+            <button class="chat__peer" data-action="open-profile" id="chatPeer" data-contact="" aria-label="Ver perfil">
+                <span class="chat__avatar" id="chatAvatar">👁️</span>
+                <span class="chat__who">
+                    <span class="chat__name" id="chatName">—</span>
+                    <span class="chat__status" id="chatStatus">—</span>
+                </span>
+            </button>
+        </header>
+
+        <div class="chat__history" id="history"></div>
+
+        <div class="chat__typing" id="typing" hidden>
+            <span class="chat__typing-dots"><i></i><i></i><i></i></span>
+            <span class="chat__typing-text">digitando</span>
+        </div>
+
+        <div class="sticker-picker" id="stickerPicker" hidden></div>
+        <form class="composer" id="composer" autocomplete="off" aria-label="Enviar mensagem">
+            <button class="composer__tool" type="button" aria-label="Figurinha" disabled="disabled">☺</button>
+            <button class="composer__tool composer__mic" type="button" aria-label="Áudio" disabled="disabled">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="3" width="6" height="12" rx="3"/><path d="M6.5 11a5.5 5.5 0 0 0 11 0M12 17v4m-3 0h6"/></svg>
+            </button>
+            <input class="composer__input" id="messageInput" type="text" placeholder="Mensagem" aria-label="Mensagem" maxlength="500">
+            <button class="composer__send" type="submit" aria-label="Enviar">➤</button>
+        </form>
+
+        <div class="chat__choices" id="choices"></div>
+    </section>
+
+
+    <section class="profile" id="profile" hidden>
+        <header class="profile__head">
+            <button class="profile__back" data-action="close-profile" aria-label="Voltar">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+            </button>
+            <span class="profile__title">Perfil</span>
+        </header>
+
+        <div class="profile__body">
+            <span class="profile__avatar" id="profileAvatar">👤</span>
+            <span class="profile__name" id="profileName">—</span>
+            <span class="profile__status" id="profileStatus">—</span>
+
+            <div class="profile__card">
+                <div class="profile__row">
+                    <span class="profile__label">Número</span>
+                    <span class="profile__value" id="profilePhone">—</span>
+                </div>
+                <div class="profile__row">
+                    <span class="profile__label">Recado</span>
+                    <span class="profile__value" id="profileAbout">—</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<script charset="UTF-8" src="js/dom.js?v=protected-dia6-4"></script>
+<script charset="UTF-8" src="../../js/app-theme.js?v=protected-dia6-4"></script>
+<script charset="UTF-8" src="../../js/audio-format.js?v=protected-dia6-4"></script>
+<script charset="UTF-8" src="js/bridge.js?v=protected-dia6-4"></script>
+<script charset="UTF-8" src="js/audio-metadata.js?v=protected-dia6-4"></script>
+<script charset="UTF-8" src="js/data.js?v=protected-dia6-4"></script>
+<script charset="UTF-8" src="js/list.js?v=protected-dia6-4"></script>
+<script charset="UTF-8" src="js/chat.js?v=protected-dia6-4"></script>
+<script charset="UTF-8" src="js/profile.js?v=protected-dia6-4"></script>
+<script src="../ghost-touch.js?v=protected-dia6-4"></script>
+<script charset="UTF-8" src="js/main.js?v=protected-dia6-4"></script>
+
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092" integrity="sha512-UKNk8GbxkABxKcXYuLkO16EleLGUkcvJWtpSNmExE0Too3ZaFAxTscNWEc1OdAv5/BikHawapSCaiD2XCmp+Bw==" data-cf-beacon='{"version":"2024.11.0","token":"451128a797b846018b2b107a2f794d60","r":1,"spa":2}' crossorigin="anonymous"></script>
+</body>
+</html>

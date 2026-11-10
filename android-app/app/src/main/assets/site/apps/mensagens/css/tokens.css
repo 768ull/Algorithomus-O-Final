@@ -1,0 +1,77 @@
+@charset "UTF-8";
+:root {
+  --bg: #0b141a;
+  --surface: #1f2c34;
+  --surface-2: #2a3942;
+  --line: #22303a;
+  --text: #e9edef;
+  --text-dim: #aebac1;
+  --text-faint: #667781;
+  --accent: #00a884;
+  --accent-dim: #00735c;
+  --mine: #005c4b;
+  --theirs: #1f2c34;
+  --danger: #ff2d55;
+  --bar-h: 56px;
+  --dur: 220ms;
+  --dur-slow: 340ms;
+  --ease-out: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --spring: cubic-bezier(0.22, 1.2, 0.36, 1)
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent
+}
+body,
+html {
+  height: 100%
+}
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Tahoma,Geneva,Verdana,'Apple Color Emoji','Segoe UI Emoji','Noto Color Emoji',sans-serif;
+  font-size: 14px;
+  overflow: hidden;
+  user-select: none;
+  -webkit-user-select: none
+}
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer
+}
+.app {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  scrollbar-width: none
+}
+[hidden] {
+  display: none!important
+}
+::-webkit-scrollbar {
+  width: 0;
+  height: 4px
+}
+::-webkit-scrollbar-track {
+  background: transparent
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.14);
+  border-radius: 4px
+}
+@keyframes bubble-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.96)
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1)
+  }
+}

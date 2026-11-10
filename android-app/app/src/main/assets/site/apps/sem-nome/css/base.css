@@ -1,0 +1,24 @@
+/* Base, paleta e layout */
+:root { color-scheme: light; --paper: #e5c96f; --ink: #3d321d; --muted: #75633d; --line: #c7b15e; --accent: #89502f; }
+* { box-sizing: border-box; }
+html, body { width: 100%; height: 100%; margin: 0; overflow: hidden; }
+body { background: radial-gradient(ellipse at 18% 8%, #967a45 0, transparent 48%), linear-gradient(145deg, #30261b, #66502f 52%, #211b14); color: var(--ink); font-family: "Segoe UI", "Trebuchet MS", sans-serif; }
+button { color: inherit; font: inherit; }
+.app { position: relative; width: 100%; height: 100%; min-height: 0; overflow: hidden; color: var(--ink); background-color: var(--paper); background-image: linear-gradient(115deg, rgba(255,255,255,.12), transparent 42%, rgba(55,35,10,.045)), repeating-linear-gradient(to bottom, transparent 0, transparent 37px, color-mix(in srgb, var(--line) 68%, transparent) 38px, transparent 39px); box-shadow: inset 0 0 35px rgba(62,43,17,.16); transition: background-color .35s ease, color .35s ease; }
+.shade-layer { position: absolute; z-index: 0; inset: 0; pointer-events: none; opacity: 0; background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,.96) 100%); background-position: center bottom; background-repeat: no-repeat; background-size: 100% 100%; }
+.app.day-1 { --paper: #f0d778; --line: #d0b95e; --ink: #3d321d; --muted: #75633d; }
+.app.day-2 { --paper: #d7bf78; --line: #b39a58; --ink: #3a301f; --muted: #695a39; }
+.app.day-3 { --paper: #aa9454; --line: #897443; --ink: #302918; --muted: #584a2d; }
+.app.day-4 { --paper: #6b5935; --line: #806b3e; --ink: #fff0c4; --muted: #e3d1a7; }
+.app.day-5 { --paper: #342d24; --line: #504332; --ink: #f2e4c6; --muted: #c7b99e; }
+.app.day-6 { --paper: #11100f; --line: #292522; --ink: #f5e9cf; --muted: #c7b99e; }
+.app::before { position: absolute; inset: 0 auto 0 48px; width: 1px; background: #e9b6a2; content: ""; }
+.topbar { position: relative; z-index: 1; height: 92px; padding: 18px 24px 12px 68px; display: flex; align-items: center; justify-content: space-between; color: var(--ink); background: linear-gradient(180deg, color-mix(in srgb, var(--paper) 94%, white), color-mix(in srgb, var(--paper) 88%, var(--ink))); border-top: 3px solid color-mix(in srgb, var(--ink) 74%, black); border-bottom: 1px solid color-mix(in srgb, var(--ink) 38%, transparent); box-shadow: inset 0 2px rgba(255,255,255,.45), inset 0 -3px rgba(40,25,10,.12), 0 5px 12px rgba(0,0,0,.2); }
+.eyebrow { margin: 0 0 4px; color: var(--muted); font-size: 12px; font-weight: 750; letter-spacing: .17em; text-transform: uppercase; }
+h1 { margin: 0; color: var(--ink); font-family: Georgia, "Times New Roman", serif; font-size: clamp(27px, 4vw, 34px); font-weight: 600; letter-spacing: -.035em; line-height: 1.05; }
+.date { color: var(--muted); font-family: Georgia, serif; font-size: 15px; font-weight: 600; }
+.content { position: relative; z-index: 1; height: calc(100% - 92px); overflow-y: auto; padding: 27px 22px 40px 68px; scrollbar-width: thin; scrollbar-color: color-mix(in srgb, var(--ink) 38%, transparent) transparent; -webkit-overflow-scrolling: touch; overscroll-behavior-y: contain; }
+.intro { margin: 3px 0 20px; }
+.intro h2 { margin: 0 0 5px; color: var(--ink); font: 500 27px/1.2 Georgia, serif; letter-spacing: -.02em; text-shadow: 0 1px rgba(255,255,255,.28), 0 2px 1px rgba(54,38,17,.16); }
+.intro p { margin: 0; color: var(--muted); font-size: 15px; }
+.notes { display: grid; gap: 11px; }

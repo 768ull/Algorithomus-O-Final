@@ -1,0 +1,165 @@
+.note { width: 100%; min-height: 80px; padding: 13px 15px; display: flex; align-items: center; gap: 14px; color: var(--ink); text-align: left; border: 1px solid color-mix(in srgb, var(--ink) 32%, transparent); border-top-color: rgba(255,255,255,.55); border-radius: 11px; background: linear-gradient(155deg, #fff2c2 0%, #f1dc97 48%, #dfc77c 100%); box-shadow: inset 0 1px rgba(255,255,255,.72), inset 0 -2px 3px rgba(82,56,21,.17), 0 3px 0 color-mix(in srgb, var(--ink) 22%, #80653a), 0 7px 12px rgba(24,17,9,.2); cursor: pointer; transition: transform .16s ease, background .16s ease, border-color .16s ease, box-shadow .16s ease, filter .16s ease; }
+.note:nth-child(1) { transform: rotate(-.7deg) skewX(-.6deg); border-radius: 13px 8px 15px 7px; }
+.note:nth-child(2) { transform: rotate(.8deg) skewX(.4deg); border-radius: 7px 15px 8px 13px; }
+.note:nth-child(3) { transform: rotate(-1.1deg) skewX(.8deg); border-radius: 15px 7px 12px 9px; }
+.note:nth-child(4) { transform: rotate(.6deg) skewX(-.7deg); border-radius: 8px 12px 6px 16px; }
+.note:nth-child(5) { transform: rotate(-.9deg) skewX(-.3deg); border-radius: 12px 7px 16px 8px; }
+.note:nth-child(1) { color: #3d321d; background: linear-gradient(150deg, #fff3c8, #f5e5ad 55%, #e9d18f); }
+.note:nth-child(2) { color: #3a301f; background: linear-gradient(150deg, #ebd68f, #d7bf78 58%, #bfa45d); }
+.note:nth-child(3) { color: #302918; background: linear-gradient(150deg, #c0a956, #aa9454 58%, #89733e); }
+.note:nth-child(4) { background: linear-gradient(150deg, #806b43, #6b5935 60%, #51432d); color: #fff0c4; border-color: #58482c; }
+.note:nth-child(5) { background: linear-gradient(150deg, #494034, #342d24 62%, #211c17); color: #f2e4c6; border-color: #29231c; }
+.note:nth-child(6) { transform: rotate(1.3deg) skewX(1deg); border: 1px solid #292522; border-radius: 5px 16px 6px 13px; background: linear-gradient(145deg, #28231e, #11100f 66%, #080706); color: #f5e9cf; box-shadow: inset 0 1px rgba(255,255,255,.12), inset 0 -3px 5px rgba(0,0,0,.7), 0 4px 0 #080808, 0 8px 15px rgba(0,0,0,.55); }
+.note:nth-child(4) { border-top-color: rgba(255,235,180,.52); box-shadow: inset 0 1px rgba(255,243,202,.26), inset 0 -3px 5px rgba(31,22,11,.26), 0 3px 0 #493a24, 0 7px 13px rgba(18,13,8,.26); }
+.note:nth-child(5) { border-top-color: rgba(236,211,160,.38); box-shadow: inset 0 1px rgba(255,239,199,.18), inset 0 -3px 6px rgba(0,0,0,.4), 0 3px 0 #201a14, 0 8px 15px rgba(0,0,0,.36); }
+.note:nth-child(6) { border-top-color: rgba(238,226,205,.34); }
+.note:nth-child(1) .note-icon { background: linear-gradient(145deg, #fff0a9, #e0c46b); }
+.note:nth-child(2) .note-icon { background: linear-gradient(145deg, #d7bd70, #ad9148); }
+.note:nth-child(3) .note-icon { background: linear-gradient(145deg, #a88e40, #76602c); }
+.note:nth-child(4) .note-icon { color: #fff0c4; border-color: #c1a76b; background: linear-gradient(145deg, #87734b, #453820); box-shadow: inset 0 1px rgba(255,238,183,.3), inset 0 -2px 4px rgba(0,0,0,.38), 0 2px 3px rgba(0,0,0,.3); }
+.note:nth-child(5) .note-icon { color: #f2e4c6; border-color: #8a795e; background: linear-gradient(145deg, #40382e, #17130f); box-shadow: inset 0 1px rgba(255,239,199,.23), inset 0 -3px 5px rgba(0,0,0,.55), 0 2px 4px rgba(0,0,0,.4); }
+.note:nth-child(6) .note-icon { color: #f5e9cf; border-color: #8a7f70; background: linear-gradient(145deg, #454039, #171411); box-shadow: inset 0 1px rgba(255,255,255,.22), inset 0 -3px 5px rgba(0,0,0,.66), 0 2px 5px rgba(0,0,0,.55); }
+.note:nth-child(4) .note-hint, .note:nth-child(4) .arrow { color: #e3d1a7; }
+.note:nth-child(5) .note-hint, .note:nth-child(5) .arrow, .note:nth-child(6) .note-hint, .note:nth-child(6) .arrow { color: #c7b99e; }
+.note:nth-child(5) .note-title, .note:nth-child(6) .note-title { color: #fff0d0; text-shadow: 0 1px rgba(255,255,255,.18), 0 2px 2px rgba(0,0,0,.58); }
+.note:not(:is(:disabled, .note--locked)):hover, .note:not(:is(:disabled, .note--locked)):focus-visible { transform: translateY(-2px); color: #3d321d; background: linear-gradient(150deg, #fff4ce, #f0d991 58%, #ddc279); border-color: #956e3e; outline: none; box-shadow: inset 0 1px rgba(255,255,255,.8), 0 5px 0 #80623d, 0 11px 18px rgba(25,18,10,.28); }
+.note:is(:disabled, .note--locked) { position: relative; isolation: isolate; overflow: hidden; cursor: not-allowed; animation: locked-glitch var(--glitch-duration, 1.1s) steps(1,end) infinite; }
+.note:is(:disabled, .note--locked):hover { transform: none; }
+.note:is(:disabled, .note--locked) > * { position: relative; z-index: 1; }
+.note:is(:disabled, .note--locked)::before { position: absolute; z-index: 2; inset: 0; pointer-events: none; content: ""; opacity: 0; background: linear-gradient(90deg, transparent 0 8%, var(--glitch-cyan, #00d9ff) 8% 31%, transparent 31% 68%, var(--glitch-red, #ff2d55) 68% 87%, transparent 87%); clip-path: inset(var(--glitch-top, 20%) 0 var(--glitch-bottom, 58%) 0); }
+.note:is(:disabled, .note--locked)::after { position: absolute; z-index: 0; inset: 0; pointer-events: none; content: ""; opacity: 0; background: linear-gradient(0deg, transparent 0 35%, var(--glitch-red, #ff2d55) 35% 39%, transparent 39% 63%, var(--glitch-cyan, #00d9ff) 63% 66%, transparent 66%); clip-path: inset(var(--glitch-top, 20%) 0 var(--glitch-bottom, 58%) 0); }
+.note:is(:disabled, .note--locked) .note-copy { animation: locked-content var(--glitch-duration, 1.6s) steps(1,end) infinite; }
+@keyframes locked-glitch {
+    0%,2%,100% { transform: translateX(0); }
+    5% { transform: translateX(-3px) skewX(-3deg); }
+    9% { transform: translateX(3px) skewX(3deg); }
+    13% { transform: translateX(-2px); }
+    18% { transform: translateX(2px); }
+    25% { transform: translateX(-1px); }
+}
+@keyframes locked-content {
+    0%,2%,100% { transform: translateX(0); text-shadow: none; }
+    5% { transform: translateX(-3px) skewX(-3deg); text-shadow: 2px 0 #ff2d55,-2px 0 #00d9ff; }
+    9% { transform: translateX(3px) skewX(3deg); }
+    13% { transform: translateX(-2px); }
+    18% { transform: translateX(2px); text-shadow: 2px 0 #ff2d55,-2px 0 #00d9ff; }
+    25% { transform: translateX(-1px); }
+}
+.note:is(:disabled, .note--locked) { animation-duration: var(--glitch-duration, 1.1s); }
+.note:is(:disabled, .note--locked)::before { animation: locked-lines var(--glitch-duration, 1.1s) steps(1,end) infinite; }
+.note:is(:disabled, .note--locked)::after { animation: locked-block var(--glitch-duration, 1.1s) steps(1,end) infinite; }
+/* Mesmo glitch, com pequenas variações de ritmo e fase em cada página. */
+.note:is(:disabled, .note--locked):nth-child(2) { --glitch-duration: 1.24s; --glitch-top: 15%; --glitch-bottom: 62%; --glitch-red: #ff2d55; --glitch-cyan: #00d9ff; animation-delay: -.19s; }
+.note:is(:disabled, .note--locked):nth-child(3) { --glitch-duration: 1.02s; --glitch-top: 54%; --glitch-bottom: 17%; --glitch-red: #f01866; --glitch-cyan: #00c7e8; animation-delay: -.37s; }
+.note:is(:disabled, .note--locked):nth-child(4) { --glitch-duration: 1.31s; --glitch-top: 32%; --glitch-bottom: 48%; --glitch-red: #ff7448; --glitch-cyan: #56e6df; animation-delay: -.11s; }
+.note:is(:disabled, .note--locked):nth-child(5) { --glitch-duration: .94s; --glitch-top: 66%; --glitch-bottom: 12%; --glitch-red: #ff416b; --glitch-cyan: #57cfff; animation-delay: -.52s; }
+.note:is(:disabled, .note--locked):nth-child(6) { --glitch-duration: 1.18s; --glitch-top: 43%; --glitch-bottom: 31%; --glitch-red: #ff3b5c; --glitch-cyan: #00e0d2; animation-delay: -.29s; }
+.note:is(:disabled, .note--locked):nth-child(2)::before, .note:is(:disabled, .note--locked):nth-child(2)::after, .note:is(:disabled, .note--locked):nth-child(2) .note-copy,
+.note:is(:disabled, .note--locked):nth-child(3)::before, .note:is(:disabled, .note--locked):nth-child(3)::after, .note:is(:disabled, .note--locked):nth-child(3) .note-copy,
+.note:is(:disabled, .note--locked):nth-child(4)::before, .note:is(:disabled, .note--locked):nth-child(4)::after, .note:is(:disabled, .note--locked):nth-child(4) .note-copy,
+.note:is(:disabled, .note--locked):nth-child(5)::before, .note:is(:disabled, .note--locked):nth-child(5)::after, .note:is(:disabled, .note--locked):nth-child(5) .note-copy,
+.note:is(:disabled, .note--locked):nth-child(6)::before, .note:is(:disabled, .note--locked):nth-child(6)::after, .note:is(:disabled, .note--locked):nth-child(6) .note-copy { animation-delay: inherit; }
+/* Cada página ganha uma assinatura própria, mantendo a mesma estética de falha digital. */
+.note:is(:disabled, .note--locked):nth-child(2) { animation-name: glitch-tear; }
+.note:is(:disabled, .note--locked):nth-child(2)::before { animation-name: glitch-tear-lines; }
+.note:is(:disabled, .note--locked):nth-child(2)::after { animation-name: glitch-tear-block; }
+.note:is(:disabled, .note--locked):nth-child(3) { animation-name: glitch-chroma; }
+.note:is(:disabled, .note--locked):nth-child(3) .note-copy { animation-name: glitch-chroma-text; }
+.note:is(:disabled, .note--locked):nth-child(3)::before { animation-name: glitch-chroma-flash; }
+.note:is(:disabled, .note--locked):nth-child(3)::after { animation: none; }
+.note:is(:disabled, .note--locked):nth-child(4) { animation-name: glitch-jump; }
+.note:is(:disabled, .note--locked):nth-child(4)::before { animation: none; }
+.note:is(:disabled, .note--locked):nth-child(4)::after { animation-name: glitch-jump-bars; }
+.note:is(:disabled, .note--locked):nth-child(5) { animation: none; }
+.note:is(:disabled, .note--locked):nth-child(5)::before { background: repeating-linear-gradient(0deg, transparent 0 5px, var(--glitch-cyan) 6px 7px, transparent 8px 12px); clip-path: none; animation-name: glitch-scan; }
+.note:is(:disabled, .note--locked):nth-child(5)::after { animation: none; }
+.note:is(:disabled, .note--locked):nth-child(5) .note-copy { animation-name: glitch-scan-text; }
+.note:is(:disabled, .note--locked):nth-child(6) { animation-name: glitch-pixels; }
+.note:is(:disabled, .note--locked):nth-child(6)::before { background: linear-gradient(90deg, var(--glitch-cyan) 0 22%, transparent 22% 100%); clip-path: inset(12% 0 70% 0); animation-name: glitch-pixel-fragments; }
+.note:is(:disabled, .note--locked):nth-child(6)::after { background: linear-gradient(90deg, transparent 0 68%, var(--glitch-red) 68% 91%, transparent 91%); clip-path: inset(62% 0 12% 0); animation-name: glitch-pixel-fragments; }
+.note:is(:disabled, .note--locked):nth-child(6) .note-copy { animation-name: glitch-pixel-text; }
+/* Fragmentos curtos e composições diferentes: evita tarjas grandes sobre os cartões. */
+.note:is(:disabled, .note--locked):nth-child(2)::before { background: linear-gradient(var(--glitch-cyan) 0 0) 8% 24%/30px 5px no-repeat, linear-gradient(var(--glitch-red) 0 0) 72% 68%/22px 4px no-repeat; }
+.note:is(:disabled, .note--locked):nth-child(2)::after { background: linear-gradient(var(--glitch-red) 0 0) 19% 72%/38px 4px no-repeat, linear-gradient(var(--glitch-cyan) 0 0) 84% 28%/17px 6px no-repeat; }
+.note:is(:disabled, .note--locked):nth-child(3)::before { background: linear-gradient(var(--glitch-red) 0 0) 12% 68%/24px 5px no-repeat, linear-gradient(var(--glitch-cyan) 0 0) 78% 25%/34px 4px no-repeat; }
+.note:is(:disabled, .note--locked):nth-child(3)::after { background: linear-gradient(var(--glitch-cyan) 0 0) 34% 30%/15px 7px no-repeat, linear-gradient(var(--glitch-red) 0 0) 66% 73%/27px 4px no-repeat; }
+.note:is(:disabled, .note--locked):nth-child(4)::after { background: linear-gradient(var(--glitch-cyan) 0 0) 6% 40%/18px 4px no-repeat, linear-gradient(var(--glitch-red) 0 0) 86% 62%/25px 5px no-repeat; }
+.note:is(:disabled, .note--locked):nth-child(6)::before { background: linear-gradient(var(--glitch-cyan) 0 0) 13% 18%/12px 8px no-repeat, linear-gradient(var(--glitch-cyan) 0 0) 77% 43%/21px 5px no-repeat, linear-gradient(var(--glitch-red) 0 0) 48% 76%/16px 7px no-repeat; clip-path: none; }
+.note:is(:disabled, .note--locked):nth-child(6)::after { background: linear-gradient(var(--glitch-red) 0 0) 88% 19%/13px 6px no-repeat, linear-gradient(var(--glitch-red) 0 0) 25% 59%/24px 4px no-repeat, linear-gradient(var(--glitch-cyan) 0 0) 59% 83%/11px 5px no-repeat; clip-path: none; }
+@keyframes glitch-tear { 0%,100% { transform:none; } 8% { transform:translateX(-2px) skewX(-2deg); } 12% { transform:translateX(2px) skewX(2deg); } 17% { transform:translateX(-1px); } }
+@keyframes glitch-tear-lines { 0%,100% { opacity:0; } 8%,12% { opacity:.85; transform:translateX(3px); } 17% { opacity:.5; transform:translateX(-2px); } }
+@keyframes glitch-tear-block { 0%,100% { opacity:0; } 8% { opacity:.7; clip-path:inset(15% 0 55%); } 12% { opacity:.55; clip-path:inset(55% 0 12%); } }
+@keyframes glitch-chroma { 0%,100% { filter:none; } 9%,15% { filter:contrast(1.28) saturate(1.8); } }
+@keyframes glitch-chroma-text { 0%,100% { transform:none; text-shadow:none; } 8% { transform:translateX(2px); text-shadow:-3px 0 var(--glitch-red),3px 0 var(--glitch-cyan); } 13% { transform:translateX(-2px); text-shadow:2px 0 var(--glitch-cyan); } }
+@keyframes glitch-chroma-flash { 0%,100% { opacity:0; } 8%,13% { opacity:.75; transform:translateX(2px); } }
+@keyframes glitch-jump { 0%,100% { transform:translate(0); } 7% { transform:translate(-3px,1px) skewX(-2deg); } 11% { transform:translate(3px,-1px) skewX(2deg); } 16% { transform:translate(-1px); } }
+@keyframes glitch-jump-bars { 0%,100% { opacity:0; } 7% { opacity:.7; transform:translateX(-4px); } 11% { opacity:.5; transform:translateX(3px); } }
+@keyframes glitch-scan { 0%,100% { opacity:0; } 8%,16% { opacity:.48; transform:translateY(2px); } 12% { opacity:.72; transform:translateY(-2px); } }
+@keyframes glitch-scan-text { 0%,100% { transform:none; } 8% { transform:translateX(-1px); text-shadow:0 2px var(--glitch-red); } 13% { transform:translateX(1px); text-shadow:0 -2px var(--glitch-cyan); } }
+@keyframes glitch-pixels { 0%,100% { transform:none; } 6% { transform:translateX(-3px); } 10% { transform:translateX(3px) skewX(3deg); } 15% { transform:translateX(-1px); } }
+@keyframes glitch-pixel-fragments { 0%,100% { opacity:0; } 6% { opacity:.82; transform:translateX(4px); } 10% { opacity:.58; transform:translateX(-3px); } 15% { opacity:.35; transform:translateX(2px); } }
+@keyframes glitch-pixel-text { 0%,100% { transform:none; text-shadow:none; } 6% { transform:translateX(2px); text-shadow:2px 0 var(--glitch-red); } 11% { transform:translateX(-2px); text-shadow:-2px 0 var(--glitch-cyan); } }
+/* Dia 1: falha discreta, lenta e quase imperceptível. */
+.note:is(:disabled, .note--locked):nth-child(1) { --glitch-duration: 2.2s; animation-name: glitch-soft; animation-delay: 0s; }
+.note:is(:disabled, .note--locked):nth-child(1)::before, .note:is(:disabled, .note--locked):nth-child(1)::after { animation: none; opacity: 0; }
+.note:is(:disabled, .note--locked):nth-child(1) .note-copy { animation: glitch-soft-text 2.2s ease-in-out infinite; }
+/* Dia 5: interferência intensa, com cortes, linhas e deslocamentos mais agressivos. */
+.note:is(:disabled, .note--locked):nth-child(5) { --glitch-duration: .72s; animation-name: glitch-heavy; animation-delay: 0s; }
+.note:is(:disabled, .note--locked):nth-child(5)::before { background: repeating-linear-gradient(0deg, transparent 0 4px, var(--glitch-cyan) 5px 7px, transparent 8px 12px), linear-gradient(var(--glitch-red) 0 0) 10% 23%/42px 8px no-repeat, linear-gradient(var(--glitch-cyan) 0 0) 72% 68%/35px 6px no-repeat; clip-path: none; animation-name: glitch-heavy-lines; }
+.note:is(:disabled, .note--locked):nth-child(5)::after { background: linear-gradient(var(--glitch-red) 0 0) 8% 18%/32px 7px no-repeat, linear-gradient(var(--glitch-cyan) 0 0) 76% 42%/44px 6px no-repeat, linear-gradient(var(--glitch-red) 0 0) 34% 78%/24px 8px no-repeat; clip-path: none; animation-name: glitch-heavy-blocks; }
+.note:is(:disabled, .note--locked):nth-child(5) .note-copy { animation: glitch-heavy-text .72s steps(1,end) infinite; }
+@keyframes glitch-soft { 0%,100% { transform:none; filter:none; } 48% { transform:translateX(-1px); } 52% { transform:translateX(1px); } }
+@keyframes glitch-soft-text { 0%,100% { transform:none; text-shadow:none; } 49% { transform:translateX(-1px); text-shadow:-1px 0 rgba(255,45,85,.45); } 53% { transform:translateX(1px); text-shadow:1px 0 rgba(0,217,255,.4); } }
+@keyframes glitch-heavy { 0%,100% { transform:none; filter:none; } 8% { transform:translateX(-5px) skewX(-5deg); filter:contrast(1.5) saturate(1.7); } 13% { transform:translateX(5px) skewX(4deg); clip-path:inset(18% 0 48%); } 19% { transform:translateX(-4px); clip-path:inset(58% 0 10%); } 26% { transform:translateX(3px); clip-path:none; filter:hue-rotate(35deg) contrast(1.35); } 34% { transform:translateX(-2px); } }
+@keyframes glitch-heavy-lines { 0%,100% { opacity:0; } 8%,13%,26% { opacity:.9; transform:translateX(4px); } 19%,34% { opacity:.72; transform:translateX(-4px); } }
+@keyframes glitch-heavy-blocks { 0%,100% { opacity:0; } 8% { opacity:.9; transform:translateX(-5px); } 13% { opacity:.75; transform:translateX(5px); } 19% { opacity:.85; transform:translateX(-4px); } 26% { opacity:.65; transform:translateX(3px); } }
+@keyframes glitch-heavy-text { 0%,100% { transform:none; text-shadow:none; } 8% { transform:translateX(-4px) skewX(-3deg); text-shadow:3px 0 var(--glitch-red),-3px 0 var(--glitch-cyan); } 14% { transform:translateX(4px); text-shadow:-3px 0 var(--glitch-red),3px 0 var(--glitch-cyan); } 21% { transform:translateX(-3px); } 29% { transform:translateX(2px); text-shadow:2px 0 var(--glitch-cyan); } }
+/* Dia 6 ultrapassa o Dia 5: mais fragmentos, amplitude e frequência. */
+.note:is(:disabled, .note--locked):nth-child(6) { --glitch-duration: .56s; animation-name: glitch-max; animation-delay: 0s; }
+.note:is(:disabled, .note--locked):nth-child(6)::before { background: repeating-linear-gradient(0deg, transparent 0 5px, var(--glitch-cyan) 6px 8px, transparent 9px 12px), linear-gradient(var(--glitch-red) 0 0) 8% 18%/38px 8px no-repeat, linear-gradient(var(--glitch-cyan) 0 0) 68% 40%/48px 7px no-repeat, linear-gradient(var(--glitch-red) 0 0) 24% 76%/30px 8px no-repeat; clip-path:none; animation-name: glitch-max-fragments; }
+.note:is(:disabled, .note--locked):nth-child(6)::after { background: linear-gradient(var(--glitch-cyan) 0 0) 82% 16%/31px 8px no-repeat, linear-gradient(var(--glitch-red) 0 0) 50% 57%/42px 7px no-repeat, linear-gradient(var(--glitch-cyan) 0 0) 12% 84%/27px 8px no-repeat; clip-path:none; animation-name: glitch-max-fragments; }
+.note:is(:disabled, .note--locked):nth-child(6) .note-copy { animation: glitch-max-text .56s steps(1,end) infinite; }
+@keyframes glitch-max { 0%,100% { transform:none; filter:none; } 5% { transform:translateX(-7px) skewX(-7deg); filter:contrast(1.8) saturate(2); } 10% { transform:translateX(7px) skewX(6deg); clip-path:inset(12% 0 56%); } 15% { transform:translateX(-6px); clip-path:inset(58% 0 8%); filter:hue-rotate(75deg) contrast(1.6); } 21% { transform:translateX(6px) skewX(-4deg); clip-path:inset(34% 0 38%); } 28% { transform:translateX(-4px); clip-path:none; } 36% { transform:translateX(3px); filter:contrast(1.35); } }
+@keyframes glitch-max-fragments { 0%,100% { opacity:0; } 5%,10%,21%,28% { opacity:1; transform:translateX(6px); } 15%,36% { opacity:.82; transform:translateX(-6px); } }
+@keyframes glitch-max-text { 0%,100% { transform:none; text-shadow:none; } 5% { transform:translateX(-6px) skewX(-5deg); text-shadow:4px 0 var(--glitch-red),-4px 0 var(--glitch-cyan); } 12% { transform:translateX(6px); text-shadow:-4px 0 var(--glitch-red),4px 0 var(--glitch-cyan); } 20% { transform:translateX(-5px); text-shadow:3px 0 var(--glitch-cyan); } 29% { transform:translateX(4px); text-shadow:-3px 0 var(--glitch-red); } }
+@keyframes locked-lines { 0%,2%,100% { opacity: 0; } 5%,9%,18% { opacity: .72; transform: translateX(2px); } 13% { opacity: .5; transform: translateX(-2px); } }
+@keyframes locked-block { 0%,2%,100% { opacity: 0; } 5% { opacity: .68; transform: translateX(-3px); } 9% { opacity: .52; transform: translateX(3px); } 13% { opacity: .32; transform: translateX(-2px); } }
+.note--new { animation: note-reveal .7s cubic-bezier(.2,.85,.25,1) both; }
+@keyframes note-reveal { 0% { opacity: 0; transform: translateY(-18px) scale(.88); filter: brightness(1.35); } 65% { opacity: 1; transform: translateY(2px) scale(1.025); filter: brightness(1.12); } 100% { opacity: 1; transform: translateY(0) scale(1); filter: none; } }
+.app.day-six-awakening { animation: day-six-shake .18s steps(2,end) infinite; }
+@keyframes day-six-shake {
+    0%,100% { transform: translate3d(0,0,0); }
+    25%,75% { transform: translate3d(-1px,0,0); }
+    50% { transform: translate3d(1px,0,0); }
+}
+.note:not(:is(:disabled, .note--locked)):active { transform: translateY(2px) scale(.995); box-shadow: inset 0 2px 5px rgba(60,39,13,.22), 0 1px 0 color-mix(in srgb, var(--ink) 20%, transparent); }
+.note-icon { width: 42px; height: 48px; flex: 0 0 auto; display: grid; place-items: center; color: var(--accent); border: 1px solid color-mix(in srgb, var(--accent) 58%, white); border-radius: 8px; background: linear-gradient(145deg, #f3df9c, #d8b85e); box-shadow: inset 0 1px rgba(255,255,255,.68), inset 0 -2px 3px rgba(94,61,20,.2), 0 2px 3px rgba(63,43,16,.17); }
+.note-icon svg { width: 21px; height: 21px; }
+.note-copy { min-width: 0; flex: 1; }
+.note-title { display: block; margin-bottom: 5px; font: 600 17px Georgia, serif; }
+.note-hint { display: block; overflow: hidden; color: color-mix(in srgb, currentColor 72%, transparent); font-size: 14px; font-weight: 500; text-overflow: ellipsis; white-space: nowrap; }
+.arrow { color: #806a38; font-size: 25px; }
+
+/* Revelação final: as páginas anteriores falham e somem, deixando o Dia 6. */
+.app.day-six-waiting #notes .note:nth-child(6) { animation: final-note-signal .48s ease-in-out 3; }
+#notes .note.note--purging { animation: day-six-purge-card .96s steps(1,end) var(--purge-delay, 0ms) forwards; }
+#notes .note.note--purging::before,
+#notes .note.note--purging::after { animation: day-six-purge-fragments .96s steps(1,end) var(--purge-delay, 0ms) forwards; }
+#notes .note.note--purging .note-copy { animation: day-six-purge-copy .96s steps(1,end) var(--purge-delay, 0ms) forwards; }
+@keyframes final-note-signal { 0%,100% { box-shadow: inset 0 1px rgba(255,255,255,.12), inset 0 -3px 5px rgba(0,0,0,.7), 0 4px 0 #080808, 0 8px 15px rgba(0,0,0,.55); } 50% { box-shadow: inset 0 1px rgba(255,255,255,.2), inset 0 -3px 5px rgba(0,0,0,.7), 0 4px 0 #080808, 0 0 18px rgba(0,217,255,.72), 0 0 28px rgba(255,45,85,.38); } }
+@keyframes day-six-purge-card { 0%,100% { opacity: 1; transform: translateX(0); filter: none; clip-path: none; } 9% { transform: translateX(-7px) skewX(-6deg); filter: hue-rotate(65deg) contrast(1.6); } 17% { transform: translateX(8px) skewX(5deg); clip-path: inset(12% 0 56%); } 26% { transform: translateX(-6px); clip-path: inset(58% 0 8%); filter: invert(.65) saturate(1.8); } 38% { transform: translateX(7px) skewX(-4deg); clip-path: inset(34% 0 38%); } 52% { opacity: .92; transform: translateX(-4px); clip-path: none; filter: hue-rotate(-55deg) contrast(1.5); } 68% { opacity: .72; transform: translateX(5px) scale(.99); filter: blur(.4px); } 82% { opacity: .35; transform: translateX(-3px) scale(.96); filter: blur(1px); } 93% { opacity: .08; transform: translateY(-10px) scale(.9); filter: blur(3px); clip-path: inset(45% 0); } }
+@keyframes day-six-purge-fragments { 0%,100% { opacity: 0; } 9%,17%,38%,52% { opacity: .95; transform: translateX(5px); } 26%,68% { opacity: .78; transform: translateX(-6px); } 82% { opacity: .38; transform: translateX(3px); } }
+@keyframes day-six-purge-copy { 0%,100% { transform: translateX(0); text-shadow: none; } 9% { transform: translateX(-5px); text-shadow: 3px 0 #ff2d55,-3px 0 #00d9ff; } 19% { transform: translateX(5px); text-shadow: -3px 0 #ff2d55,3px 0 #00d9ff; } 38% { transform: translateX(-4px) skewX(3deg); text-shadow: 2px 0 #00d9ff; } 58% { transform: translateX(4px); text-shadow: -2px 0 #ff2d55; } 82% { opacity: .35; transform: translateY(-4px); } }
+.notes--final { min-height: clamp(260px, calc(100% - 120px), 560px); align-content: center; }
+#notes .note--final-day { width: min(100%, 460px); min-height: 88px; justify-self: center; transform: none; border: 1px solid #292522; border-top-color: rgba(238,226,205,.34); border-radius: 9px 14px 10px 12px; background: linear-gradient(145deg, #28231e, #11100f 66%, #080706); color: #f5e9cf; box-shadow: inset 0 1px rgba(255,255,255,.12), inset 0 -3px 5px rgba(0,0,0,.7), 0 4px 0 #080808, 0 8px 15px rgba(0,0,0,.55); }
+#notes .note--final-day .note-icon { color: #f5e9cf; border-color: #8a7f70; background: linear-gradient(145deg, #454039, #171411); box-shadow: inset 0 1px rgba(255,255,255,.22), inset 0 -3px 5px rgba(0,0,0,.66), 0 2px 5px rgba(0,0,0,.55); }
+#notes .note--final-day .note-title { color: #fff0d0; text-shadow: 0 1px rgba(255,255,255,.18), 0 2px 2px rgba(0,0,0,.58); }
+#notes .note--final-day .note-hint,
+#notes .note--final-day .arrow { color: #c7b99e; }
+#notes .note--final-day:not(:is(:disabled, .note--locked)):hover,
+#notes .note--final-day:not(:is(:disabled, .note--locked)):focus-visible { color: #fff0d0; background: linear-gradient(145deg, #393128, #171411 66%, #080706); border-color: #786a52; }
+#notes.notes--final .note--final-day { animation: day-six-center-motion 2.4s ease-in-out infinite; }
+@keyframes day-six-center-motion {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}

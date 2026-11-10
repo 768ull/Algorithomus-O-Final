@@ -1,0 +1,151 @@
+.screen-black {
+  position: absolute;
+  inset: 0;
+  z-index: var(--z-black);
+  background: #000;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 260ms var(--ease-out),visibility 260ms linear
+}
+.screen-black.is-on {
+  opacity: 1;
+  visibility: visible
+}
+.update {
+  position: absolute;
+  inset: 0;
+  z-index: var(--z-update);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 24px;
+  text-align: center;
+  background: #050508;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 420ms var(--ease-out),visibility 420ms linear
+}
+.update.is-on {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto
+}
+.update__logo {
+  font-size: 13px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--text-faint)
+}
+.update__title {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  color: var(--text)
+}
+.update__track {
+  width: min(240px, 70vw);
+  height: 4px;
+  border-radius: 2px;
+  background: rgba(255, 255, 255, 0.09);
+  overflow: hidden
+}
+.update__fill {
+  position: relative;
+  display: block;
+  width: 0;
+  height: 100%;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #30d158, #7ee787)
+}
+.update.is-on .update__fill {
+  animation: update-fill 5s cubic-bezier(0.4, 0, 0.6, 1) both
+}
+@keyframes update-fill {
+  from {
+    width: 0
+  }
+  to {
+    width: 50%
+  }
+}
+.update.is-completing .update__fill {
+  animation: update-complete 1600ms linear both
+}
+@keyframes update-complete {
+  from {
+    width: 50%
+  }
+  to {
+    width: 100%
+  }
+}
+.update__fill::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--danger), #ff6b81);
+  opacity: 0;
+  transition: opacity 600ms var(--ease-out)
+}
+.update.is-error .update__fill::after {
+  opacity: 1
+}
+.update__pct {
+  font-size: 13px;
+  font-family: ui-monospace,'Courier New',monospace;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.5px;
+  color: var(--text-dim);
+  text-shadow: -1.5px 0 rgba(255, 45, 85, 0.8),1.5px 0 rgba(0, 200, 255, 0.7);
+  animation: update-glitch 320ms steps(1, end) infinite
+}
+@keyframes update-glitch {
+  0% {
+    transform: translate(0, 0);
+    opacity: 1
+  }
+  20% {
+    transform: translate(-1px, 1px);
+    opacity: 0.7
+  }
+  40% {
+    transform: translate(1px, -1px);
+    opacity: 1
+  }
+  60% {
+    transform: translate(-1px, 0);
+    opacity: 0.55
+  }
+  80% {
+    transform: translate(1px, 1px);
+    opacity: 0.9
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1
+  }
+}
+.update__note {
+  margin-top: 10px;
+  font-size: 11px;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: var(--text-faint)
+}
+.update.is-on .update__title {
+  animation: update-breathe 2.4s ease-in-out infinite
+}
+@keyframes update-breathe {
+  0%,
+  100% {
+    opacity: 1
+  }
+  50% {
+    opacity: 0.55
+  }
+}

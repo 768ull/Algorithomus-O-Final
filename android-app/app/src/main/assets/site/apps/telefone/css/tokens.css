@@ -1,0 +1,57 @@
+:root {
+  --bg: #0a0a10;
+  --surface: #12121a;
+  --surface-2: #1a1a25;
+  --line: #24242f;
+  --text: #f2f2f7;
+  --text-dim: #90909f;
+  --text-faint: #5b5b69;
+  --accent: #34c759;
+  --danger: #ff2d55;
+  --bar-h: 52px;
+  --tabs-h: 40px;
+  --dur: 220ms;
+  --dur-slow: 340ms;
+  --ease-out: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --spring: cubic-bezier(0.22, 1.2, 0.36, 1)
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent
+}
+body,
+html {
+  height: 100%
+}
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+  font-size: 14px;
+  overflow: hidden;
+  user-select: none;
+  -webkit-user-select: none
+}
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer
+}
+[hidden] {
+  display: none!important
+}
+::-webkit-scrollbar {
+  width: 3px
+}
+::-webkit-scrollbar-track {
+  background: transparent
+}
+::-webkit-scrollbar-thumb {
+  background: var(--line);
+  border-radius: 3px
+}
