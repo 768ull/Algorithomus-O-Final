@@ -31,32 +31,18 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Algorithomus - aplicativo hibrido (v1.8).
+ * Activity Android nativa que hospeda o simulador Algorithomus.
  *
- * Com internet: carrega o site original (https://algorithomus.com.br/),
- * preservando o funcionamento dos servidores do jogo.
- * Sem internet: TODO o site e servido pelos arquivos embutidos no APK
- * (paginas, estilos, scripts, manifesto de midias, audios, videos,
- * galeria e icones), atraves da interceptacao de requisicoes, de modo
- * que o jogo roda localmente sob o mesmo endereco original.
+ * Online: abre o site oficial e mantém suas requisições ao servidor.
+ * Offline: mantém a origem algorithomus.com.br e responde as requisições
+ * de arquivos do site a partir de assets/site dentro do APK.
+ * A tela local de contingência é servida por AndroidX WebViewAssetLoader.
  *
- * Correcoes proprias do aplicativo (aplicadas nos dois modos):
- * - a senha do wi-fi do jogo e validada no servidor do site; o aplicativo
- *   serve copias corrigidas dos tres arquivos do wi-fi, identicas ao site
- *   quando o servidor responde, mas que aceitam a conexao, lembram o
- *   estado no aparelho e nao travam a historia quando o servidor esta
- *   inacessivel (por exemplo, no modo offline);
- * - alguns aparelhos deixam a pagina marcada como oculta mesmo depois
- *   de o jogo voltar ao primeiro plano, o que congela os aplicativos
- *   internos do simulador; ao retornar, o aplicativo forc a pagina a se
- *   reportar como visivel, notifica o retorno, retoma o audio e
- *   reexecuta o modo tela cheia;
- * - nenhum som do jogo toca fora do aplicativo: ao sair, todo o audio
- *   e pausado e os contextos de som suspensos; ao voltar, os sons que
- *   estavam tocando sao retomados automaticamente.
+ * As rotas /api/* ainda dependem do servidor quando não houver uma implementação
+ * local verificada. O patch de Wi-Fi da versão anterior foi preservado à parte
+ * para revisão e não é aplicado automaticamente nesta build.
  *
- * Aplicativo 100% nativo de WebView, sem dependencias externas,
- * tela cheia imersiva e suporte a dispositivos do SDK 21 ao mais recente.
+ * O ciclo de vida também pausa/retoma áudio e estado de visibilidade da página.
  */
 public class MainActivity extends Activity {
 
