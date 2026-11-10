@@ -98,7 +98,7 @@ public class MainActivity extends Activity {
             + "} }catch(e){}"
             + "try{w.__algoNativePaused=false;}catch(e){}"
             + "try{if(w.sound&&typeof w.sound.resumeNative==='function')w.sound.resumeNative();}catch(e){}"
-            + "try{w.dispatchEvent(new Event('visibilitychange'));w.dispatchEvent(new Event('focus'));w.dispatchEvent(new Event('pageshow'));}catch(e){}"
+            + "try{if(d)d.dispatchEvent(new Event('visibilitychange'));w.dispatchEvent(new Event('focus'));w.dispatchEvent(new Event('pageshow'));}catch(e){}"
             + "try{if(d){var els=d.querySelectorAll('audio,video');for(var i=0;i<els.length;i++){try{var m=els[i];"
             + "if(m.getAttribute('data-algo-native-playing')==='1'){m.removeAttribute('data-algo-native-playing');"
             + "if(m.paused&&!m.ended){var p=m.play();if(p&&p.catch)p.catch(function(){});}}}catch(e5){}}}}catch(e){}"

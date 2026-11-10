@@ -72,3 +72,12 @@ Exact duplicates and perceptual near-duplicate candidates (8x8 average hash dist
 The native Activity calls the patched local \`/js/sound.js\` in online and offline mode. On Android \`onPause\`, it first invokes \`sound.suspendNative()\`, pauses every audio/video element across same-origin frames, and suspends the audio context. It then waits for JavaScript completion before pausing the WebView and its timers. On return, timers are resumed, the page is made visible again, previous media positions are resumed and the current game state is not reloaded.
 
 The final CI step inspects the generated APK ZIP and fails if any file in the media inventory is absent from the package.
+
+
+## Full Cobrinha and Frutris web-source trees
+
+The media importer also downloads every file under the separate Android modules' `assets/www/` trees in `768ull/https-algorithomus.com.br-`:
+- `android/apps/cobrinha/src/main/assets/www/`
+- `android/apps/frutris/src/main/assets/www/`
+
+This copies their full HTML/CSS/JavaScript and shared scripts (including game engines, render/input/state modules, game audio logic, ghost-touch and app-theme), plus every image/audio/font/video file present in those source trees. Paths are mapped into `assets/site/`. If a live-site path already exists with different bytes, the alternate source version is retained under `assets/media/legacy-repositories/` instead of overwriting the canonical live asset. The complete module tree remains available for review in that legacy archive.

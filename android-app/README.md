@@ -60,3 +60,6 @@ Nenhum áudio ou imagem é convertido de formato. O APK preserva OGG/MP3 e PNG/W
 ## Pausa e retomada do jogo
 
 Ao sair do aplicativo, a Activity nativa suspende o motor de som, pausa áudio e vídeo inclusive nos iframes, e só então congela os timers do WebView. Ao voltar, retoma o estado existente sem recarregar a página. O script nativo usa uma cópia local e compatível de \`js/sound.js\` também quando o jogo está conectado ao servidor oficial.
+
+
+The media import stage also pulls the **entire** `assets/www/` source trees of the separate Cobrinha and Frutris modules from `768ull/https-algorithomus.com.br-`, including their HTML/CSS/JS game code and shared assets. Conflicting historical versions are preserved instead of replacing the current site files.

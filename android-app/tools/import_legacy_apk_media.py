@@ -44,6 +44,12 @@ SOURCES = [
     ("algorithomus-webapk-reference",
      "https://raw.githubusercontent.com/768ull/https-algorithomus.com.br-/main/Algorithomus.apk")
 ]
+SOURCE_TREE_PREFIXES = [
+    ("cobrinha-full-web-module", "android/apps/cobrinha/src/main/assets/www/"),
+    ("frutris-full-web-module", "android/apps/frutris/src/main/assets/www/")
+]
+SOURCE_TREE_API = "https://api.github.com/repos/768ull/https-algorithomus.com.br-/git/trees/main?recursive=1"
+SOURCE_TREE_RAW = "https://raw.githubusercontent.com/768ull/https-algorithomus.com.br-/main/"
 SOURCE_MEDIA = [
     ("cobrinha-source-game-image",
      "https://raw.githubusercontent.com/768ull/https-algorithomus.com.br-/main/android/apps/cobrinha/src/main/assets/www/apps/cobrinha/game.webp",
@@ -184,6 +190,52 @@ def process_download(source: str, url: str):
         if n.endswith(".apk"):
             process_apk(outer.read(info), source + "-embedded", info.filename)
 
+def import_complete_game_source_trees():
+    """Import every file under both isolated Android games' assets/www trees.
+
+    This includes HTML/CSS/JS, images, audio and shared helper files, not only
+    files with media extensions. Files are mapped to the same relative site
+    paths; conflicting versions are preserved in legacy-repositories/.
+    """
+    try:
+        tree_data = json.loads(download(SOURCE_TREE_API).decode("utf-8"))
+    except Exception as exc:
+        report["errors"].append({"source": "cobrinha-frutris-source-tree", "url": SOURCE_TREE_API, "error": str(exc)})
+        print("[legacy-media] game source tree unavailable: %s" % exc)
+        return
+    tree = tree_data.get("tree", [])
+    if tree_data.get("truncated"):
+        report["errors"].append({
+            "source": "cobrinha-frutris-source-tree",
+            "error": "GitHub tree API returned a truncated tree"
+        })
+    for label, prefix in SOURCE_TREE_PREFIXES:
+        selected = [item for item in tree if item.get("type") == "blob" and item.get("path", "").startswith(prefix)]
+        copied = 0
+        for item in selected:
+            source_path = item["path"]
+            relative = source_path[len(prefix):]
+            parts = safe_parts(relative)
+            if not parts:
+                report["errors"].append({"source": label, "file": source_path, "error": "unsafe relative path"})
+                continue
+            url = SOURCE_TREE_RAW + source_path
+            try:
+                data = download(url)
+                target = SITE / Path(*parts)
+                preserve_file(data, label, source_path, target, "complete-game-source-file")
+                copied += 1
+            except Exception as exc:
+                report["errors"].append({"source": label, "file": source_path, "url": url, "error": str(exc)})
+                print("[legacy-media] source module file unavailable: %s: %s" % (source_path, exc))
+        report["sources"].append({
+            "source": label,
+            "kind": "complete-assets-www-source-tree",
+            "filesFound": len(selected),
+            "filesDownloaded": copied
+        })
+        print("[legacy-media] %s: %d/%d files imported" % (label, copied, len(selected)))
+
 def import_source_media():
     for label, url, website_path in SOURCE_MEDIA:
         try:
@@ -198,6 +250,7 @@ def main():
     TEMP.mkdir(parents=True, exist_ok=True)
     for source, url in SOURCES:
         process_download(source, url)
+    import_complete_game_source_trees()
     import_source_media()
     CONFIG.mkdir(parents=True, exist_ok=True)
     report["summary"] = {
