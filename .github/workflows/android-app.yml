@@ -12,7 +12,7 @@ permissions:
 
 concurrency:
   group: algorithomus-android-${{ github.ref }}
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   build:
@@ -64,6 +64,12 @@ jobs:
             git commit -m "Add Gradle Wrapper [skip ci]"
             git push origin "HEAD:${GITHUB_REF_NAME}"
           fi
+
+      - name: Install PDF extraction tools
+        run: sudo apt-get update && sudo apt-get install -y poppler-utils
+
+      - name: Prepare offline site and bundled media
+        run: bash android-app/tools/mirror_site.sh
 
       - name: Build debug APK
         working-directory: android-app

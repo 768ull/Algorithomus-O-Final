@@ -34,7 +34,7 @@ APK de depuração: `app/build/outputs/apk/debug/`.
 
 ## Organização dos arquivos
 
-Consulte [PROJECT_STRUCTURE.md](PROJECT_STRUCTURE.md). Os arquivos originais que estão na raiz do repositório foram mantidos no lugar.
+Consulte [PROJECT_STRUCTURE.md](PROJECT_STRUCTURE.md) e [MEDIA_AND_SOURCE_ANALYSIS.md](docs/MEDIA_AND_SOURCE_ANALYSIS.md). O código Java v1.9 está em `reference/legacy-v1.9/` como material de análise, não como Activity ativa.
 
 ## Identidade de atualização e assinatura
 
