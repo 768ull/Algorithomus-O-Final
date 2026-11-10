@@ -75,13 +75,13 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git fetch origin "${GITHUB_REF_NAME}"
-          git rebase "origin/${GITHUB_REF_NAME}"
           git add android-app/app/src/main/assets/site android-app/app/src/main/assets/media android-app/app/src/main/assets/config
           if ! git diff --cached --quiet; then
             git commit -m "Import offline site snapshot and PDF media [skip ci]"
-            git push origin "HEAD:${GITHUB_REF_NAME}"
           fi
+          git fetch origin "${GITHUB_REF_NAME}"
+          git rebase "origin/${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
 
       - name: Build debug APK
         working-directory: android-app
