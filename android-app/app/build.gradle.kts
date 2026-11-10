@@ -8,7 +8,7 @@ android {
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "br.com.algorithomus.app"
+        applicationId = "br.com.algorithomus.mobile"
         minSdk = 24
         targetSdk = 35
         versionCode = 1

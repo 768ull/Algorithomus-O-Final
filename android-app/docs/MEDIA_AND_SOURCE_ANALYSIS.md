@@ -27,3 +27,25 @@ The v1.9 APK's JAR/V1 signature shows the self-signed certificate subject `CN=Al
 
 ## Known missing media
 The v1.9 artifact contains no MP4/WebM, although the legacy URL manifest lists two diary videos. The new PDF provides still images, not those videos. Those files need to be recovered separately from the official server or the user's media archive.
+
+
+## APIs identificadas no snapshot v1.9
+
+As chamadas ao servidor encontradas no JavaScript antigo incluem:
+
+| Recurso | Endpoint observado | Observação offline |
+|---|---|---|
+| Mensagens | `POST /api/messages/` | Conversas e mensagens dependem de retorno do servidor; não inventar histórico |
+| Y | `POST /api/<ação>` | Ações/estado precisam de resposta oficial |
+| Diário | `POST /api/diary/<ação>` | Sequência e desbloqueios podem depender do backend |
+| Calculadora | `POST /api/calculator-check` | Verificação de códigos depende do backend |
+| Wi-Fi | `/api/wifi-check`, `/api/wifi-forget`, `/api/wifi-state`, `/api/wifi-clues` | O JS antigo inclui fallback parcial em localStorage para estado/pistas |
+| Mídia | `/api/media` | A resposta pode selecionar um recurso de áudio; exige mapear dados do servidor |
+
+O APK novo incorpora os arquivos estáticos em `assets/site/`, mas o cliente WebView não transforma automaticamente essas rotas de API em dados locais. Sem conexão, essas chamadas ainda podem falhar. O modo online segue encaminhando-as ao domínio oficial.
+
+## Identidade do aplicativo novo
+
+O APK híbrido antigo usa `applicationId=br.com.algorithomus.app`. Para manter esta nova versão independente e instalável ao lado da versão anterior, o módulo novo usa `applicationId=br.com.algorithomus.mobile`, mantendo o namespace/código Java interno separado. Essa identidade deve permanecer fixa nas atualizações deste novo APK.
+
+A keystore histórica não foi recuperada. A identidade de assinatura do APK v1.9 não prova que a chave privada esteja disponível. O novo app precisa de uma keystore própria, protegida fora do GitHub.
