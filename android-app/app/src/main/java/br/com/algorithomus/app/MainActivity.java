@@ -102,7 +102,7 @@ public class MainActivity extends Activity {
             + "try{if(d){var els=d.querySelectorAll('audio,video');for(var i=0;i<els.length;i++){try{var m=els[i];"
             + "if(m.getAttribute('data-algo-native-playing')==='1'){m.removeAttribute('data-algo-native-playing');"
             + "if(m.paused&&!m.ended){var p=m.play();if(p&&p.catch)p.catch(function(){});}}}catch(e5){}}}}catch(e){}"
-            + "try{for(var f=0;f<w.frames.length;f++)visit(w.frames[f],depth+1);}catch(e){}"
+            + "try{for(var f=0;f<w.frames.length;f++){try{w.frames[f].postMessage({v:1,from:'shell',type:'app:state',name:'open'},'*');}catch(e6){}visit(w.frames[f],depth+1);}}catch(e){}"
             + "}"
             + "visit(window,0);"
             + "})();";
@@ -122,7 +122,8 @@ public class MainActivity extends Activity {
             + "try{if(w.sound&&typeof w.sound.suspendNative==='function')w.sound.suspendNative();}catch(e){}"
             + "try{w.dispatchEvent(new Event('blur'));w.dispatchEvent(new Event('pagehide'));w.dispatchEvent(new Event('freeze'));}catch(e){}"
             + "try{if(d){var all=d.querySelectorAll('audio,video');for(var j=0;j<all.length;j++){try{all[j].pause();}catch(e2){}}}}catch(e){}"
-            + "try{for(var f=0;f<w.frames.length;f++)visit(w.frames[f],depth+1);}catch(e){}"
+            + "try{if(w.Cobrinha&&w.Cobrinha.audioContext&&w.Cobrinha.audioContext.state==='running'){var cp=w.Cobrinha.audioContext.suspend();if(cp&&cp.catch)cp.catch(function(){});}}catch(e){}"
+            + "try{for(var f=0;f<w.frames.length;f++){try{w.frames[f].postMessage({v:1,from:'shell',type:'app:state',name:'paused'},'*');}catch(e7){}visit(w.frames[f],depth+1);}}catch(e){}"
             + "}"
             + "visit(window,0);"
             + "})();";
