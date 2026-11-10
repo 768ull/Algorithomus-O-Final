@@ -7,15 +7,19 @@ o manifesto oficial de midias (/media-manifest.json), os audios por dia
 do diario, os videos, os rabiscos e as mensagens de voz.
 Cada arquivo e tentado duas vezes em caso de falha de rede.
 """
+import hashlib
+import json
 import os
 import re
 import time
+from datetime import datetime, timezone
 import urllib.parse
 import urllib.request
 
 ORIGIN = "https://algorithomus.com.br"
 DEST = os.environ.get("ALGO_SITE_DEST", "android-app/app/src/main/assets/site")
 MANIFEST = os.environ.get("ALGO_MEDIA_MANIFEST", "android-app/tools/media_manifest.txt")
+REPORT = os.environ.get("ALGO_MIRROR_REPORT", "android-app/app/src/main/assets/config/site-mirror-report.json")
 UA = ("Mozilla/5.0 (Linux; Android 14) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/131.0.0.0 Mobile Safari/537.36")
 
@@ -47,6 +51,9 @@ def normalize(url, base):
     if p.scheme not in ("http", "https"):
         return None
     if p.netloc not in ("algorithomus.com.br", "www.algorithomus.com.br"):
+        return None
+    decoded_path = urllib.parse.unquote(p.path)
+    if any(part in (".", "..") for part in decoded_path.split("/")):
         return None
     path = urllib.parse.quote(p.path, safe="/%")
     if any(s in path for s in SKIP):
@@ -142,6 +149,8 @@ def main():
     queue = list(seeds)
     media = 0
     pages = 0
+    downloaded = []
+    failed = []
 
     for pass_num in (1, 2, 3, 4, 5):
         batch = [u for u in queue if u not in seen]
@@ -154,15 +163,32 @@ def main():
             try:
                 data, ctype = fetch(url)
             except Exception as exc:
-                print("[spider] falha (ignorada): %s -> %s" % (url, exc))
+                parts = urllib.parse.urlsplit(url)
+                safe_url = urllib.parse.urlunsplit((parts.scheme, parts.netloc, parts.path, "", ""))
+                failed.append({"url": safe_url, "reason": str(exc)})
+                print("[spider] falha (ignorada): %s -> %s" % (safe_url, exc))
                 continue
             try:
                 save(url, data)
             except Exception as exc:
-                print("[spider] falha ao salvar (ignorada): %s -> %s" % (url, exc))
+                parts = urllib.parse.urlsplit(url)
+                safe_url = urllib.parse.urlunsplit((parts.scheme, parts.netloc, parts.path, "", ""))
+                failed.append({"url": safe_url, "reason": "save: " + str(exc)})
+                print("[spider] falha ao salvar (ignorada): %s -> %s" % (safe_url, exc))
                 continue
             path = urllib.parse.urlsplit(url).path.lower()
             ext = os.path.splitext(path)[1]
+            local_file = local_path(url)
+            parts = urllib.parse.urlsplit(url)
+            safe_url = urllib.parse.urlunsplit((parts.scheme, parts.netloc, parts.path, "", ""))
+            downloaded.append({
+                "url": safe_url,
+                "path": os.path.relpath(local_file, DEST).replace(os.sep, "/"),
+                "bytes": len(data),
+                "sha256": hashlib.sha256(data).hexdigest(),
+                "contentType": ctype,
+                "extension": ext
+            })
             if ext in TEXT_EXTS or path.endswith("/"):
                 pages += 1
                 try:
@@ -177,9 +203,25 @@ def main():
 
     counts = count_by_ext()
     total_files = sum(counts.values())
+    report = {
+        "schemaVersion": 1,
+        "origin": ORIGIN,
+        "generatedAtUtc": datetime.now(timezone.utc).isoformat(),
+        "pagesAndTextDownloaded": pages,
+        "mediaDownloadedThisRun": media,
+        "bundledFileCountsByType": counts,
+        "bundledFileCount": total_files,
+        "downloaded": downloaded,
+        "missingOrFailed": failed
+    }
+    os.makedirs(os.path.dirname(REPORT), exist_ok=True)
+    with open(REPORT, "w", encoding="utf-8") as handle:
+        json.dump(report, handle, ensure_ascii=False, indent=2)
+        handle.write("\\n")
     print("[spider] concluido: %d paginas/texto, %d midias baixadas nesta execucao" % (pages, media))
     print("[spider] EMBUTIDOS NO APK: %d audios, %d videos, %d imagens, %d outros, %d arquivos totais"
           % (counts["audio"], counts["video"], counts["imagem"], counts["outro"], total_files))
+    print("[spider] urls sem arquivo local: %d; inventario: %s" % (len(failed), REPORT))
 
 
 if __name__ == "__main__":
