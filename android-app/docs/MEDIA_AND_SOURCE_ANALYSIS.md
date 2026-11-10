@@ -2,7 +2,7 @@
 
 ## Inspected sources
 - The supplied PDF has 39 pages and 39 embedded JPEG images. The extraction script copies the JPEG streams without recompression and records source page, dimensions, byte count and SHA-256.
-- The uploaded `base.apk` is a 187,071-byte Chrome-generated WebAPK. Its manifest package is `org.chromium.webapk.a9b2dd68c59c4c6f1_v2`, with start URL `https://algorithomus.com.br/`. It has 32 ZIP entries and no `assets/` game tree. It is a PWA shortcut/runtime host, not the native game APK.
+- The uploaded `base.apk` is a 187,071-byte Chrome-generated WebAPK. Its manifest package is `org.chromium.webapk.a9b2dd68c59c4c6f1_v2`, with start URL `https://algorithomus.com.br/`. It has 32 ZIP entries and no `assets/` game tree. It is a PWA shortcut/runtime host, not the native game APK. Its archive has V1/JAR entries (`APP.SF/RSA` and `BROWSER.SF/RSA`) and a V2 signing block. The two signers identify Google/WebAPK certificates, so this is not an Algorithomus-owned update key.
 - `768ull/Algorithomus-App` contains the prior Android Java hybrid, full website HTML/CSS/JS entry source, media URL manifest, crawler and Wi-Fi fallback patch.
 - A successful CI artifact from that repository contained `Algorithomus-v1.9.apk` (23,198,325 bytes). It has 290 ZIP entries, including 256 under `assets/www/`: 115 JS, 48 CSS, 12 HTML, 1 JSON, 57 WebP, 7 PNG, 5 SVG, 9 OGG and 2 MP3. No MP4/WebM were present.
 - The v1.9 APK includes local app routes for Calculadora, Cobrinha, Configurações, Galeria, Mensagens, Sem Nome/Rabiscos, Telefone, Tetris and Y. It includes gallery wallpapers and camera photos, profile pictures, app icons and five Rabiscos frames.
