@@ -1,6 +1,6 @@
 # Algorithomus para Android
 
-Este é um aplicativo Android independente, com uma Activity nativa em Kotlin e o motor WebView do Android para preservar a execução do jogo e a comunicação com o servidor oficial.
+Este é um aplicativo Android independente, com uma Activity Android nativa em Java e o motor WebView do Android para preservar a execução do jogo e a comunicação com o servidor oficial.
 
 ## Estado do projeto
 

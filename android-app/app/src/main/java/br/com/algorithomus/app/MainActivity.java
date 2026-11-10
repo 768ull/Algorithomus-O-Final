@@ -22,6 +22,7 @@ import android.webkit.WebResourceResponse;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.webkit.RenderProcessGoneDetail;
 import androidx.webkit.WebViewAssetLoader;
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
@@ -387,6 +388,15 @@ public class MainActivity extends Activity {
                 return serveLocal(url);
             }
             return null;
+        }
+
+        @SuppressLint("NewApi")
+        @Override
+        public boolean onRenderProcessGone(WebView view, RenderProcessGoneDetail detail) {
+            // O renderer do WebView pode ser encerrado pelo Android em pressão de memória.
+            // Recriar a Activity evita deixar o simulador preso em uma tela vazia.
+            recreate();
+            return true;
         }
 
         @SuppressLint("NewApi")
