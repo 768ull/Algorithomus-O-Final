@@ -1,0 +1,30 @@
+# Gradle
+.gradle/
+build/
+**/build/
+local.properties
+
+# Android Studio / IDE
+.idea/
+*.iml
+.DS_Store
+
+# Signing material: never commit private keys or passwords
+*.jks
+*.keystore
+*.p12
+*.pem
+*.key
+keystore.properties
+.env
+.env.*
+
+# Generated outputs
+*.apk
+*.aab
+*.idsig
+*.ap_
+*.dex
+captures/
+.externalNativeBuild/
+.cxx/

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Algorithomus</string>
+    <string name="offline_title">Algorithomus — modo offline</string>
+    <string name="offline_message">A estrutura offline está preparada. O conteúdo original do jogo será incorporado nesta pasta em uma etapa posterior.</string>
+    <string name="retry_connection">Tentar conectar novamente</string>
+</resources>
