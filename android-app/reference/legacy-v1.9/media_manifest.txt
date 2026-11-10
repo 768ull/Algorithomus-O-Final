@@ -1,0 +1,134 @@
+# Sementes da aranha: conteudo publico do jogo Algorithomus que deve ficar
+# embutido no APK. Uma URL por linha. A aranha tambem segue o manifesto
+# oficial de midias (/media-manifest.json) e todos os arquivos que as
+# paginas do jogo referenciam. Linhas que falharem (404) sao ignoradas.
+
+# Paginas principais e aplicativos internos
+https://algorithomus.com.br/
+https://algorithomus.com.br/media-manifest.json?v=protected-dia6
+https://algorithomus.com.br/apps/mensagens/
+https://algorithomus.com.br/apps/y/
+https://algorithomus.com.br/apps/sem-nome/
+https://algorithomus.com.br/apps/sem-nome/rabiscos/
+https://algorithomus.com.br/apps/configuracoes/
+https://algorithomus.com.br/apps/galeria/
+https://algorithomus.com.br/apps/calculadora/
+https://algorithomus.com.br/apps/telefone/
+https://algorithomus.com.br/apps/cobrinha/
+https://algorithomus.com.br/apps/tetris/
+https://algorithomus.com.br/apps/ghost-touch.js
+
+# Sequencia do diario: audios por dia, faiscas e videos
+https://algorithomus.com.br/apps/sem-nome/audios/DIA 1.mp3
+https://algorithomus.com.br/apps/sem-nome/audios/DIA 2.mp3
+https://algorithomus.com.br/apps/sem-nome/audios/DIA 3.mp3
+https://algorithomus.com.br/apps/sem-nome/audios/DIA 4.mp3
+https://algorithomus.com.br/apps/sem-nome/audios/DIA 5.mp3
+https://algorithomus.com.br/apps/sem-nome/audios/DIA 6.mp3
+https://algorithomus.com.br/apps/sem-nome/audios/DIA 7.mp3
+https://algorithomus.com.br/apps/sem-nome/audios/DIA 8.mp3
+https://algorithomus.com.br/apps/sem-nome/audios/DIA 9.mp3
+https://algorithomus.com.br/apps/sem-nome/audios/DIA 10.mp3
+https://algorithomus.com.br/apps/sem-nome/audios/DIA 11.mp3
+https://algorithomus.com.br/apps/sem-nome/audios/DIA 12.mp3
+https://algorithomus.com.br/apps/sem-nome/audios/LOOP FAÍSCAS.mp3
+https://algorithomus.com.br/apps/sem-nome/video/Horizontal.mp4
+https://algorithomus.com.br/apps/sem-nome/video/vertical.mp4
+
+# Mensagens de voz da Maya e audios das conversas
+https://algorithomus.com.br/apps/mensagens/audio/Maya/MAYA 1.mp3
+https://algorithomus.com.br/apps/mensagens/audio/Maya/MAYA 2.mp3
+https://algorithomus.com.br/apps/mensagens/audio/Maya/MAYA 3.mp3
+https://algorithomus.com.br/apps/mensagens/audio/Maya/MAYA 4.mp3
+https://algorithomus.com.br/apps/mensagens/audio/Maya/MAYA LIGAÇÃO.mp3
+https://algorithomus.com.br/apps/mensagens/audio/Maya/vibrando.mp3
+https://algorithomus.com.br/apps/mensagens/audio/audio-001.mp3
+https://algorithomus.com.br/apps/mensagens/audio/audio-002.mp3
+https://algorithomus.com.br/apps/mensagens/audio/audio-003.mp3
+https://algorithomus.com.br/apps/mensagens/audio/audio-004.mp3
+
+# Vozes das chamadas de telefone (pasta de audios de anuncio do jogo)
+https://algorithomus.com.br/assets/audio/ad/audio-001.ogg
+https://algorithomus.com.br/assets/audio/ad/audio-002.ogg
+https://algorithomus.com.br/assets/audio/ad/audio-003.ogg
+https://algorithomus.com.br/assets/audio/ad/audio-004.ogg
+https://algorithomus.com.br/assets/audio/ad/audio-005.ogg
+https://algorithomus.com.br/assets/audio/ad/audio-006.ogg
+https://algorithomus.com.br/assets/audio/ad/audio-007.ogg
+https://algorithomus.com.br/assets/audio/ad/audio-008.ogg
+https://algorithomus.com.br/assets/audio/ad/audio-009.ogg
+https://algorithomus.com.br/assets/audio/ad/audio-010.ogg
+https://algorithomus.com.br/assets/audio/ad/audio-011.ogg
+https://algorithomus.com.br/assets/audio/ad/audio-012.ogg
+https://algorithomus.com.br/assets/audio/ad/audio-013.ogg
+https://algorithomus.com.br/assets/audio/ad/audio-014.ogg
+https://algorithomus.com.br/assets/audio/ad/audio-015.ogg
+https://algorithomus.com.br/assets/audio/ad/audio-016.ogg
+https://algorithomus.com.br/assets/audio/ad/audio-017.ogg
+https://algorithomus.com.br/assets/audio/ad/audio-018.ogg
+https://algorithomus.com.br/assets/audio/ad/audio-019.ogg
+https://algorithomus.com.br/assets/audio/ad/audio-020.ogg
+https://algorithomus.com.br/assets/audio/ad/audio-021.ogg
+https://algorithomus.com.br/assets/audio/ad/audio-022.ogg
+https://algorithomus.com.br/assets/audio/ad/audio-023.ogg
+https://algorithomus.com.br/assets/audio/ad/audio-024.ogg
+
+# Fotos de perfil usadas pelo aplicativo de telefone
+https://algorithomus.com.br/apps/telefone/pfp/imagem-002.webp
+https://algorithomus.com.br/apps/telefone/pfp/imagem-003.webp
+https://algorithomus.com.br/apps/telefone/pfp/imagem-004.svg
+https://algorithomus.com.br/apps/telefone/pfp/imagem-006.webp
+https://algorithomus.com.br/apps/telefone/pfp/imagem-007.webp
+https://algorithomus.com.br/apps/telefone/pfp/imagem-008.webp
+https://algorithomus.com.br/apps/telefone/pfp/imagem-009.svg
+https://algorithomus.com.br/apps/telefone/pfp/imagem-010.webp
+https://algorithomus.com.br/apps/telefone/pfp/imagem-011.webp
+https://algorithomus.com.br/apps/telefone/pfp/imagem-012.webp
+https://algorithomus.com.br/apps/telefone/pfp/imagem-013.webp
+https://algorithomus.com.br/apps/telefone/pfp/imagem-014.webp
+https://algorithomus.com.br/apps/telefone/pfp/imagem-017.webp
+https://algorithomus.com.br/apps/telefone/pfp/imagem-018.webp
+
+# Audios numerados ainda nao catalogados pelo codigo do jogo
+https://algorithomus.com.br/assets/audio/audio-010.ogg
+https://algorithomus.com.br/assets/audio/audio-011.ogg
+https://algorithomus.com.br/assets/audio/audio-012.ogg
+https://algorithomus.com.br/assets/audio/audio-013.ogg
+https://algorithomus.com.br/assets/audio/audio-014.ogg
+https://algorithomus.com.br/assets/audio/audio-015.ogg
+https://algorithomus.com.br/assets/audio/audio-016.ogg
+https://algorithomus.com.br/assets/audio/audio-017.ogg
+https://algorithomus.com.br/assets/audio/audio-018.ogg
+https://algorithomus.com.br/assets/audio/audio-019.ogg
+https://algorithomus.com.br/assets/audio/audio-020.ogg
+https://algorithomus.com.br/assets/audio/audio-021.ogg
+https://algorithomus.com.br/assets/audio/audio-022.ogg
+https://algorithomus.com.br/assets/audio/audio-023.ogg
+https://algorithomus.com.br/assets/audio/audio-024.ogg
+
+# Midia historica do jogo ainda publica
+https://algorithomus.com.br/assets/audio/00a16767.ogg
+https://algorithomus.com.br/assets/audio/112dac91.ogg
+https://algorithomus.com.br/assets/audio/2835b99d.ogg
+https://algorithomus.com.br/assets/audio/48667212.ogg
+https://algorithomus.com.br/assets/audio/7e01c3df.ogg
+https://algorithomus.com.br/assets/audio/a2bdad8f.ogg
+https://algorithomus.com.br/assets/audio/ccd923b8.ogg
+https://algorithomus.com.br/assets/audio/d18de117.ogg
+https://algorithomus.com.br/assets/audio/f15a9117.ogg
+https://algorithomus.com.br/assets/audio/f1e7a9c9.ogg
+https://algorithomus.com.br/assets/audio/carregando.mp3
+https://algorithomus.com.br/assets/audio/glitch-1.mp3
+https://algorithomus.com.br/assets/audio/glitch-2.mp3
+https://algorithomus.com.br/assets/audio/glitch-3.mp3
+https://algorithomus.com.br/assets/audio/glitch-4.mp3
+https://algorithomus.com.br/assets/audio/riser.mp3
+https://algorithomus.com.br/assets/audio/ruido-branco.mp3
+https://algorithomus.com.br/assets/img/bg-9f9d94ca.webp
+https://algorithomus.com.br/assets/img/icon-ebd30d47.webp
+https://algorithomus.com.br/assets/img/icon.png
+https://algorithomus.com.br/assets/img/texto1-5f8da8ee.webp
+https://algorithomus.com.br/assets/img/texto2-dc5f65a4.webp
+https://algorithomus.com.br/assets/img/texto3-f0324ff2.webp
+https://algorithomus.com.br/assets/img/texto4-d312ba3b.webp
+https://algorithomus.com.br/assets/img/texto5-8772a6c4.webp
