@@ -43,11 +43,16 @@ jobs:
           gradle-version: "8.9"
 
       - name: Generate Gradle Wrapper
-        working-directory: android-app
         run: |
-          if [ ! -f gradle/wrapper/gradle-wrapper.jar ]; then
-            gradle wrapper --gradle-version 8.9
-            chmod +x gradlew
+          if [ ! -f android-app/gradle/wrapper/gradle-wrapper.jar ]; then
+            mkdir -p "$RUNNER_TEMP/gradle-wrapper-seed"
+            cd "$RUNNER_TEMP/gradle-wrapper-seed"
+            gradle --no-daemon wrapper --gradle-version 8.9
+            cd "$GITHUB_WORKSPACE"
+            mkdir -p android-app/gradle
+            cp gradlew gradlew.bat android-app/
+            cp -R gradle/wrapper android-app/gradle/
+            chmod +x android-app/gradlew
           fi
 
       - name: Save Gradle Wrapper in repository
