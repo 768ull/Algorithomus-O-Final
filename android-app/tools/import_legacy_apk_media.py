@@ -45,11 +45,10 @@ SOURCES = [
      "https://raw.githubusercontent.com/768ull/https-algorithomus.com.br-/main/Algorithomus.apk")
 ]
 SOURCE_TREE_PREFIXES = [
-    ("cobrinha-full-web-module", "android/apps/cobrinha/src/main/assets/www/"),
-    ("frutris-full-web-module", "android/apps/frutris/src/main/assets/www/")
+    ("algorithomus-app-v1.9-web-tree", "768ull/Algorithomus-App", "app/src/main/assets/www/"),
+    ("cobrinha-full-web-module", "768ull/https-algorithomus.com.br-", "android/apps/cobrinha/src/main/assets/www/"),
+    ("frutris-full-web-module", "768ull/https-algorithomus.com.br-", "android/apps/frutris/src/main/assets/www/")
 ]
-SOURCE_TREE_API = "https://api.github.com/repos/768ull/https-algorithomus.com.br-/git/trees/main?recursive=1"
-SOURCE_TREE_RAW = "https://raw.githubusercontent.com/768ull/https-algorithomus.com.br-/main/"
 SOURCE_MEDIA = [
     ("cobrinha-source-game-image",
      "https://raw.githubusercontent.com/768ull/https-algorithomus.com.br-/main/android/apps/cobrinha/src/main/assets/www/apps/cobrinha/game.webp",
@@ -191,25 +190,27 @@ def process_download(source: str, url: str):
             process_apk(outer.read(info), source + "-embedded", info.filename)
 
 def import_complete_game_source_trees():
-    """Import every file under both isolated Android games' assets/www trees.
+    """Import every file from all historical site/game assets/www source trees.
 
-    This includes HTML/CSS/JS, images, audio and shared helper files, not only
-    files with media extensions. Files are mapped to the same relative site
-    paths; conflicting versions are preserved in legacy-repositories/.
+    This imports HTML/CSS/JS and all bundled media. The raw repo tree is
+    enumerated through GitHub's public tree API. Conflicting paths are archived,
+    never silently discarded or used to overwrite the live site.
     """
-    try:
-        tree_data = json.loads(download(SOURCE_TREE_API).decode("utf-8"))
-    except Exception as exc:
-        report["errors"].append({"source": "cobrinha-frutris-source-tree", "url": SOURCE_TREE_API, "error": str(exc)})
-        print("[legacy-media] game source tree unavailable: %s" % exc)
-        return
-    tree = tree_data.get("tree", [])
-    if tree_data.get("truncated"):
-        report["errors"].append({
-            "source": "cobrinha-frutris-source-tree",
-            "error": "GitHub tree API returned a truncated tree"
-        })
-    for label, prefix in SOURCE_TREE_PREFIXES:
+    for label, repository, prefix in SOURCE_TREE_PREFIXES:
+        tree_api = "https://api.github.com/repos/%s/git/trees/main?recursive=1" % repository
+        raw_root = "https://raw.githubusercontent.com/%s/main/" % repository
+        try:
+            tree_data = json.loads(download(tree_api).decode("utf-8"))
+        except Exception as exc:
+            report["errors"].append({"source": label, "url": tree_api, "error": str(exc)})
+            print("[legacy-media] source tree unavailable: %s: %s" % (label, exc))
+            continue
+        tree = tree_data.get("tree", [])
+        if tree_data.get("truncated"):
+            report["errors"].append({
+                "source": label,
+                "error": "GitHub tree API returned a truncated tree"
+            })
         selected = [item for item in tree if item.get("type") == "blob" and item.get("path", "").startswith(prefix)]
         copied = 0
         for item in selected:
@@ -219,17 +220,19 @@ def import_complete_game_source_trees():
             if not parts:
                 report["errors"].append({"source": label, "file": source_path, "error": "unsafe relative path"})
                 continue
-            url = SOURCE_TREE_RAW + source_path
+            url = raw_root + source_path
             try:
                 data = download(url)
                 target = SITE / Path(*parts)
-                preserve_file(data, label, source_path, target, "complete-game-source-file")
+                preserve_file(data, label, source_path, target, "complete-source-tree-file")
                 copied += 1
             except Exception as exc:
                 report["errors"].append({"source": label, "file": source_path, "url": url, "error": str(exc)})
-                print("[legacy-media] source module file unavailable: %s: %s" % (source_path, exc))
+                print("[legacy-media] source tree file unavailable: %s: %s" % (source_path, exc))
         report["sources"].append({
             "source": label,
+            "repository": repository,
+            "sourceTreePrefix": prefix,
             "kind": "complete-assets-www-source-tree",
             "filesFound": len(selected),
             "filesDownloaded": copied

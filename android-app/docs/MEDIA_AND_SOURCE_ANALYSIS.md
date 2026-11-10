@@ -81,3 +81,13 @@ The media importer also downloads every file under the separate Android modules'
 - `android/apps/frutris/src/main/assets/www/`
 
 This copies their full HTML/CSS/JavaScript and shared scripts (including game engines, render/input/state modules, game audio logic, ghost-touch and app-theme), plus every image/audio/font/video file present in those source trees. Paths are mapped into `assets/site/`. If a live-site path already exists with different bytes, the alternate source version is retained under `assets/media/legacy-repositories/` instead of overwriting the canonical live asset. The complete module tree remains available for review in that legacy archive.
+
+
+## Importação integral das árvores web antigas
+
+Além de extrair mídia dos APKs, o build percorre e importa todos os arquivos sob:
+- `768ull/Algorithomus-App/app/src/main/assets/www/` (snapshot completo do simulador v1.9);
+- `768ull/https-algorithomus.com.br-/android/apps/cobrinha/src/main/assets/www/`;
+- `768ull/https-algorithomus.com.br-/android/apps/frutris/src/main/assets/www/`.
+
+Essas árvores contêm arquivos executáveis e de interface, não apenas mídia. O importador guarda HTML, CSS, JavaScript, JSON, SVG, imagens, áudio, fontes e outros arquivos exatamente como baixados. Os arquivos são mapeados para seus caminhos relativos sob `assets/site/`; versões conflitantes são guardadas sob `assets/media/legacy-repositories/`. Duplicatas idênticas são registradas sem multiplicar cópias; nenhum recurso visualmente parecido é eliminado por heurística.

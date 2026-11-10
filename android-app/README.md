@@ -63,3 +63,6 @@ Ao sair do aplicativo, a Activity nativa suspende o motor de som, pausa áudio e
 
 
 The media import stage also pulls the **entire** `assets/www/` source trees of the separate Cobrinha and Frutris modules from `768ull/https-algorithomus.com.br-`, including their HTML/CSS/JS game code and shared assets. Conflicting historical versions are preserved instead of replacing the current site files.
+
+
+A importação de versões antigas inclui agora também a árvore web v1.9 inteira de `Algorithomus-App`, além dos módulos completos `assets/www` de Cobrinha e Frutris. Assim, HTML/CSS/JavaScript e os respectivos recursos são preservados junto com imagens, áudio, vídeo e fontes.
