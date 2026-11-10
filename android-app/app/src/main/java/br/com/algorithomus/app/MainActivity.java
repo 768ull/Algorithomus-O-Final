@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.res.AssetManager;
+import android.content.res.AssetFileDescriptor;
 import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.net.NetworkCapabilities;
@@ -28,9 +29,13 @@ import android.webkit.RenderProcessGoneDetail;
 import androidx.webkit.WebViewAssetLoader;
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
+import java.io.FilterInputStream;
+import java.io.IOException;
 import java.net.URLDecoder;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * Activity Android nativa que hospeda o simulador Algorithomus.
@@ -401,16 +406,16 @@ public class MainActivity extends Activity {
             // Ela é compatível com o site atual e expõe suspend/resume nativos.
             if ("GET".equalsIgnoreCase(request.getMethod())
                     && "/js/sound.js".equals(request.getUrl().getPath())) {
-                return serveLocal(url);
+                return serveLocal(url, request.getRequestHeaders());
             }
             String relativePath = sitePathOf(url);
             if (isBundledMediaPath(relativePath) && assetExists("site/" + relativePath)) {
                 // Usa os bytes originais incluídos no APK para imagens, áudios,
                 // vídeos e fontes também quando o servidor está acessível.
-                return serveLocal(url);
+                return serveLocal(url, request.getRequestHeaders());
             }
             if (offlineMode) {
-                return serveLocal(url);
+                return serveLocal(url, request.getRequestHeaders());
             }
             return null;
         }
@@ -507,25 +512,130 @@ public class MainActivity extends Activity {
     }
 
     /** Responde uma URL do site original com o arquivo local embutido no APK. */
-    private WebResourceResponse serveLocal(String url) {
+    private WebResourceResponse serveLocal(String url, Map<String, String> requestHeaders) {
         String path = sitePathOf(url);
         if (path.isEmpty()) {
             return new WebResourceResponse("text/plain", "utf-8",
                     new ByteArrayInputStream(new byte[0]));
         }
         AssetManager assets = getAssets();
+        String assetPath = "site/" + path;
+        String rangeHeader = null;
+        if (requestHeaders != null) {
+            for (Map.Entry<String, String> entry : requestHeaders.entrySet()) {
+                if ("range".equalsIgnoreCase(entry.getKey())) {
+                    rangeHeader = entry.getValue();
+                    break;
+                }
+            }
+        }
+
+        // Audio/vídeo sem compressão no APK permitem abrir um descritor e
+        // responder a pedidos Range, necessários para seek e streaming local.
+        if (rangeHeader != null && isRangeMediaPath(path)) {
+            try {
+                AssetFileDescriptor afd = assets.openFd(assetPath);
+                long totalLength = afd.getLength();
+                long[] byteRange = parseByteRange(rangeHeader, totalLength);
+                if (byteRange != null) {
+                    InputStream base = afd.createInputStream();
+                    skipExactly(base, byteRange[0]);
+                    final long[] remaining = new long[] { byteRange[1] - byteRange[0] + 1 };
+                    InputStream limited = new FilterInputStream(base) {
+                        @Override
+                        public int read() throws IOException {
+                            if (remaining[0] <= 0) return -1;
+                            int value = super.read();
+                            if (value >= 0) remaining[0]--;
+                            return value;
+                        }
+
+                        @Override
+                        public int read(byte[] buffer, int offset, int length) throws IOException {
+                            if (remaining[0] <= 0) return -1;
+                            int allowed = (int) Math.min((long) length, remaining[0]);
+                            int count = super.read(buffer, offset, allowed);
+                            if (count > 0) remaining[0] -= count;
+                            return count;
+                        }
+                    };
+                    Map<String, String> headers = new HashMap<>();
+                    headers.put("Access-Control-Allow-Origin", "*");
+                    headers.put("Accept-Ranges", "bytes");
+                    headers.put("Content-Length", String.valueOf(remaining[0]));
+                    headers.put("Content-Range", "bytes " + byteRange[0] + "-"
+                            + byteRange[1] + "/" + totalLength);
+                    return new WebResourceResponse(mimeFor(path), null, 206,
+                            "Partial Content", headers, limited);
+                }
+                afd.close();
+            } catch (Exception ignored) {
+                // Se o asset não estiver armazenado sem compressão, usa o
+                // fluxo padrão. O APK configura noCompress para os formatos
+                // de mídia suportados.
+            }
+        }
+
         try {
-            InputStream stream = assets.open("site/" + path);
+            InputStream stream = assets.open(assetPath);
             Map<String, String> headers = new HashMap<>();
             headers.put("Access-Control-Allow-Origin", "*");
+            if (isRangeMediaPath(path)) headers.put("Accept-Ranges", "bytes");
             return new WebResourceResponse(mimeFor(path), null, 200, "OK", headers, stream);
         } catch (Exception e) {
-            // Arquivo inexistente na copia local: resposta 404 limpa, sem
-            // tocar a rede (que esta offline de qualquer forma).
             Map<String, String> headers = new HashMap<>();
             headers.put("Access-Control-Allow-Origin", "*");
             InputStream empty = new ByteArrayInputStream(new byte[0]);
             return new WebResourceResponse("text/plain", "utf-8", 404, "Not Found", headers, empty);
+        }
+    }
+
+    private boolean isRangeMediaPath(String path) {
+        if (path == null) return false;
+        String p = path.toLowerCase();
+        return p.endsWith(".mp3") || p.endsWith(".ogg") || p.endsWith(".oga")
+                || p.endsWith(".wav") || p.endsWith(".m4a") || p.endsWith(".aac")
+                || p.endsWith(".flac") || p.endsWith(".opus") || p.endsWith(".mid")
+                || p.endsWith(".midi") || p.endsWith(".mp4") || p.endsWith(".webm")
+                || p.endsWith(".m4v") || p.endsWith(".mov") || p.endsWith(".3gp");
+    }
+
+    private long[] parseByteRange(String header, long totalLength) {
+        if (header == null || totalLength <= 0) return null;
+        Matcher matcher = Pattern.compile("^bytes=(\\d*)-(\\d*)$").matcher(header.trim());
+        if (!matcher.matches()) return null;
+        try {
+            String startText = matcher.group(1);
+            String endText = matcher.group(2);
+            long start;
+            long end;
+            if (startText.isEmpty()) {
+                long suffixLength = Long.parseLong(endText);
+                if (suffixLength <= 0) return null;
+                start = Math.max(0, totalLength - suffixLength);
+                end = totalLength - 1;
+            } else {
+                start = Long.parseLong(startText);
+                end = endText.isEmpty() ? totalLength - 1
+                        : Math.min(Long.parseLong(endText), totalLength - 1);
+            }
+            if (start < 0 || start >= totalLength || end < start) return null;
+            return new long[] { start, end };
+        } catch (NumberFormatException e) {
+            return null;
+        }
+    }
+
+    private void skipExactly(InputStream stream, long count) throws IOException {
+        long remaining = count;
+        while (remaining > 0) {
+            long skipped = stream.skip(remaining);
+            if (skipped > 0) {
+                remaining -= skipped;
+            } else {
+                if (stream.read() < 0) throw new IOException("Unexpected end of media asset");
+                remaining--;
+            }
         }
     }
 

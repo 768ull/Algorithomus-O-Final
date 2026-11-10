@@ -20,6 +20,17 @@ android {
         buildConfigField("String", "OFFLINE_ASSET_URL", "\"https://appassets.androidplatform.net/assets/offline/index.html\"")
     }
 
+    androidResources {
+        // Keep original media bytes un-reencoded and support AssetFileDescriptor
+        // + HTTP Range responses for local audio/video playback and seeking.
+        noCompress += setOf(
+            "png", "webp", "jpg", "jpeg", "gif", "svg", "ico", "bmp", "avif",
+            "mp3", "ogg", "oga", "wav", "m4a", "aac", "flac", "opus", "mid", "midi",
+            "mp4", "webm", "m4v", "mov", "3gp",
+            "woff", "woff2", "ttf", "otf"
+        )
+    }
+
     buildFeatures {
         buildConfig = true
     }
