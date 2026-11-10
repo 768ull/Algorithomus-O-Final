@@ -217,7 +217,7 @@ def main():
     os.makedirs(os.path.dirname(REPORT), exist_ok=True)
     with open(REPORT, "w", encoding="utf-8") as handle:
         json.dump(report, handle, ensure_ascii=False, indent=2)
-        handle.write("\\n")
+        handle.write("\n")
     print("[spider] concluido: %d paginas/texto, %d midias baixadas nesta execucao" % (pages, media))
     print("[spider] EMBUTIDOS NO APK: %d audios, %d videos, %d imagens, %d outros, %d arquivos totais"
           % (counts["audio"], counts["video"], counts["imagem"], counts["outro"], total_files))
