@@ -16,6 +16,7 @@ import sys
 import time
 import urllib.request
 import zipfile
+from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path, PurePosixPath
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -40,25 +41,12 @@ SOURCES = [
     ("cobrinha-apk",
      "https://raw.githubusercontent.com/768ull/https-algorithomus.com.br-/main/originals/apk/Cobrinha.apk"),
     ("frutris-apk",
-     "https://raw.githubusercontent.com/768ull/https-algorithomus.com.br-/main/originals/apk/Frutris.apk"),
-    ("algorithomus-webapk-reference",
-     "https://raw.githubusercontent.com/768ull/https-algorithomus.com.br-/main/Algorithomus.apk")
+     "https://raw.githubusercontent.com/768ull/https-algorithomus.com.br-/main/originals/apk/Frutris.apk")
 ]
 SOURCE_TREE_PREFIXES = [
     ("algorithomus-app-v1.9-web-tree", "768ull/Algorithomus-App", "app/src/main/assets/www/"),
     ("cobrinha-full-web-module", "768ull/https-algorithomus.com.br-", "android/apps/cobrinha/src/main/assets/www/"),
     ("frutris-full-web-module", "768ull/https-algorithomus.com.br-", "android/apps/frutris/src/main/assets/www/")
-]
-SOURCE_MEDIA = [
-    ("cobrinha-source-game-image",
-     "https://raw.githubusercontent.com/768ull/https-algorithomus.com.br-/main/android/apps/cobrinha/src/main/assets/www/apps/cobrinha/game.webp",
-     "apps/cobrinha/game.webp"),
-    ("cobrinha-source-icon",
-     "https://raw.githubusercontent.com/768ull/https-algorithomus.com.br-/main/android/apps/cobrinha/src/main/assets/www/assets/img/Icones/cobrinha.webp",
-     "assets/img/Icones/cobrinha.webp"),
-    ("frutris-source-icon",
-     "https://raw.githubusercontent.com/768ull/https-algorithomus.com.br-/main/android/apps/frutris/src/main/assets/www/assets/img/Icones/tetris.webp",
-     "assets/img/Icones/tetris.webp")
 ]
 report = {"schemaVersion": 1, "sources": [], "media": [], "errors": []}
 
@@ -73,14 +61,15 @@ def safe_parts(name: str):
 
 def download(url: str) -> bytes:
     last = None
-    for attempt in range(3):
+    for attempt in range(2):
         try:
             req = urllib.request.Request(url, headers={"User-Agent": UA})
-            with urllib.request.urlopen(req, timeout=120) as response:
+            with urllib.request.urlopen(req, timeout=60) as response:
                 return response.read()
         except Exception as exc:
             last = exc
-            time.sleep(1 + attempt)
+            if attempt == 0:
+                time.sleep(1)
     raise last
 
 def is_drawable_resource(name: str) -> bool:
@@ -192,43 +181,45 @@ def process_download(source: str, url: str):
 def import_complete_game_source_trees():
     """Import every file from all historical site/game assets/www source trees.
 
-    This imports HTML/CSS/JS and all bundled media. The raw repo tree is
-    enumerated through GitHub's public tree API. Conflicting paths are archived,
-    never silently discarded or used to overwrite the live site.
+    Downloads the small HTML/CSS/JS/media trees concurrently. Original bytes
+    are copied as-is; collisions are archived and never silently overwritten.
     """
     for label, repository, prefix in SOURCE_TREE_PREFIXES:
         tree_api = "https://api.github.com/repos/%s/git/trees/main?recursive=1" % repository
         raw_root = "https://raw.githubusercontent.com/%s/main/" % repository
+        print("[legacy-media] listing source tree: %s" % label, flush=True)
         try:
             tree_data = json.loads(download(tree_api).decode("utf-8"))
         except Exception as exc:
             report["errors"].append({"source": label, "url": tree_api, "error": str(exc)})
-            print("[legacy-media] source tree unavailable: %s: %s" % (label, exc))
+            print("[legacy-media] source tree unavailable: %s: %s" % (label, exc), flush=True)
             continue
         tree = tree_data.get("tree", [])
         if tree_data.get("truncated"):
-            report["errors"].append({
-                "source": label,
-                "error": "GitHub tree API returned a truncated tree"
-            })
+            report["errors"].append({"source": label, "error": "GitHub tree API returned a truncated tree"})
         selected = [item for item in tree if item.get("type") == "blob" and item.get("path", "").startswith(prefix)]
-        copied = 0
-        for item in selected:
-            source_path = item["path"]
-            relative = source_path[len(prefix):]
-            parts = safe_parts(relative)
-            if not parts:
-                report["errors"].append({"source": label, "file": source_path, "error": "unsafe relative path"})
-                continue
-            url = raw_root + source_path
-            try:
-                data = download(url)
-                target = SITE / Path(*parts)
-                preserve_file(data, label, source_path, target, "complete-source-tree-file")
-                copied += 1
-            except Exception as exc:
-                report["errors"].append({"source": label, "file": source_path, "url": url, "error": str(exc)})
-                print("[legacy-media] source tree file unavailable: %s: %s" % (source_path, exc))
+        tasks = []
+        with ThreadPoolExecutor(max_workers=8) as pool:
+            for item in selected:
+                source_path = item["path"]
+                relative = source_path[len(prefix):]
+                if not safe_parts(relative):
+                    report["errors"].append({"source": label, "file": source_path, "error": "unsafe relative path"})
+                    continue
+                url = raw_root + source_path
+                tasks.append((item, pool.submit(download, url), url))
+            copied = 0
+            for item, future, url in tasks:
+                source_path = item["path"]
+                relative = source_path[len(prefix):]
+                try:
+                    data = future.result()
+                    target = SITE / Path(*safe_parts(relative))
+                    preserve_file(data, label, source_path, target, "complete-source-tree-file")
+                    copied += 1
+                except Exception as exc:
+                    report["errors"].append({"source": label, "file": source_path, "url": url, "error": str(exc)})
+                    print("[legacy-media] source file unavailable: %s: %s" % (source_path, exc), flush=True)
         report["sources"].append({
             "source": label,
             "repository": repository,
@@ -237,24 +228,14 @@ def import_complete_game_source_trees():
             "filesFound": len(selected),
             "filesDownloaded": copied
         })
-        print("[legacy-media] %s: %d/%d files imported" % (label, copied, len(selected)))
-
-def import_source_media():
-    for label, url, website_path in SOURCE_MEDIA:
-        try:
-            data = download(url)
-            target = SITE / Path(*safe_parts(website_path))
-            preserve_file(data, label, website_path, target, "source-repository-media")
-        except Exception as exc:
-            report["errors"].append({"source": label, "url": url, "error": str(exc)})
-            print("[legacy-media] source media unavailable: %s: %s" % (label, exc))
+        print("[legacy-media] %s: %d/%d files imported" % (label, copied, len(selected)), flush=True)
 
 def main():
     TEMP.mkdir(parents=True, exist_ok=True)
     for source, url in SOURCES:
+        print("[legacy-media] importing archive source: %s" % source, flush=True)
         process_download(source, url)
     import_complete_game_source_trees()
-    import_source_media()
     CONFIG.mkdir(parents=True, exist_ok=True)
     report["summary"] = {
         "mediaEntryRecords": len(report["media"]),
