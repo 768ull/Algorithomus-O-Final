@@ -199,9 +199,14 @@ public class MainActivity extends Activity {
         if (Build.VERSION.SDK_INT >= 23) {
             NetworkCapabilities capabilities =
                     manager.getNetworkCapabilities(manager.getActiveNetwork());
+            // A rede local pode alcançar um servidor privado sem validacao de
+            // internet publica. Tente a origem oficial em Wi-Fi/Ethernet ativo;
+            // onReceivedError ativa o snapshot local se o host nao responder.
             return capabilities != null
-                    && capabilities.hasCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET)
-                    && capabilities.hasCapability(NetworkCapabilities.NET_CAPABILITY_VALIDATED);
+                    && (capabilities.hasCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET)
+                        || capabilities.hasTransport(NetworkCapabilities.TRANSPORT_WIFI)
+                        || capabilities.hasTransport(NetworkCapabilities.TRANSPORT_ETHERNET)
+                        || capabilities.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR));
         }
         return manager.getActiveNetworkInfo() != null
                 && manager.getActiveNetworkInfo().isConnectedOrConnecting();
