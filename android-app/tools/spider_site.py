@@ -35,7 +35,7 @@ IMG_EXTS = (".webp", ".png", ".jpg", ".jpeg", ".gif", ".svg", ".ico")
 # Midia que o jogo so baixa quando o aparelho nao suporta OGG. O WebView
 # do Android suporta Vorbis e Opus nativamente, portanto esses arquivos
 # nunca sao usados no aplicativo e sao ignorados para manter o APK leve.
-SKIP = ("audio-fallback/",)
+SKIP = ()  # Nenhuma mídia é excluída: fallback de áudio também vai para o APK.
 
 
 def normalize(url, base):
@@ -56,8 +56,6 @@ def normalize(url, base):
     if any(part in (".", "..") for part in decoded_path.split("/")):
         return None
     path = urllib.parse.quote(p.path, safe="/%")
-    if any(s in path for s in SKIP):
-        return None
     return urllib.parse.urlunsplit(("https", "algorithomus.com.br",
                                      path, p.query, ""))
 
@@ -95,8 +93,32 @@ def fetch(absu):
 def save(absu, data):
     lp = local_path(absu)
     os.makedirs(os.path.dirname(lp), exist_ok=True)
+    digest = hashlib.sha256(data).hexdigest()
+    if os.path.exists(lp):
+        previous = open(lp, "rb").read()
+        previous_hash = hashlib.sha256(previous).hexdigest()
+        if previous_hash == digest:
+            return lp
+        # Quando o servidor publica uma versão nova de uma mídia, arquiva
+        # os bytes anteriores e mantém o caminho canônico apontando para a
+        # versão atual. Arquivos de código/texto seguem a versão atual do site.
+        if os.path.splitext(lp)[1].lower() in (
+            ".png", ".webp", ".jpg", ".jpeg", ".gif", ".svg", ".ico", ".bmp", ".avif",
+            ".mp3", ".ogg", ".oga", ".wav", ".m4a", ".aac", ".flac", ".opus", ".mid", ".midi",
+            ".mp4", ".webm", ".m4v", ".mov", ".3gp", ".woff", ".woff2", ".ttf", ".otf"
+        ):
+            rel = os.path.relpath(lp, DEST)
+            archive = os.path.join(os.path.dirname(DEST), "media", "legacy-site-variants", rel)
+            os.makedirs(os.path.dirname(archive), exist_ok=True)
+            if os.path.exists(archive) and hashlib.sha256(open(archive, "rb").read()).hexdigest() != previous_hash:
+                stem, ext = os.path.splitext(archive)
+                archive = stem + ".sha-" + previous_hash[:10] + ext
+            if not os.path.exists(archive):
+                with open(archive, "wb") as backup:
+                    backup.write(previous)
     with open(lp, "wb") as handle:
         handle.write(data)
+    return lp
 
 
 ATTR_RE = re.compile(
@@ -169,7 +191,7 @@ def main():
                 print("[spider] falha (ignorada): %s -> %s" % (safe_url, exc))
                 continue
             try:
-                save(url, data)
+                saved_path = save(url, data)
             except Exception as exc:
                 parts = urllib.parse.urlsplit(url)
                 safe_url = urllib.parse.urlunsplit((parts.scheme, parts.netloc, parts.path, "", ""))
@@ -178,7 +200,7 @@ def main():
                 continue
             path = urllib.parse.urlsplit(url).path.lower()
             ext = os.path.splitext(path)[1]
-            local_file = local_path(url)
+            local_file = saved_path
             parts = urllib.parse.urlsplit(url)
             safe_url = urllib.parse.urlunsplit((parts.scheme, parts.netloc, parts.path, "", ""))
             downloaded.append({

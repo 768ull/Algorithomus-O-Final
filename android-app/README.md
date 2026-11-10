@@ -43,3 +43,20 @@ O identificador permanente do aplicativo é `br.com.algorithomus.app`. Não o al
 A chave de release ainda não foi criada. Use `scripts/create-keystore.sh` localmente uma única vez e mantenha a keystore e suas senhas em cópias seguras fora do repositório. Configure os segredos listados em [signing/README.md](signing/README.md) antes de executar o workflow manual de release.
 
 Não publique uma keystore nem senhas neste repositório ou nesta conversa. Todas as atualizações futuras precisam ser assinadas com a mesma chave de release.
+
+
+## Biblioteca completa de mídia
+
+Antes de cada APK de depuração, o workflow:
+1. espelha os recursos atuais do servidor oficial;
+2. extrai todas as imagens JPEG do PDF fornecido;
+3. baixa os APKs públicos anteriores de Algorithomus, Cobrinha e Frutris e extrai somente mídia;
+4. preenche os caminhos ausentes sem sobrescrever o snapshot atual;
+5. calcula hashes e candidatos de duplicata sem excluir arquivos;
+6. verifica dentro do APK final todos os arquivos listados no inventário.
+
+Nenhum áudio ou imagem é convertido de formato. O APK preserva OGG/MP3 e PNG/WebP/JPEG/SVG originais. O inventário está em \`app/src/main/assets/config/media-library-manifest.json\`.
+
+## Pausa e retomada do jogo
+
+Ao sair do aplicativo, a Activity nativa suspende o motor de som, pausa áudio e vídeo inclusive nos iframes, e só então congela os timers do WebView. Ao voltar, retoma o estado existente sem recarregar a página. O script nativo usa uma cópia local e compatível de \`js/sound.js\` também quando o jogo está conectado ao servidor oficial.

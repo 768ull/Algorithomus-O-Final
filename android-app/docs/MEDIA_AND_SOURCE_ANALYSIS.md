@@ -49,3 +49,26 @@ O APK novo incorpora os arquivos estáticos em `assets/site/`, mas o cliente Web
 O APK híbrido antigo usa `applicationId=br.com.algorithomus.app`. Para manter esta nova versão independente e instalável ao lado da versão anterior, o módulo novo usa `applicationId=br.com.algorithomus.mobile`, mantendo o namespace/código Java interno separado. Essa identidade deve permanecer fixa nas atualizações deste novo APK.
 
 A keystore histórica não foi recuperada. A identidade de assinatura do APK v1.9 não prova que a chave privada esteja disponível. O novo app precisa de uma keystore própria, protegida fora do GitHub.
+
+
+## Exhaustive media extraction from previous repositories
+
+The build now imports media from the public archive sources in:
+- \`768ull/Algorithomus\`: previous hybrid APK and the V1/V2/V3/V4 ZIP archive (only embedded APK media is extracted; keystores, keys and signature sidecars are never copied).
+- \`768ull/https-algorithomus.com.br-\`: Cobrinha and Frutris APKs, plus their three source-repository WebP assets.
+- \`768ull/Algorithomus-App\`: prior Java/HTML/CSS/JS snapshot and media URL manifest already retained as source reference.
+- The supplied PDF: all embedded JPEG images are extracted without recompression.
+
+The importer only copies media entries. For the main hybrid APK, media from \`assets/www/\` fills missing paths under \`assets/site/\`; an existing live-site file is never overwritten. If a same-path file has different bytes, the legacy version is stored under \`assets/media/legacy-repositories/\`. Other APK drawable/media resources are stored under \`assets/media/legacy-apks/\`.
+
+## Media format and duplicate policy
+
+No conversion or recompression is applied to the original PNG, WebP, JPEG, SVG, OGG, MP3, WAV, MP4/WebM, or font files. The \`config/media-library-manifest.json\` inventory lists the original path, extension, MIME type, byte length and SHA-256.
+
+Exact duplicates and perceptual near-duplicate candidates (8x8 average hash distance <= 2) are reported, never deleted. The PDF's 39 JPEGs remain included even when their artwork resembles an older website/APK asset. The two known visually similar page pairs from the supplied PDF are pages 8/9 (settings icon) and pages 11/12 (calculator icon); they are different JPEG files and both are retained.
+
+## Audio lifecycle behavior
+
+The native Activity calls the patched local \`/js/sound.js\` in online and offline mode. On Android \`onPause\`, it first invokes \`sound.suspendNative()\`, pauses every audio/video element across same-origin frames, and suspends the audio context. It then waits for JavaScript completion before pausing the WebView and its timers. On return, timers are resumed, the page is made visible again, previous media positions are resumed and the current game state is not reloaded.
+
+The final CI step inspects the generated APK ZIP and fails if any file in the media inventory is absent from the package.

@@ -9,6 +9,8 @@ import android.net.ConnectivityManager;
 import android.net.NetworkCapabilities;
 import android.net.Uri;
 import android.os.Build;
+import android.os.Handler;
+import android.os.Looper;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
@@ -80,50 +82,55 @@ public class MainActivity extends Activity {
      * antes de o aplicativo ir ao fundo, e (4) repassa o foco as molduras
      * internas (iframes) usadas pelos aplicativos do jogo.
      */
+    /**
+     * Retoma o som somente depois que o WebView voltou ao primeiro plano.
+     * O mesmo comando percorre os iframes do simulador (todos same-origin).
+     */
     private static final String RESUME_NUDGE_JS =
-            "(function(){try{"
-                    + "try{Object.defineProperty(document,'visibilityState',"
-                    + "{get:function(){return 'visible'},configurable:true});}catch(e){}"
-                    + "try{Object.defineProperty(document,'hidden',"
-                    + "{get:function(){return false},configurable:true});}catch(e){}"
-                    + "try{Object.defineProperty(document,'webkitVisibilityState',"
-                    + "{get:function(){return 'visible'},configurable:true});}catch(e){}"
-                    + "try{Object.defineProperty(document,'webkitHidden',"
-                    + "{get:function(){return false},configurable:true});}catch(e){}"
-                    + "document.dispatchEvent(new Event('visibilitychange'));"
-                    + "window.dispatchEvent(new Event('focus'));"
-                    + "window.dispatchEvent(new Event('pageshow'));"
-                    + "try{for(var k in window){try{var v=window[k];"
-                    + "if(v&&v.state==='suspended'&&typeof v.resume==='function'){v.resume();}}catch(e2){}}}catch(e){}"
-                    + "try{var fs=document.querySelectorAll('iframe');"
-                    + "for(var i=0;i<fs.length;i++){try{fs[i].contentWindow.dispatchEvent(new Event('focus'));"
-                    + "fs[i].contentWindow.dispatchEvent(new Event('pageshow'));}catch(e3){}}}catch(e){}"
-                    + "try{var els=document.querySelectorAll('audio,video');"
-                    + "for(var j=0;j<els.length;j++){try{var m=els[j];"
-                    + "if(m.dataset&&m.dataset.algoPlaying==='1'){"
-                    + "try{delete m.dataset.algoPlaying;}catch(e4){}"
-                    + "var p=m.play();if(p&&p.catch){p.catch(function(){});}}}catch(e5){}}}catch(e){}"
-                    + "}catch(e0){}})();";
+            "(function(){"
+            + "function visit(w,depth){if(!w||depth>8)return;var d;"
+            + "try{d=w.document;}catch(e){return;}"
+            + "try{if(d){"
+            + "try{Object.defineProperty(d,'visibilityState',{get:function(){return 'visible'},configurable:true});}catch(e1){}"
+            + "try{Object.defineProperty(d,'hidden',{get:function(){return false},configurable:true});}catch(e2){}"
+            + "try{Object.defineProperty(d,'webkitVisibilityState',{get:function(){return 'visible'},configurable:true});}catch(e3){}"
+            + "try{Object.defineProperty(d,'webkitHidden',{get:function(){return false},configurable:true});}catch(e4){}"
+            + "} }catch(e){}"
+            + "try{w.__algoNativePaused=false;}catch(e){}"
+            + "try{if(w.sound&&typeof w.sound.resumeNative==='function')w.sound.resumeNative();}catch(e){}"
+            + "try{w.dispatchEvent(new Event('visibilitychange'));w.dispatchEvent(new Event('focus'));w.dispatchEvent(new Event('pageshow'));}catch(e){}"
+            + "try{if(d){var els=d.querySelectorAll('audio,video');for(var i=0;i<els.length;i++){try{var m=els[i];"
+            + "if(m.getAttribute('data-algo-native-playing')==='1'){m.removeAttribute('data-algo-native-playing');"
+            + "if(m.paused&&!m.ended){var p=m.play();if(p&&p.catch)p.catch(function(){});}}}catch(e5){}}}}catch(e){}"
+            + "try{for(var f=0;f<w.frames.length;f++)visit(w.frames[f],depth+1);}catch(e){}"
+            + "}"
+            + "visit(window,0);"
+            + "})();";
 
     /**
-     * Silencio ao sair do aplicativo: pausa todos os elementos de audio e
-     * video da pagina (marcando os que estavam tocando, para retoma-los ao
-     * voltar) e suspende os contextos de audio. Com isso, nenhum som do
-     * jogo continua tocando enquanto o usuario esta fora do aplicativo.
+     * Pausa os elementos HTMLMedia e suspende o AudioContext privado de sound.js.
+     * Marca a posicao dos sons em execucao para que possam continuar de onde
+     * pararam quando o aplicativo voltar ao primeiro plano.
      */
     private static final String PAUSE_NUDGE_JS =
-            "(function(){try{"
-                    + "try{var els=document.querySelectorAll('audio,video');"
-                    + "for(var i=0;i<els.length;i++){try{var m=els[i];"
-                    + "if(!m.paused&&!m.ended){try{m.dataset.algoPlaying='1';}catch(e1){}}"
-                    + "m.pause();}catch(e2){}}}catch(e){}"
-                    + "try{for(var k in window){try{var v=window[k];"
-                    + "if(v&&v.state==='running'&&typeof v.suspend==='function'){v.suspend();}}catch(e3){}}}catch(e){}"
-                    + "window.dispatchEvent(new Event('blur'));"
-                    + "}catch(e0){}})();";
+            "(function(){"
+            + "function visit(w,depth){if(!w||depth>8)return;var d;"
+            + "try{d=w.document;}catch(e){return;}"
+            + "try{w.__algoNativePaused=true;}catch(e){}"
+            + "try{if(d){var els=d.querySelectorAll('audio,video');for(var i=0;i<els.length;i++){try{var m=els[i];"
+            + "if(!m.paused&&!m.ended)m.setAttribute('data-algo-native-playing','1');}catch(e1){}}}}catch(e){}"
+            + "try{if(w.sound&&typeof w.sound.suspendNative==='function')w.sound.suspendNative();}catch(e){}"
+            + "try{w.dispatchEvent(new Event('blur'));w.dispatchEvent(new Event('pagehide'));w.dispatchEvent(new Event('freeze'));}catch(e){}"
+            + "try{if(d){var all=d.querySelectorAll('audio,video');for(var j=0;j<all.length;j++){try{all[j].pause();}catch(e2){}}}}catch(e){}"
+            + "try{for(var f=0;f<w.frames.length;f++)visit(w.frames[f],depth+1);}catch(e){}"
+            + "}"
+            + "visit(window,0);"
+            + "})();";
 
     private WebView webView;
     private WebViewAssetLoader assetLoader;
+    private final Handler mainHandler = new Handler(Looper.getMainLooper());
+    private volatile boolean appInForeground = true;
 
     /** Verdadeiro quando o aparelho esta sem internet e o jogo roda local. */
     private boolean offlineMode = false;
@@ -294,28 +301,42 @@ public class MainActivity extends Activity {
     @Override
     protected void onResume() {
         super.onResume();
+        appInForeground = true;
         if (webView != null) {
             webView.onResume();
             webView.resumeTimers();
-            if (offlineMode && isOnline()) {
-                offlineMode = false;
-                webView.loadUrl(SITE_URL);
-            } else {
-                // Restaura visibilidade, foco e áudio ao retornar do segundo plano.
-                webView.evaluateJavascript(RESUME_NUDGE_JS, null);
-            }
+            // Não recarrega o site ao voltar: conserva a tela, o estado e a
+            // navegação do simulador que estavam abertos antes de sair.
+            webView.evaluateJavascript(RESUME_NUDGE_JS, null);
         }
         applyFullscreen();
     }
 
     @Override
     protected void onPause() {
-        if (webView != null) {
-            // Silencia o jogo e suspende o processamento ao sair: nenhum
-            // som ou temporizador continua ativo fora do aplicativo.
-            webView.evaluateJavascript(PAUSE_NUDGE_JS, null);
-            webView.onPause();
-            webView.pauseTimers();
+        appInForeground = false;
+        final WebView pausingView = webView;
+        if (pausingView != null) {
+            // Primeiro aguarda o JavaScript pausar HTMLMedia e AudioContext.
+            // Só depois congela o WebView e seus timers. O fallback cobre
+            // dispositivos nos quais o callback do renderer demora a chegar.
+            final boolean[] freezeDone = new boolean[] { false };
+            final Runnable freezeWebView = new Runnable() {
+                @Override
+                public void run() {
+                    if (freezeDone[0]) return;
+                    freezeDone[0] = true;
+                    if (!appInForeground && webView == pausingView) {
+                        pausingView.onPause();
+                        pausingView.pauseTimers();
+                    }
+                }
+            };
+            mainHandler.postDelayed(freezeWebView, 250);
+            pausingView.evaluateJavascript(PAUSE_NUDGE_JS, value -> {
+                mainHandler.removeCallbacks(freezeWebView);
+                freezeWebView.run();
+            });
         }
         super.onPause();
     }
@@ -374,6 +395,18 @@ public class MainActivity extends Activity {
             }
             if (!isSiteUrl(url)) {
                 return null;
+            }
+            // Usa a versão local do motor de áudio também no modo online.
+            // Ela é compatível com o site atual e expõe suspend/resume nativos.
+            if ("GET".equalsIgnoreCase(request.getMethod())
+                    && "/js/sound.js".equals(request.getUrl().getPath())) {
+                return serveLocal(url);
+            }
+            String relativePath = sitePathOf(url);
+            if (isBundledMediaPath(relativePath) && assetExists("site/" + relativePath)) {
+                // Usa os bytes originais incluídos no APK para imagens, áudios,
+                // vídeos e fontes também quando o servidor está acessível.
+                return serveLocal(url);
             }
             if (offlineMode) {
                 return serveLocal(url);
@@ -495,6 +528,21 @@ public class MainActivity extends Activity {
         }
     }
 
+    private boolean isBundledMediaPath(String path) {
+        if (path == null) return false;
+        String p = path.toLowerCase();
+        return p.endsWith(".png") || p.endsWith(".webp") || p.endsWith(".jpg")
+                || p.endsWith(".jpeg") || p.endsWith(".gif") || p.endsWith(".svg")
+                || p.endsWith(".ico") || p.endsWith(".bmp") || p.endsWith(".avif")
+                || p.endsWith(".mp3") || p.endsWith(".ogg") || p.endsWith(".oga")
+                || p.endsWith(".wav") || p.endsWith(".m4a") || p.endsWith(".aac")
+                || p.endsWith(".flac") || p.endsWith(".opus") || p.endsWith(".mid")
+                || p.endsWith(".midi") || p.endsWith(".mp4") || p.endsWith(".webm")
+                || p.endsWith(".m4v") || p.endsWith(".mov") || p.endsWith(".3gp")
+                || p.endsWith(".woff") || p.endsWith(".woff2") || p.endsWith(".ttf")
+                || p.endsWith(".otf");
+    }
+
     private String mimeFor(String path) {
         String p = path.toLowerCase();
         if (p.endsWith(".html")) return "text/html";
@@ -507,17 +555,23 @@ public class MainActivity extends Activity {
         if (p.endsWith(".jpg") || p.endsWith(".jpeg")) return "image/jpeg";
         if (p.endsWith(".gif")) return "image/gif";
         if (p.endsWith(".ico")) return "image/x-icon";
+        if (p.endsWith(".bmp")) return "image/bmp";
+        if (p.endsWith(".avif")) return "image/avif";
         if (p.endsWith(".mp3")) return "audio/mpeg";
-        if (p.endsWith(".ogg")) return "audio/ogg";
-        if (p.endsWith(".oga")) return "audio/ogg";
+        if (p.endsWith(".ogg") || p.endsWith(".oga")) return "audio/ogg";
+        if (p.endsWith(".opus")) return "audio/opus";
         if (p.endsWith(".wav")) return "audio/wav";
         if (p.endsWith(".m4a")) return "audio/mp4";
         if (p.endsWith(".aac")) return "audio/aac";
         if (p.endsWith(".flac")) return "audio/flac";
-        if (p.endsWith(".webm")) return "video/webm";
+        if (p.endsWith(".mid") || p.endsWith(".midi")) return "audio/midi";
         if (p.endsWith(".mp4")) return "video/mp4";
-        if (p.endsWith(".woff")) return "font/woff";
+        if (p.endsWith(".webm")) return "video/webm";
+        if (p.endsWith(".m4v")) return "video/x-m4v";
+        if (p.endsWith(".mov")) return "video/quicktime";
+        if (p.endsWith(".3gp")) return "video/3gpp";
         if (p.endsWith(".woff2")) return "font/woff2";
+        if (p.endsWith(".woff")) return "font/woff";
         if (p.endsWith(".ttf")) return "font/ttf";
         if (p.endsWith(".otf")) return "font/otf";
         if (p.endsWith(".vtt")) return "text/vtt";

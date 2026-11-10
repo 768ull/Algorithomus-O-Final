@@ -66,7 +66,7 @@ jobs:
           fi
 
       - name: Install PDF extraction tools
-        run: sudo apt-get update && sudo apt-get install -y poppler-utils
+        run: sudo apt-get update && sudo apt-get install -y poppler-utils python3-pil
 
       - name: Prepare offline site and bundled media
         run: bash android-app/tools/mirror_site.sh
@@ -86,6 +86,12 @@ jobs:
       - name: Build debug APK
         working-directory: android-app
         run: ./gradlew --no-daemon assembleDebug
+
+      - name: Verify all media are inside the APK
+        run: |
+          APK="$(find android-app/app/build/outputs/apk/debug -name '*.apk' -type f | head -n 1)"
+          test -n "$APK"
+          python3 android-app/tools/verify_apk_media.py "$APK"
 
       - name: Upload debug APK
         uses: actions/upload-artifact@v4

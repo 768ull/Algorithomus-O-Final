@@ -480,7 +480,28 @@
         });
     }
     if (!isForeground()) suspend();
+    function suspendNative() {
+        if (!suspended) suspend();
+        if (audioCtx && audioCtx.state !== "suspended" && audioCtx.suspend) {
+            try {
+                var stopped = audioCtx.suspend();
+                if (stopped && stopped.catch) stopped.catch(function() {});
+            } catch (err) {}
+        }
+    }
+    function resumeNative() {
+        if (!isForeground()) return;
+        if (audioCtx && audioCtx.state === "suspended" && audioCtx.resume) {
+            try {
+                var started = audioCtx.resume();
+                if (started && started.catch) started.catch(function() {});
+            } catch (err) {}
+        }
+        if (suspended) resume();
+    }
     global.sound = {
+        suspendNative,
+        resumeNative,
         setMaster: function(volume, muted) {
             phoneVolume = Math.max(0, Math.min(1, Number(volume) || 0));
             phoneMuted = !!muted;
