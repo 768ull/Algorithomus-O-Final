@@ -34,14 +34,10 @@ MEDIA_SUFFIXES = {
 DRAWABLE_DIRS = ("res/drawable", "res/mipmap", "res/raw", "res/font")
 UA = "Mozilla/5.0 (compatible; AlgorithomusMediaImporter/1.0)"
 SOURCES = [
-    ("algorithomus-hybrid-apk",
-     "https://raw.githubusercontent.com/768ull/Algorithomus/main/algorithomus_offline_hibrido_assinado.apk"),
-    ("algorithomus-v1-v2-v3-v4-archive",
-     "https://raw.githubusercontent.com/768ull/Algorithomus/main/algorithomus_assinado_V1_V2_V3_V4.zip"),
-    ("cobrinha-apk",
-     "https://raw.githubusercontent.com/768ull/https-algorithomus.com.br-/main/originals/apk/Cobrinha.apk"),
-    ("frutris-apk",
-     "https://raw.githubusercontent.com/768ull/https-algorithomus.com.br-/main/originals/apk/Frutris.apk")
+    ("algorithomus-hybrid-apk", "768ull/Algorithomus", "algorithomus_offline_hibrido_assinado.apk"),
+    ("algorithomus-v1-v2-v3-v4-archive", "768ull/Algorithomus", "algorithomus_assinado_V1_V2_V3_V4.zip"),
+    ("cobrinha-apk", "768ull/https-algorithomus.com.br-", "originals/apk/Cobrinha.apk"),
+    ("frutris-apk", "768ull/https-algorithomus.com.br-", "originals/apk/Frutris.apk")
 ]
 SOURCE_TREE_PREFIXES = [
     ("algorithomus-app-v1.9-web-tree", "768ull/Algorithomus-App", "app/src/main/assets/www/"),
@@ -59,18 +55,34 @@ def safe_parts(name: str):
         return None
     return p.parts
 
-def download(url: str) -> bytes:
+def download(url: str, accept: str = "application/vnd.github+json") -> bytes:
+    """Download private-repository content through the authenticated GitHub API."""
+    token = os.environ.get("LEGACY_REPOS_TOKEN", "").strip()
+    if not token:
+        raise RuntimeError("LEGACY_REPOS_TOKEN is not configured; add a fine-grained PAT with read access to the three private source repositories.")
     last = None
     for attempt in range(2):
         try:
-            req = urllib.request.Request(url, headers={"User-Agent": UA})
-            with urllib.request.urlopen(req, timeout=60) as response:
+            headers = {
+                "User-Agent": UA,
+                "Authorization": "Bearer " + token,
+                "Accept": accept,
+                "X-GitHub-Api-Version": "2022-11-28"
+            }
+            req = urllib.request.Request(url, headers=headers)
+            with urllib.request.urlopen(req, timeout=120) as response:
                 return response.read()
         except Exception as exc:
             last = exc
             if attempt == 0:
                 time.sleep(1)
     raise last
+
+
+def contents_api_url(repository: str, path: str) -> str:
+    from urllib.parse import quote
+    return "https://api.github.com/repos/%s/contents/%s?ref=main" % (
+        repository, quote(path, safe="/"))
 
 def is_drawable_resource(name: str) -> bool:
     n = name.lower()
@@ -150,24 +162,26 @@ def process_apk(data: bytes, source: str, apk_name: str):
         "mediaEntries": count
     })
 
-def process_download(source: str, url: str):
+def process_download(source: str, repository: str, path: str):
+    url = contents_api_url(repository, path)
     try:
-        data = download(url)
+        data = download(url, "application/vnd.github.raw")
     except Exception as exc:
-        report["errors"].append({"source": source, "url": url, "error": str(exc)})
-        print("[legacy-media] source unavailable: %s: %s" % (source, exc))
+        report["errors"].append({"source": source, "repository": repository, "path": path, "error": str(exc)})
+        print("[legacy-media] source unavailable: %s: %s" % (source, exc), flush=True)
         return
-    if url.lower().endswith(".apk"):
-        process_apk(data, source, url.rsplit("/", 1)[-1])
+    filename = path.rsplit("/", 1)[-1]
+    if path.lower().endswith(".apk"):
+        process_apk(data, source, filename)
         return
     try:
         outer = zipfile.ZipFile(io.BytesIO(data))
     except zipfile.BadZipFile:
-        report["errors"].append({"source": source, "url": url, "error": "ZIP archive was invalid"})
+        report["errors"].append({"source": source, "repository": repository, "path": path, "error": "ZIP archive was invalid"})
         return
     entries = [i for i in outer.infolist() if not i.is_dir()]
     report["sources"].append({
-        "source": source, "file": url.rsplit("/", 1)[-1], "kind": "ZIP",
+        "source": source, "repository": repository, "file": filename, "kind": "ZIP",
         "bytes": len(data), "sha256": sha(data),
         "entries": [i.filename for i in entries if i.filename.lower().endswith((".apk", ".idsig"))]
     })
@@ -206,8 +220,8 @@ def import_complete_game_source_trees():
                 if not safe_parts(relative):
                     report["errors"].append({"source": label, "file": source_path, "error": "unsafe relative path"})
                     continue
-                url = raw_root + source_path
-                tasks.append((item, pool.submit(download, url), url))
+                url = contents_api_url(repository, source_path)
+                tasks.append((item, pool.submit(download, url, "application/vnd.github.raw"), url))
             copied = 0
             for item, future, url in tasks:
                 source_path = item["path"]
@@ -232,9 +246,9 @@ def import_complete_game_source_trees():
 
 def main():
     TEMP.mkdir(parents=True, exist_ok=True)
-    for source, url in SOURCES:
+    for source, repository, path in SOURCES:
         print("[legacy-media] importing archive source: %s" % source, flush=True)
-        process_download(source, url)
+        process_download(source, repository, path)
     import_complete_game_source_trees()
     CONFIG.mkdir(parents=True, exist_ok=True)
     report["summary"] = {

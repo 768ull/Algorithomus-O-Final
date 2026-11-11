@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "status": "scaffold",
-  "description": "Local resource map for the Algorithomus Android package.",
+  "status": "partial-media-import",
+  "description": "Inventory of bundled media and offline resource roots. Legacy private APK imports require LEGACY_REPOS_TOKEN.",
   "officialSite": "https://algorithomus.com.br/",
   "bundledSiteEntry": "site/index.html",
   "mediaDirectories": [
@@ -15,7 +15,9 @@
     "media/secret/"
   ],
   "notes": [
-    "This manifest intentionally contains no invented game assets.",
-    "Populate resource paths only after the original game files have been inspected."
+    "Original media files are kept byte-for-byte; no image/audio/video is recompressed by the import process.",
+    "Exact duplicates are reported by SHA-256. Perceptual matches are candidates only and are never deleted automatically.",
+    "The current official-site snapshot contains images and audio but no videos; old private APK repositories must be read to recover additional media.",
+    "All inventoried files are verified inside the APK by android-app/tools/verify_apk_media.py."
   ]
 }

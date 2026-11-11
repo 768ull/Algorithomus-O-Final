@@ -69,6 +69,8 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y poppler-utils python3-pil
 
       - name: Prepare offline site and bundled media
+        env:
+          LEGACY_REPOS_TOKEN: ${{ secrets.LEGACY_REPOS_TOKEN }}
         run: bash android-app/tools/mirror_site.sh
 
       - name: Commit prepared offline assets
