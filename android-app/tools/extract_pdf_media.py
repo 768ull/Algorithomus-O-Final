@@ -66,7 +66,7 @@ def main():
         listing = run(["pdfimages", "-list", str(pdf)]).stdout
         rows = []
         for line in listing.splitlines():
-            match = re.match(r"^\\s*(\\d+)\\s+\\d+\\s+image\\s+(\\d+)\\s+(\\d+)", line)
+            match = re.match(r"^\s*(\d+)\s+\d+\s+image\s+(\d+)\s+(\d+)", line)
             if match:
                 rows.append({
                     "sourcePage": int(match.group(1)),
@@ -149,7 +149,7 @@ def main():
         "images": all_images
     }
     MANIFEST.parent.mkdir(parents=True, exist_ok=True)
-    MANIFEST.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
+    MANIFEST.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print("[pdf-media] PDFs=%d image entries=%d new unique files=%d exact duplicates=%d" % (
         len(pdfs), len(all_images), new_unique, duplicate_entries))
     return 0
