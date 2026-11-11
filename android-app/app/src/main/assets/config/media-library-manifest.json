@@ -1,0 +1,1479 @@
+{
+  "schemaVersion": 1,
+  "policy": "Original media files are not deleted, renamed, or re-encoded. Exact duplicates and perceptual candidates are recorded for review only.",
+  "counts": {
+    "totalMediaFiles": 123,
+    "images": 103,
+    "audio": 20,
+    "video": 0,
+    "fonts": 0,
+    "exactDuplicateGroups": 9,
+    "perceptualDuplicateCandidates": 48,
+    "pdfPerceptualDuplicatePairs": 2
+  },
+  "exactDuplicateGroups": [
+    {
+      "type": "image",
+      "sha256": "9f9d94ca4a0fbfbf1c7c691d9bba723ba13be5e3d2374d37c7693ff2dd11e0ca",
+      "paths": [
+        "site/apps/galeria/img/Wallpapers/wallpaper-padrao.webp",
+        "site/assets/img/bg.webp"
+      ]
+    },
+    {
+      "type": "image",
+      "sha256": "1e44da405e4865c0b95c24fcb678e36c0ad9bb851f55f4321dec03f0c539cb94",
+      "paths": [
+        "site/apps/mensagens/pfp/imagem-003.webp",
+        "site/apps/y/pfp/imagem-003.webp"
+      ]
+    },
+    {
+      "type": "image",
+      "sha256": "f3f1f77e8a63f3b458b59ab653c71a033032460c5d5a95790d4b302ff54c697a",
+      "paths": [
+        "site/apps/mensagens/pfp/imagem-008.webp",
+        "site/apps/y/pfp/imagem-008.webp"
+      ]
+    },
+    {
+      "type": "image",
+      "sha256": "fffad26195d86ad040156dd585cdd3573484c4b32c57340303a8eaffcabec36b",
+      "paths": [
+        "site/apps/mensagens/pfp/imagem-010.webp",
+        "site/apps/y/pfp/imagem-010.webp"
+      ]
+    },
+    {
+      "type": "image",
+      "sha256": "396772724128798ea4d115030f20168621f4bea49438632a0cf5eccab3ed64a5",
+      "paths": [
+        "site/apps/mensagens/pfp/imagem-011.webp",
+        "site/apps/y/pfp/imagem-011.webp"
+      ]
+    },
+    {
+      "type": "image",
+      "sha256": "b4ccda8877e46ef035dd0cb725328057c29701f6be06f41eb1618a52fa93a9b2",
+      "paths": [
+        "site/apps/mensagens/pfp/imagem-013.webp",
+        "site/apps/y/pfp/imagem-013.webp"
+      ]
+    },
+    {
+      "type": "image",
+      "sha256": "7ca824a7fff09a93ace0c7d3ac21b88a6201682bf62a6cb242d9bed282d268c8",
+      "paths": [
+        "site/apps/mensagens/pfp/imagem-014.webp",
+        "site/apps/y/pfp/imagem-014.webp"
+      ]
+    },
+    {
+      "type": "image",
+      "sha256": "415b4f8bf8a6463165576b43f34af243c19d98058b5a622acf9a3782b91a9c27",
+      "paths": [
+        "site/apps/mensagens/pfp/imagem-017.webp",
+        "site/apps/y/pfp/imagem-017.webp"
+      ]
+    },
+    {
+      "type": "image",
+      "sha256": "7482771a2f7c0ba67961d2203394c8b350c7427b5766dc9a63535d2ecc930303",
+      "paths": [
+        "site/apps/mensagens/pfp/imagem-018.webp",
+        "site/apps/y/pfp/imagem-018.webp"
+      ]
+    }
+  ],
+  "perceptualDuplicateCandidates": [
+    {
+      "pathA": "media/app-icons/pdf-page-02.jpg",
+      "pathB": "site/assets/img/Icones/twitter.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/app-icons/pdf-page-08.jpg",
+      "pathB": "media/app-icons/pdf-page-09.jpg",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/app-icons/pdf-page-08.jpg",
+      "pathB": "site/assets/img/Icones/configuracoes.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/app-icons/pdf-page-09.jpg",
+      "pathB": "site/assets/img/Icones/configuracoes.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/app-icons/pdf-page-10.jpg",
+      "pathB": "site/assets/img/Icones/cobrinha.webp",
+      "averageHashDistance": 1,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/app-icons/pdf-page-11.jpg",
+      "pathB": "media/app-icons/pdf-page-12.jpg",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/images/branding/pdf-page-01.jpg",
+      "pathB": "site/apps/cobrinha/game.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/images/branding/pdf-page-01.jpg",
+      "pathB": "site/assets/img/icon.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/images/branding/pdf-page-01.jpg",
+      "pathB": "site/assets/img/logo/logotest.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/images/branding/pdf-page-37.jpg",
+      "pathB": "site/apps/y/pfp/imagem-005.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/images/characters/pdf-page-14.jpg",
+      "pathB": "site/apps/galeria/img/camera/Foto5.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/images/characters/pdf-page-15.jpg",
+      "pathB": "site/apps/galeria/img/camera/Foto4.webp",
+      "averageHashDistance": 1,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/images/characters/pdf-page-16.jpg",
+      "pathB": "site/apps/galeria/img/camera/Foto3.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/images/characters/pdf-page-17.jpg",
+      "pathB": "site/apps/galeria/img/camera/Foto2.webp",
+      "averageHashDistance": 1,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/images/characters/pdf-page-18.jpg",
+      "pathB": "site/apps/galeria/img/camera/Foto1.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/images/characters/pdf-page-19.jpg",
+      "pathB": "site/apps/galeria/img/camera/956.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/images/characters/pdf-page-20.jpg",
+      "pathB": "site/apps/galeria/img/camera/879.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/images/characters/pdf-page-23.jpg",
+      "pathB": "site/apps/galeria/img/Wallpapers/932.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/images/characters/pdf-page-28.jpg",
+      "pathB": "site/apps/mensagens/pfp/imagem-018.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/images/characters/pdf-page-28.jpg",
+      "pathB": "site/apps/y/pfp/imagem-018.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/images/characters/pdf-page-29.jpg",
+      "pathB": "site/apps/mensagens/pfp/imagem-017.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/images/characters/pdf-page-29.jpg",
+      "pathB": "site/apps/y/pfp/imagem-017.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/images/characters/pdf-page-30.jpg",
+      "pathB": "site/apps/y/pfp/imagem-016.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/images/characters/pdf-page-32.jpg",
+      "pathB": "site/apps/mensagens/pfp/imagem-014.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/images/characters/pdf-page-32.jpg",
+      "pathB": "site/apps/y/pfp/imagem-014.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/images/characters/pdf-page-33.jpg",
+      "pathB": "site/apps/mensagens/pfp/imagem-013.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/images/characters/pdf-page-33.jpg",
+      "pathB": "site/apps/y/pfp/imagem-013.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/images/characters/pdf-page-34.jpg",
+      "pathB": "site/apps/mensagens/pfp/imagem-011.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/images/characters/pdf-page-34.jpg",
+      "pathB": "site/apps/y/pfp/imagem-011.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/images/characters/pdf-page-35.jpg",
+      "pathB": "site/apps/mensagens/pfp/imagem-010.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/images/characters/pdf-page-35.jpg",
+      "pathB": "site/apps/y/pfp/imagem-010.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/images/characters/pdf-page-36.jpg",
+      "pathB": "site/apps/mensagens/pfp/imagem-008.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/images/characters/pdf-page-36.jpg",
+      "pathB": "site/apps/y/pfp/imagem-008.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/images/characters/pdf-page-38.jpg",
+      "pathB": "site/apps/mensagens/pfp/imagem-003.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/images/characters/pdf-page-38.jpg",
+      "pathB": "site/apps/y/pfp/imagem-003.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/images/characters/pdf-page-39.jpg",
+      "pathB": "site/apps/y/pfp/imagem-001.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/images/objects/pdf-page-31.jpg",
+      "pathB": "site/apps/y/pfp/imagem-015.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/images/scenes/pdf-page-21.jpg",
+      "pathB": "site/apps/galeria/img/Wallpapers/wallpaper-padrao.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/images/scenes/pdf-page-21.jpg",
+      "pathB": "site/assets/img/bg.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/images/scenes/pdf-page-22.jpg",
+      "pathB": "site/apps/galeria/img/Wallpapers/halloween_floresta.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/images/scenes/pdf-page-24.jpg",
+      "pathB": "site/apps/galeria/img/Wallpapers/6.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/images/scenes/pdf-page-25.jpg",
+      "pathB": "site/apps/galeria/img/Wallpapers/5.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/images/scenes/pdf-page-26.jpg",
+      "pathB": "site/apps/galeria/img/Wallpapers/4.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/images/scenes/pdf-page-27.jpg",
+      "pathB": "site/apps/galeria/img/Wallpapers/2.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "site/apps/cobrinha/game.webp",
+      "pathB": "site/assets/img/icon.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "site/apps/cobrinha/game.webp",
+      "pathB": "site/assets/img/logo/logotest.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "site/assets/img/Icones/calculadora.png",
+      "pathB": "site/assets/img/Icones/calculadora.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "site/assets/img/icon.webp",
+      "pathB": "site/assets/img/logo/logotest.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    }
+  ],
+  "pdfPerceptualDuplicatePairs": [
+    {
+      "pathA": "media/app-icons/pdf-page-08.jpg",
+      "pathB": "media/app-icons/pdf-page-09.jpg",
+      "averageHashDistance": 0
+    },
+    {
+      "pathA": "media/app-icons/pdf-page-11.jpg",
+      "pathB": "media/app-icons/pdf-page-12.jpg",
+      "averageHashDistance": 0
+    }
+  ],
+  "files": [
+    {
+      "path": "media/app-icons/pdf-page-02.jpg",
+      "type": "image",
+      "extension": ".jpg",
+      "mimeType": "image/jpeg",
+      "bytes": 22347,
+      "sha256": "05904273a2c3aaf43589c8e2fc3a7f8958a55c11f2972a3088e6abaafeb2680f",
+      "averageHash8x8": "7efffd383c381000"
+    },
+    {
+      "path": "media/app-icons/pdf-page-03.jpg",
+      "type": "image",
+      "extension": ".jpg",
+      "mimeType": "image/jpeg",
+      "bytes": 25499,
+      "sha256": "155d3dae74264ab20b393056d7c11c623ddc5ff25b21c6ceebd57d8231524c02",
+      "averageHash8x8": "7fffffc23c180000"
+    },
+    {
+      "path": "media/app-icons/pdf-page-04.jpg",
+      "type": "image",
+      "extension": ".jpg",
+      "mimeType": "image/jpeg",
+      "bytes": 21234,
+      "sha256": "7dd73b26c54d3573e004e7fbd932c57c8ea34c6b67d397d8fa154d126a783698",
+      "averageHash8x8": "7fffff38301c0800"
+    },
+    {
+      "path": "media/app-icons/pdf-page-05.jpg",
+      "type": "image",
+      "extension": ".jpg",
+      "mimeType": "image/jpeg",
+      "bytes": 19062,
+      "sha256": "b50026252ce716ec2f4c0b835efc1254ff399fc4961eb40bb3b4c40b6a1fed0d",
+      "averageHash8x8": "7eff3c7e3c3c0000"
+    },
+    {
+      "path": "media/app-icons/pdf-page-06.jpg",
+      "type": "image",
+      "extension": ".jpg",
+      "mimeType": "image/jpeg",
+      "bytes": 20301,
+      "sha256": "6c0da5594a1e04962b10a2db42e2cbbfcf3a21dec6e86c2cbba648fbafe6ff61",
+      "averageHash8x8": "7e084c62737f7f00"
+    },
+    {
+      "path": "media/app-icons/pdf-page-07.jpg",
+      "type": "image",
+      "extension": ".jpg",
+      "mimeType": "image/jpeg",
+      "bytes": 23121,
+      "sha256": "38e3a7df91686360ed12ae76ba3ecd973957dba9f212029be735f6b29c59e5f0",
+      "averageHash8x8": "ffff3c183c3c1800"
+    },
+    {
+      "path": "media/app-icons/pdf-page-08.jpg",
+      "type": "image",
+      "extension": ".jpg",
+      "mimeType": "image/jpeg",
+      "bytes": 17392,
+      "sha256": "22d6f030837356e1c21a6686243f094bca2a1237e2295ec139c937d2d543f4f1",
+      "averageHash8x8": "ffffdb9999000042"
+    },
+    {
+      "path": "media/app-icons/pdf-page-09.jpg",
+      "type": "image",
+      "extension": ".jpg",
+      "mimeType": "image/jpeg",
+      "bytes": 5615,
+      "sha256": "a8c27c5741a5ce62a5dc9c54594fe7721caa75f5c806524a20b096a3ddb7bbb7",
+      "averageHash8x8": "ffffdb9999000042"
+    },
+    {
+      "path": "media/app-icons/pdf-page-10.jpg",
+      "type": "image",
+      "extension": ".jpg",
+      "mimeType": "image/jpeg",
+      "bytes": 6901,
+      "sha256": "f8f57bdd016c8287e1482d64f384b7cd53a269c233325221945e3846bc95f763",
+      "averageHash8x8": "7e81fd813f01817e"
+    },
+    {
+      "path": "media/app-icons/pdf-page-11.jpg",
+      "type": "image",
+      "extension": ".jpg",
+      "mimeType": "image/jpeg",
+      "bytes": 19105,
+      "sha256": "fc9ee2c84ec130aaa125e5ce607541d34103446e739c15ede83352638a72c124",
+      "averageHash8x8": "7effd9dfff000000"
+    },
+    {
+      "path": "media/app-icons/pdf-page-12.jpg",
+      "type": "image",
+      "extension": ".jpg",
+      "mimeType": "image/jpeg",
+      "bytes": 19101,
+      "sha256": "bce820bcc6a1362d9c7d833dd56d538a6bbe892c4f8d8b73b3f3b3b076697466",
+      "averageHash8x8": "7effd9dfff000000"
+    },
+    {
+      "path": "media/app-icons/pdf-page-13.jpg",
+      "type": "image",
+      "extension": ".jpg",
+      "mimeType": "image/jpeg",
+      "bytes": 21481,
+      "sha256": "5df045cee691d4036a92802ebabd2bf5820ac84d7f337cf0cf09bc633e36deec",
+      "averageHash8x8": "7fffbf9d1c008042"
+    },
+    {
+      "path": "media/images/branding/pdf-page-01.jpg",
+      "type": "image",
+      "extension": ".jpg",
+      "mimeType": "image/jpeg",
+      "bytes": 52955,
+      "sha256": "5b05e8ac416eb1cd12db42821de3334a5a1183a87fed11ba717049129a071273",
+      "averageHash8x8": "ffffffffffffffff"
+    },
+    {
+      "path": "media/images/branding/pdf-page-37.jpg",
+      "type": "image",
+      "extension": ".jpg",
+      "mimeType": "image/jpeg",
+      "bytes": 16878,
+      "sha256": "015f0b0b6454f43a32ba18b80c7988e0b33e0045077d0fb17cefb6b1ef88d5c8",
+      "averageHash8x8": "3c7e6666e77e2400"
+    },
+    {
+      "path": "media/images/characters/pdf-page-14.jpg",
+      "type": "image",
+      "extension": ".jpg",
+      "mimeType": "image/jpeg",
+      "bytes": 102774,
+      "sha256": "fa1cadeb3a358d7c6ca205760aef7534b249a64553f968dc800cb0b3d9cebfb6",
+      "averageHash8x8": "ffe38109b111acae"
+    },
+    {
+      "path": "media/images/characters/pdf-page-15.jpg",
+      "type": "image",
+      "extension": ".jpg",
+      "mimeType": "image/jpeg",
+      "bytes": 77194,
+      "sha256": "3c6b7003f208a0a4db1b10c090d48d8b1d1f5017d353acd2240ca2c757fbeb07",
+      "averageHash8x8": "e783838584c8f8ff"
+    },
+    {
+      "path": "media/images/characters/pdf-page-16.jpg",
+      "type": "image",
+      "extension": ".jpg",
+      "mimeType": "image/jpeg",
+      "bytes": 83951,
+      "sha256": "bae401058ef7dfad8883fdb4bf350cf55167be6434a8dcb6a8ab98d59888a7ac",
+      "averageHash8x8": "bbc58c84c6dfc1c3"
+    },
+    {
+      "path": "media/images/characters/pdf-page-17.jpg",
+      "type": "image",
+      "extension": ".jpg",
+      "mimeType": "image/jpeg",
+      "bytes": 94865,
+      "sha256": "24b444197cac2c0ec65ce3618622fdf8447a5c98064eaa5eccae5aa09e33009f",
+      "averageHash8x8": "ffc97d250199a43c"
+    },
+    {
+      "path": "media/images/characters/pdf-page-18.jpg",
+      "type": "image",
+      "extension": ".jpg",
+      "mimeType": "image/jpeg",
+      "bytes": 108567,
+      "sha256": "1d4b75e2b47537c2d2d0e42deb91752eaf2e9456d9aefb15dabe316689b97145",
+      "averageHash8x8": "ffc181818305bdcf"
+    },
+    {
+      "path": "media/images/characters/pdf-page-19.jpg",
+      "type": "image",
+      "extension": ".jpg",
+      "mimeType": "image/jpeg",
+      "bytes": 143496,
+      "sha256": "09f1b759b438cb4f0017605965b1d79b0291cc95fc0aed0665fa80c91adfa994",
+      "averageHash8x8": "02071f3a5f3eb707"
+    },
+    {
+      "path": "media/images/characters/pdf-page-20.jpg",
+      "type": "image",
+      "extension": ".jpg",
+      "mimeType": "image/jpeg",
+      "bytes": 79298,
+      "sha256": "c8339bcc831b41aa6ac9eaff5d67093c418928135da9b814216e6a59f8b721b4",
+      "averageHash8x8": "f9f226cc9031eb83"
+    },
+    {
+      "path": "media/images/characters/pdf-page-23.jpg",
+      "type": "image",
+      "extension": ".jpg",
+      "mimeType": "image/jpeg",
+      "bytes": 385520,
+      "sha256": "c2044287d7b871c8be6c9c3c782e4bf669dcc88df44909f2d0c6e2e86da3b588",
+      "averageHash8x8": "0f07160740ccfefe"
+    },
+    {
+      "path": "media/images/characters/pdf-page-28.jpg",
+      "type": "image",
+      "extension": ".jpg",
+      "mimeType": "image/jpeg",
+      "bytes": 56623,
+      "sha256": "e875a23239da790247e21b65093272458e2df733659e89ba67ca0e7668868045",
+      "averageHash8x8": "bf8907058cc0dddd"
+    },
+    {
+      "path": "media/images/characters/pdf-page-29.jpg",
+      "type": "image",
+      "extension": ".jpg",
+      "mimeType": "image/jpeg",
+      "bytes": 53255,
+      "sha256": "47368bd842fa46ac7ea30284385db5375b623bb114413d4d161c4dd52a819bc3",
+      "averageHash8x8": "00785c6c3f1f16fc"
+    },
+    {
+      "path": "media/images/characters/pdf-page-30.jpg",
+      "type": "image",
+      "extension": ".jpg",
+      "mimeType": "image/jpeg",
+      "bytes": 30470,
+      "sha256": "ae6f90ecd99940cffe697cee92e74cc5f709070c96b9fca48f2e1bda5d62e498",
+      "averageHash8x8": "183c767e7e7a3c00"
+    },
+    {
+      "path": "media/images/characters/pdf-page-32.jpg",
+      "type": "image",
+      "extension": ".jpg",
+      "mimeType": "image/jpeg",
+      "bytes": 47902,
+      "sha256": "37765537c77a6606aa4894a72549c9ce431421527aae7641e90d35a30d552726",
+      "averageHash8x8": "0014327e7e7e6e36"
+    },
+    {
+      "path": "media/images/characters/pdf-page-33.jpg",
+      "type": "image",
+      "extension": ".jpg",
+      "mimeType": "image/jpeg",
+      "bytes": 27285,
+      "sha256": "6839c1d4af21f7da9d25ce6d279639aec59987c13338f353b85b9f68bdd6113e",
+      "averageHash8x8": "183e3f3e3e1e181c"
+    },
+    {
+      "path": "media/images/characters/pdf-page-34.jpg",
+      "type": "image",
+      "extension": ".jpg",
+      "mimeType": "image/jpeg",
+      "bytes": 48130,
+      "sha256": "ac2f64dd58597cd5d6182749e2cf955f6ae041f3fc650a3027d18ad91ccedba4",
+      "averageHash8x8": "bfcfedcc04c4c380"
+    },
+    {
+      "path": "media/images/characters/pdf-page-35.jpg",
+      "type": "image",
+      "extension": ".jpg",
+      "mimeType": "image/jpeg",
+      "bytes": 47235,
+      "sha256": "02c5654f8202cfe2bb9e1da61fca352c61655657c571e0d0b8d9a11781bb9ae1",
+      "averageHash8x8": "1c7e727a7e7c4060"
+    },
+    {
+      "path": "media/images/characters/pdf-page-36.jpg",
+      "type": "image",
+      "extension": ".jpg",
+      "mimeType": "image/jpeg",
+      "bytes": 40844,
+      "sha256": "8932a228ae4249412d97e633021c759471070636ddc146e442ce9110ddee06d4",
+      "averageHash8x8": "ff80387e7c382874"
+    },
+    {
+      "path": "media/images/characters/pdf-page-38.jpg",
+      "type": "image",
+      "extension": ".jpg",
+      "mimeType": "image/jpeg",
+      "bytes": 42680,
+      "sha256": "5431b76ddda312eac80660745bea6de3e214124294d7793e6c827c65a345e97b",
+      "averageHash8x8": "ffeff9e18080c0e0"
+    },
+    {
+      "path": "media/images/characters/pdf-page-39.jpg",
+      "type": "image",
+      "extension": ".jpg",
+      "mimeType": "image/jpeg",
+      "bytes": 37011,
+      "sha256": "2678740fdcbc4089c0d80e4d0d0e1dc0ef4bf3bb7c9aeafda582a024d78481da",
+      "averageHash8x8": "0e3e3c78300b5f73"
+    },
+    {
+      "path": "media/images/objects/pdf-page-31.jpg",
+      "type": "image",
+      "extension": ".jpg",
+      "mimeType": "image/jpeg",
+      "bytes": 23910,
+      "sha256": "de725ef5f584105c0b9cb21368a50e2aa958c6997a08a292f2e6d37cdeba6f44",
+      "averageHash8x8": "87c1e1e1e3c3c3c3"
+    },
+    {
+      "path": "media/images/scenes/pdf-page-21.jpg",
+      "type": "image",
+      "extension": ".jpg",
+      "mimeType": "image/jpeg",
+      "bytes": 87700,
+      "sha256": "7c2bf79849d094dc29f48a8a23cd9f6899f1c63d39fc20200b18831222baddc4",
+      "averageHash8x8": "fffffe0e02070600"
+    },
+    {
+      "path": "media/images/scenes/pdf-page-22.jpg",
+      "type": "image",
+      "extension": ".jpg",
+      "mimeType": "image/jpeg",
+      "bytes": 692091,
+      "sha256": "7b6bd96e2501b3afa832fe7e854748f23ba589cac8df67b9420f22f094dc43e9",
+      "averageHash8x8": "0000187e7f7f7e7c"
+    },
+    {
+      "path": "media/images/scenes/pdf-page-24.jpg",
+      "type": "image",
+      "extension": ".jpg",
+      "mimeType": "image/jpeg",
+      "bytes": 442880,
+      "sha256": "d81da88323e5d8ad81851010c7343575ec3b2123158aeb9989f4f4185f54832f",
+      "averageHash8x8": "e3e7fe86867e0e00"
+    },
+    {
+      "path": "media/images/scenes/pdf-page-25.jpg",
+      "type": "image",
+      "extension": ".jpg",
+      "mimeType": "image/jpeg",
+      "bytes": 88827,
+      "sha256": "ef21caea0ee9b8ff687d79a4a6c5ac8da3c0a89633726488f0f445cc21adf4d9",
+      "averageHash8x8": "fffffd00f1b80000"
+    },
+    {
+      "path": "media/images/scenes/pdf-page-26.jpg",
+      "type": "image",
+      "extension": ".jpg",
+      "mimeType": "image/jpeg",
+      "bytes": 714670,
+      "sha256": "3b5da690d5f56321fb725d0ed853eae75cedb2813b3be7b6f8ab9726251ba9ad",
+      "averageHash8x8": "ffff3e00181a0387"
+    },
+    {
+      "path": "media/images/scenes/pdf-page-27.jpg",
+      "type": "image",
+      "extension": ".jpg",
+      "mimeType": "image/jpeg",
+      "bytes": 91007,
+      "sha256": "0556f0064d1d794b4015035f9f09d3c8b9dc59770f345c1b63c4bcfc818efbf4",
+      "averageHash8x8": "000038ddff00fdff"
+    },
+    {
+      "path": "site/apps/cobrinha/game.webp",
+      "type": "image",
+      "extension": ".webp",
+      "mimeType": "image/webp",
+      "bytes": 76,
+      "sha256": "f12ea3bed48c05587b4d2c5b05f3c54b092fb52ca3b3646aeecabe7689743bad",
+      "averageHash8x8": "ffffffffffffffff"
+    },
+    {
+      "path": "site/apps/galeria/img/Wallpapers/2.webp",
+      "type": "image",
+      "extension": ".webp",
+      "mimeType": "image/webp",
+      "bytes": 582872,
+      "sha256": "1ffd914b7a7a81d46ee56b1ef8605ff3a70e152d044ca179cc86d453307d0458",
+      "averageHash8x8": "000038ddff00fdff"
+    },
+    {
+      "path": "site/apps/galeria/img/Wallpapers/4.webp",
+      "type": "image",
+      "extension": ".webp",
+      "mimeType": "image/webp",
+      "bytes": 4806556,
+      "sha256": "e8197873bd59d7de9b2579826a9b14b5b3414260422662280ba82fecc6a99c9e",
+      "averageHash8x8": "ffff3e00181a0387"
+    },
+    {
+      "path": "site/apps/galeria/img/Wallpapers/5.webp",
+      "type": "image",
+      "extension": ".webp",
+      "mimeType": "image/webp",
+      "bytes": 477018,
+      "sha256": "3e3f4f4bc06bbf80358fa472ffa1c50054ec12d82ee7f68121a082d3feabd48d",
+      "averageHash8x8": "fffffd00f1b80000"
+    },
+    {
+      "path": "site/apps/galeria/img/Wallpapers/6.webp",
+      "type": "image",
+      "extension": ".webp",
+      "mimeType": "image/webp",
+      "bytes": 3616102,
+      "sha256": "7fabc9f036250ff57755188fe929941123334794974d66c22e65b84938a9ddfb",
+      "averageHash8x8": "e3e7fe86867e0e00"
+    },
+    {
+      "path": "site/apps/galeria/img/Wallpapers/932.webp",
+      "type": "image",
+      "extension": ".webp",
+      "mimeType": "image/webp",
+      "bytes": 1435330,
+      "sha256": "55a33814489961d4195faf62315520d97121d2222759e69eaf3500e084e0db61",
+      "averageHash8x8": "0f07160740ccfefe"
+    },
+    {
+      "path": "site/apps/galeria/img/Wallpapers/halloween_floresta.webp",
+      "type": "image",
+      "extension": ".webp",
+      "mimeType": "image/webp",
+      "bytes": 6275750,
+      "sha256": "df07a366fbb6b5802d9546fa280b82f668e22b1105406ae9e5f7237efc9b0596",
+      "averageHash8x8": "0000187e7f7f7e7c"
+    },
+    {
+      "path": "site/apps/galeria/img/Wallpapers/wallpaper-padrao.webp",
+      "type": "image",
+      "extension": ".webp",
+      "mimeType": "image/webp",
+      "bytes": 43556,
+      "sha256": "9f9d94ca4a0fbfbf1c7c691d9bba723ba13be5e3d2374d37c7693ff2dd11e0ca",
+      "averageHash8x8": "fffffe0e02070600"
+    },
+    {
+      "path": "site/apps/galeria/img/camera/879.webp",
+      "type": "image",
+      "extension": ".webp",
+      "mimeType": "image/webp",
+      "bytes": 341462,
+      "sha256": "b60ecbca1a0fa4f05262c45ed993dad1b10719298c86ec495982cbaa34b1c102",
+      "averageHash8x8": "f9f226cc9031eb83"
+    },
+    {
+      "path": "site/apps/galeria/img/camera/956.webp",
+      "type": "image",
+      "extension": ".webp",
+      "mimeType": "image/webp",
+      "bytes": 448790,
+      "sha256": "6baad2bd529b5c19d2f35ded5016e740a61ecb019cf7cb76762eec3c69f3f909",
+      "averageHash8x8": "02071f3a5f3eb707"
+    },
+    {
+      "path": "site/apps/galeria/img/camera/Foto1.webp",
+      "type": "image",
+      "extension": ".webp",
+      "mimeType": "image/webp",
+      "bytes": 64006,
+      "sha256": "4f799da16b8b27ff45744221146dbbc40989ba7c7b625d65ddc03cfe9e93a7af",
+      "averageHash8x8": "ffc181818305bdcf"
+    },
+    {
+      "path": "site/apps/galeria/img/camera/Foto2.webp",
+      "type": "image",
+      "extension": ".webp",
+      "mimeType": "image/webp",
+      "bytes": 46834,
+      "sha256": "688690c16f8ef592500a41d9b3b0e41dbaf7e844a9f9edf39fbde0468d9c0ae6",
+      "averageHash8x8": "ffc97d250199b43c"
+    },
+    {
+      "path": "site/apps/galeria/img/camera/Foto3.webp",
+      "type": "image",
+      "extension": ".webp",
+      "mimeType": "image/webp",
+      "bytes": 44868,
+      "sha256": "4afa47711bed22c215064a0cd689800d6a3c174425a84d3663a567159a15bd1c",
+      "averageHash8x8": "bbc58c84c6dfc1c3"
+    },
+    {
+      "path": "site/apps/galeria/img/camera/Foto4.webp",
+      "type": "image",
+      "extension": ".webp",
+      "mimeType": "image/webp",
+      "bytes": 35746,
+      "sha256": "1dd9154720b55af768da3347443ccf5feaf590864e7ff88420acbedb0d5ff9eb",
+      "averageHash8x8": "e783838584c8e8ff"
+    },
+    {
+      "path": "site/apps/galeria/img/camera/Foto5.webp",
+      "type": "image",
+      "extension": ".webp",
+      "mimeType": "image/webp",
+      "bytes": 64290,
+      "sha256": "703a883b48f0769360ce258855663e463ac9cbfa6a1d3c2380ebb51a3faf530d",
+      "averageHash8x8": "ffe38109b111acae"
+    },
+    {
+      "path": "site/apps/mensagens/audio/audio-001.mp3",
+      "type": "audio",
+      "extension": ".mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 7105,
+      "sha256": "865f391ce9b0931153ea0fbc59619e0ca5f309fbeb408e5b3e8efd3e50ad712c"
+    },
+    {
+      "path": "site/apps/mensagens/audio/audio-002.mp3",
+      "type": "audio",
+      "extension": ".mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 7941,
+      "sha256": "0dfd56198775dfe4ca3ca4a96b3806fff51d2d03d100cae9d0c6c7c19b253c5b"
+    },
+    {
+      "path": "site/apps/mensagens/pfp/imagem-002.webp",
+      "type": "image",
+      "extension": ".webp",
+      "mimeType": "image/webp",
+      "bytes": 32320,
+      "sha256": "89ee1cd1c5d1ce2fc480704098f46dde03391933edbbcfd6da4e00c056c5bd30",
+      "averageHash8x8": "3c3c7c3c18063f3e"
+    },
+    {
+      "path": "site/apps/mensagens/pfp/imagem-003.webp",
+      "type": "image",
+      "extension": ".webp",
+      "mimeType": "image/webp",
+      "bytes": 22718,
+      "sha256": "1e44da405e4865c0b95c24fcb678e36c0ad9bb851f55f4321dec03f0c539cb94",
+      "averageHash8x8": "ffeff9e18080c0e0"
+    },
+    {
+      "path": "site/apps/mensagens/pfp/imagem-006.webp",
+      "type": "image",
+      "extension": ".webp",
+      "mimeType": "image/webp",
+      "bytes": 8136,
+      "sha256": "192e94a6fee8fc22f6b67432a22ac7edb6e56c7febff80089cc77e71760b6898",
+      "averageHash8x8": "1cfe020e02e7f727"
+    },
+    {
+      "path": "site/apps/mensagens/pfp/imagem-007.webp",
+      "type": "image",
+      "extension": ".webp",
+      "mimeType": "image/webp",
+      "bytes": 23120,
+      "sha256": "642757702316655ed0c3e8b245cbfbf7d4374b2bf7de1f8a3cd4ff98d76798cc",
+      "averageHash8x8": "b81100fe7e3ed8d3"
+    },
+    {
+      "path": "site/apps/mensagens/pfp/imagem-008.webp",
+      "type": "image",
+      "extension": ".webp",
+      "mimeType": "image/webp",
+      "bytes": 20570,
+      "sha256": "f3f1f77e8a63f3b458b59ab653c71a033032460c5d5a95790d4b302ff54c697a",
+      "averageHash8x8": "ff80387e7c382874"
+    },
+    {
+      "path": "site/apps/mensagens/pfp/imagem-010.webp",
+      "type": "image",
+      "extension": ".webp",
+      "mimeType": "image/webp",
+      "bytes": 27164,
+      "sha256": "fffad26195d86ad040156dd585cdd3573484c4b32c57340303a8eaffcabec36b",
+      "averageHash8x8": "1c7e727a7e7c4060"
+    },
+    {
+      "path": "site/apps/mensagens/pfp/imagem-011.webp",
+      "type": "image",
+      "extension": ".webp",
+      "mimeType": "image/webp",
+      "bytes": 26538,
+      "sha256": "396772724128798ea4d115030f20168621f4bea49438632a0cf5eccab3ed64a5",
+      "averageHash8x8": "bfcfedcc04c4c380"
+    },
+    {
+      "path": "site/apps/mensagens/pfp/imagem-012.webp",
+      "type": "image",
+      "extension": ".webp",
+      "mimeType": "image/webp",
+      "bytes": 33790,
+      "sha256": "5c244c3e539c802c735a6d2ce76f3bd252819c2d4ada4b2eb3cec62db93b5286",
+      "averageHash8x8": "ffc1e181e1e1c331"
+    },
+    {
+      "path": "site/apps/mensagens/pfp/imagem-013.webp",
+      "type": "image",
+      "extension": ".webp",
+      "mimeType": "image/webp",
+      "bytes": 12302,
+      "sha256": "b4ccda8877e46ef035dd0cb725328057c29701f6be06f41eb1618a52fa93a9b2",
+      "averageHash8x8": "183e3f3e3e1e181c"
+    },
+    {
+      "path": "site/apps/mensagens/pfp/imagem-014.webp",
+      "type": "image",
+      "extension": ".webp",
+      "mimeType": "image/webp",
+      "bytes": 27224,
+      "sha256": "7ca824a7fff09a93ace0c7d3ac21b88a6201682bf62a6cb242d9bed282d268c8",
+      "averageHash8x8": "0014327e7e7e6e36"
+    },
+    {
+      "path": "site/apps/mensagens/pfp/imagem-017.webp",
+      "type": "image",
+      "extension": ".webp",
+      "mimeType": "image/webp",
+      "bytes": 30692,
+      "sha256": "415b4f8bf8a6463165576b43f34af243c19d98058b5a622acf9a3782b91a9c27",
+      "averageHash8x8": "00785c6c3f1f16fc"
+    },
+    {
+      "path": "site/apps/mensagens/pfp/imagem-018.webp",
+      "type": "image",
+      "extension": ".webp",
+      "mimeType": "image/webp",
+      "bytes": 34012,
+      "sha256": "7482771a2f7c0ba67961d2203394c8b350c7427b5766dc9a63535d2ecc930303",
+      "averageHash8x8": "bf8907058cc0dddd"
+    },
+    {
+      "path": "site/apps/sem-nome/rabiscos/frame1.png",
+      "type": "image",
+      "extension": ".png",
+      "mimeType": "image/png",
+      "bytes": 150370,
+      "sha256": "5a3bac5bc67092f9a55c79708b86accd688cae01e81ede267cd09b03e615a4e2",
+      "averageHash8x8": "7f72c4800e6d6cce"
+    },
+    {
+      "path": "site/apps/sem-nome/rabiscos/frame2.png",
+      "type": "image",
+      "extension": ".png",
+      "mimeType": "image/png",
+      "bytes": 141074,
+      "sha256": "ff6697c66417cbadb2059237ca53e43f8bb8d6f990ce081e0c15246b0751d99d",
+      "averageHash8x8": "f380c977427466c7"
+    },
+    {
+      "path": "site/apps/sem-nome/rabiscos/frame3.png",
+      "type": "image",
+      "extension": ".png",
+      "mimeType": "image/png",
+      "bytes": 137092,
+      "sha256": "2923a445e49b724dcef2d0382e29d6dd62c901a449d29dfe64204b35b96848c8",
+      "averageHash8x8": "0a6ab31f8b89e746"
+    },
+    {
+      "path": "site/apps/sem-nome/rabiscos/frame4.png",
+      "type": "image",
+      "extension": ".png",
+      "mimeType": "image/png",
+      "bytes": 127062,
+      "sha256": "88daef7a520272843eba64d56b621a2c92ddf5a6d890e0deb914659bc66adbff",
+      "averageHash8x8": "9f2e0dc14056f727"
+    },
+    {
+      "path": "site/apps/sem-nome/rabiscos/frame5.png",
+      "type": "image",
+      "extension": ".png",
+      "mimeType": "image/png",
+      "bytes": 134112,
+      "sha256": "19466bc47e93b819f8ba9d6b3b14c5415e27fdf4e79b15082184e3586c13dd3e",
+      "averageHash8x8": "275ed02472dc98b7"
+    },
+    {
+      "path": "site/apps/y/pfp/imagem-001.webp",
+      "type": "image",
+      "extension": ".webp",
+      "mimeType": "image/webp",
+      "bytes": 22074,
+      "sha256": "825a40dab81072593a6dd072a4f4c7967bca3947241efe9cc8ed35ca8b286b93",
+      "averageHash8x8": "0e3e3c78300b5f73"
+    },
+    {
+      "path": "site/apps/y/pfp/imagem-003.webp",
+      "type": "image",
+      "extension": ".webp",
+      "mimeType": "image/webp",
+      "bytes": 22718,
+      "sha256": "1e44da405e4865c0b95c24fcb678e36c0ad9bb851f55f4321dec03f0c539cb94",
+      "averageHash8x8": "ffeff9e18080c0e0"
+    },
+    {
+      "path": "site/apps/y/pfp/imagem-005.webp",
+      "type": "image",
+      "extension": ".webp",
+      "mimeType": "image/webp",
+      "bytes": 8804,
+      "sha256": "9cb66ee1c53f2eb252fb76b8317fbeaa3e8436d212239e43646b1f224c35da3a",
+      "averageHash8x8": "3c7e6666e77e2400"
+    },
+    {
+      "path": "site/apps/y/pfp/imagem-008.webp",
+      "type": "image",
+      "extension": ".webp",
+      "mimeType": "image/webp",
+      "bytes": 20570,
+      "sha256": "f3f1f77e8a63f3b458b59ab653c71a033032460c5d5a95790d4b302ff54c697a",
+      "averageHash8x8": "ff80387e7c382874"
+    },
+    {
+      "path": "site/apps/y/pfp/imagem-010.webp",
+      "type": "image",
+      "extension": ".webp",
+      "mimeType": "image/webp",
+      "bytes": 27164,
+      "sha256": "fffad26195d86ad040156dd585cdd3573484c4b32c57340303a8eaffcabec36b",
+      "averageHash8x8": "1c7e727a7e7c4060"
+    },
+    {
+      "path": "site/apps/y/pfp/imagem-011.webp",
+      "type": "image",
+      "extension": ".webp",
+      "mimeType": "image/webp",
+      "bytes": 26538,
+      "sha256": "396772724128798ea4d115030f20168621f4bea49438632a0cf5eccab3ed64a5",
+      "averageHash8x8": "bfcfedcc04c4c380"
+    },
+    {
+      "path": "site/apps/y/pfp/imagem-013.webp",
+      "type": "image",
+      "extension": ".webp",
+      "mimeType": "image/webp",
+      "bytes": 12302,
+      "sha256": "b4ccda8877e46ef035dd0cb725328057c29701f6be06f41eb1618a52fa93a9b2",
+      "averageHash8x8": "183e3f3e3e1e181c"
+    },
+    {
+      "path": "site/apps/y/pfp/imagem-014.webp",
+      "type": "image",
+      "extension": ".webp",
+      "mimeType": "image/webp",
+      "bytes": 27224,
+      "sha256": "7ca824a7fff09a93ace0c7d3ac21b88a6201682bf62a6cb242d9bed282d268c8",
+      "averageHash8x8": "0014327e7e7e6e36"
+    },
+    {
+      "path": "site/apps/y/pfp/imagem-015.webp",
+      "type": "image",
+      "extension": ".webp",
+      "mimeType": "image/webp",
+      "bytes": 9902,
+      "sha256": "2f2f08cefa1702aa397086b3121bbeb24c50e06a1950f6363cc946b297ac8b80",
+      "averageHash8x8": "87c1e1e1e3c3c3c3"
+    },
+    {
+      "path": "site/apps/y/pfp/imagem-016.webp",
+      "type": "image",
+      "extension": ".webp",
+      "mimeType": "image/webp",
+      "bytes": 16564,
+      "sha256": "7d5bc5246b824e15df0907be64af31f270eb3174fd822cb9151de1b6900eb543",
+      "averageHash8x8": "183c767e7e7a3c00"
+    },
+    {
+      "path": "site/apps/y/pfp/imagem-017.webp",
+      "type": "image",
+      "extension": ".webp",
+      "mimeType": "image/webp",
+      "bytes": 30692,
+      "sha256": "415b4f8bf8a6463165576b43f34af243c19d98058b5a622acf9a3782b91a9c27",
+      "averageHash8x8": "00785c6c3f1f16fc"
+    },
+    {
+      "path": "site/apps/y/pfp/imagem-018.webp",
+      "type": "image",
+      "extension": ".webp",
+      "mimeType": "image/webp",
+      "bytes": 34012,
+      "sha256": "7482771a2f7c0ba67961d2203394c8b350c7427b5766dc9a63535d2ecc930303",
+      "averageHash8x8": "bf8907058cc0dddd"
+    },
+    {
+      "path": "site/assets/audio/audio-001.ogg",
+      "type": "audio",
+      "extension": ".ogg",
+      "mimeType": "audio/ogg",
+      "bytes": 10302,
+      "sha256": "486672129c508518b4a62d9e0d0d309ba4a261552364ded88ce57510759294c1"
+    },
+    {
+      "path": "site/assets/audio/audio-002.ogg",
+      "type": "audio",
+      "extension": ".ogg",
+      "mimeType": "audio/ogg",
+      "bytes": 10241,
+      "sha256": "2835b99dddbd1b3659959266c5c6ec19dcd759f3d13ec75a86dab75f7b26bffa"
+    },
+    {
+      "path": "site/assets/audio/audio-003.ogg",
+      "type": "audio",
+      "extension": ".ogg",
+      "mimeType": "audio/ogg",
+      "bytes": 9405,
+      "sha256": "112dac91a951927105970d8026e846e2a2d503d61bea336b3e916438217ed4cf"
+    },
+    {
+      "path": "site/assets/audio/audio-004.ogg",
+      "type": "audio",
+      "extension": ".ogg",
+      "mimeType": "audio/ogg",
+      "bytes": 9857,
+      "sha256": "ccd923b8a4336beac4de0df4a16d4851f18886710126e85bf716a4f956039f18"
+    },
+    {
+      "path": "site/assets/audio/audio-005.ogg",
+      "type": "audio",
+      "extension": ".ogg",
+      "mimeType": "audio/ogg",
+      "bytes": 1794466,
+      "sha256": "f15a9117163f95c066e86adfea5d3c655e73387f709fb4882b6ec57c55437e81"
+    },
+    {
+      "path": "site/assets/audio/audio-006.ogg",
+      "type": "audio",
+      "extension": ".ogg",
+      "mimeType": "audio/ogg",
+      "bytes": 6100,
+      "sha256": "d18de1179b23abfcd9fe1232f234ce0ef0c8deb10987bc08cae6677503df8173"
+    },
+    {
+      "path": "site/assets/audio/audio-007.ogg",
+      "type": "audio",
+      "extension": ".ogg",
+      "mimeType": "audio/ogg",
+      "bytes": 9624,
+      "sha256": "a2bdad8f9b0454e2338c11cad91683cff488837a6528c28e3752df05f21bca07"
+    },
+    {
+      "path": "site/assets/audio/audio-008.ogg",
+      "type": "audio",
+      "extension": ".ogg",
+      "mimeType": "audio/ogg",
+      "bytes": 27461,
+      "sha256": "f016dfa4f6ce4eb0ab363bbf8bc11435eae3080e8c96457e3cdd34dfd1b264df"
+    },
+    {
+      "path": "site/assets/audio/audio-009.ogg",
+      "type": "audio",
+      "extension": ".ogg",
+      "mimeType": "audio/ogg",
+      "bytes": 4298,
+      "sha256": "7e01c3df7029070c32b1b3106bf0cee38c5bbcb9d480f7a6b926660f27b8675e"
+    },
+    {
+      "path": "site/assets/img/Icones/anotações.webp",
+      "type": "image",
+      "extension": ".webp",
+      "mimeType": "image/webp",
+      "bytes": 70682,
+      "sha256": "4c3d1e5c90dc10df939c0ef9dcd84090ee2d31fc109beb93c6318d61387a43d1",
+      "averageHash8x8": "ffffbf9d18000081"
+    },
+    {
+      "path": "site/assets/img/Icones/calculadora.png",
+      "type": "image",
+      "extension": ".png",
+      "mimeType": "image/png",
+      "bytes": 74174,
+      "sha256": "f17b6353ec41e9878c2341b86e353b3073bd5894e87a00590f3a34d4d8cc31d5",
+      "averageHash8x8": "ffffd9dd1c000081"
+    },
+    {
+      "path": "site/assets/img/Icones/calculadora.webp",
+      "type": "image",
+      "extension": ".webp",
+      "mimeType": "image/webp",
+      "bytes": 47422,
+      "sha256": "d8dddcf1c76cdeb6a4038799cfbd7e865a00963fc847f6a84c49480ed1e7e8ac",
+      "averageHash8x8": "ffffd9dd1c000081"
+    },
+    {
+      "path": "site/assets/img/Icones/cobrinha.webp",
+      "type": "image",
+      "extension": ".webp",
+      "mimeType": "image/webp",
+      "bytes": 4734,
+      "sha256": "b310496af877aba9ec9e9171f15b9e387e31dec7c632656a39459f0b36efc6bb",
+      "averageHash8x8": "7e81fd813f81817e"
+    },
+    {
+      "path": "site/assets/img/Icones/configuracoes.webp",
+      "type": "image",
+      "extension": ".webp",
+      "mimeType": "image/webp",
+      "bytes": 3814,
+      "sha256": "752f2073685b7504a6a826a519d4994a38d047ab58961f49a834edacb5ba2e2c",
+      "averageHash8x8": "ffffdb9999000042"
+    },
+    {
+      "path": "site/assets/img/Icones/configurações.webp",
+      "type": "image",
+      "extension": ".webp",
+      "mimeType": "image/webp",
+      "bytes": 35864,
+      "sha256": "f42029eb579be7e07e444a2ca7c9d35412c269030f4765703cd1866e39446de3",
+      "averageHash8x8": "ffffdb9999000081"
+    },
+    {
+      "path": "site/assets/img/Icones/contatos.webp",
+      "type": "image",
+      "extension": ".webp",
+      "mimeType": "image/webp",
+      "bytes": 80028,
+      "sha256": "2a9dbbda6e164909909353fa6c3551ecee86240a2200e5aa3a632177f8ba9938",
+      "averageHash8x8": "ffbd3c183c3c1881"
+    },
+    {
+      "path": "site/assets/img/Icones/galeria.webp",
+      "type": "image",
+      "extension": ".webp",
+      "mimeType": "image/webp",
+      "bytes": 59998,
+      "sha256": "d37cf3f282de7803befca9f3e8b925b0e8016f78ec74e1941504073e95d1bf15",
+      "averageHash8x8": "bf084c62737f7e00"
+    },
+    {
+      "path": "site/assets/img/Icones/mensagens.webp",
+      "type": "image",
+      "extension": ".webp",
+      "mimeType": "image/webp",
+      "bytes": 59908,
+      "sha256": "467171932bccd30da926e5975dec92fbd66052a2504a342905c407e68c4f01d6",
+      "averageHash8x8": "ff7e3c3c3c3c0081"
+    },
+    {
+      "path": "site/assets/img/Icones/telefone.webp",
+      "type": "image",
+      "extension": ".webp",
+      "mimeType": "image/webp",
+      "bytes": 78766,
+      "sha256": "63735138046992f4ffb2e54e4f4688a42be40d60d64fbefcd7f64f6f2cb30d65",
+      "averageHash8x8": "ffffbd30301c0881"
+    },
+    {
+      "path": "site/assets/img/Icones/tetris.webp",
+      "type": "image",
+      "extension": ".webp",
+      "mimeType": "image/webp",
+      "bytes": 69100,
+      "sha256": "a4d87199f94e2df1b3f5724dc5f7e3d5f6dae17c6f1b955af8f3e507c7479221",
+      "averageHash8x8": "ffffff003c180081"
+    },
+    {
+      "path": "site/assets/img/Icones/twitter.webp",
+      "type": "image",
+      "extension": ".webp",
+      "mimeType": "image/webp",
+      "bytes": 77522,
+      "sha256": "1b306ffd96a81c4b9374e8739300fd4a4304c3e680029309a6ac36bbeb85ea37",
+      "averageHash8x8": "7efffd383c381000"
+    },
+    {
+      "path": "site/assets/img/bg.webp",
+      "type": "image",
+      "extension": ".webp",
+      "mimeType": "image/webp",
+      "bytes": 43556,
+      "sha256": "9f9d94ca4a0fbfbf1c7c691d9bba723ba13be5e3d2374d37c7693ff2dd11e0ca",
+      "averageHash8x8": "fffffe0e02070600"
+    },
+    {
+      "path": "site/assets/img/icon.webp",
+      "type": "image",
+      "extension": ".webp",
+      "mimeType": "image/webp",
+      "bytes": 14732,
+      "sha256": "5031ae4cd090a6f4bb97fc6ddbac7635d41fddc36439a07ad933d966ae7b6510",
+      "averageHash8x8": "ffffffffffffffff"
+    },
+    {
+      "path": "site/assets/img/logo/logotest.png",
+      "type": "image",
+      "extension": ".png",
+      "mimeType": "image/png",
+      "bytes": 179560,
+      "sha256": "c5c195a476726e33ed7ae0287be81bfdd00c10c1f9f7482f04b234e67eb8bd07",
+      "averageHash8x8": "ffffffffffffffff"
+    },
+    {
+      "path": "site/assets/img/texto1.webp",
+      "type": "image",
+      "extension": ".webp",
+      "mimeType": "image/webp",
+      "bytes": 35308,
+      "sha256": "5f8da8ee1d6297996b643df82e6b36765c1a3d514e503d68a04ae03d5977a275",
+      "averageHash8x8": "000067fdfffa7f00"
+    },
+    {
+      "path": "site/assets/img/texto2.webp",
+      "type": "image",
+      "extension": ".webp",
+      "mimeType": "image/webp",
+      "bytes": 43200,
+      "sha256": "dc5f65a4945a6cdc0c80175da9404d745284d8caad550e2c9393e104612992ff",
+      "averageHash8x8": "0004ffffffff2000"
+    },
+    {
+      "path": "site/assets/img/texto3.webp",
+      "type": "image",
+      "extension": ".webp",
+      "mimeType": "image/webp",
+      "bytes": 35370,
+      "sha256": "f0324ff2fe87a7d2b912cd5b950f3cb6785c90d5b66d306795be9a59f247bb7d",
+      "averageHash8x8": "0000fffffeff0100"
+    },
+    {
+      "path": "site/assets/img/texto4.webp",
+      "type": "image",
+      "extension": ".webp",
+      "mimeType": "image/webp",
+      "bytes": 43378,
+      "sha256": "d312ba3bd5413a944a22e5ee6cb29ce15ae2215ae1c0167d79c55973d59bfb34",
+      "averageHash8x8": "0000efffdfdf1900"
+    },
+    {
+      "path": "site/assets/img/texto5.webp",
+      "type": "image",
+      "extension": ".webp",
+      "mimeType": "image/webp",
+      "bytes": 15580,
+      "sha256": "8772a6c43f8a10387b2d2ee5d74ca438705872992c579f698eba725504a54da6",
+      "averageHash8x8": "0060ff7f7fff0000"
+    },
+    {
+      "path": "site/audio-fallback/assets/audio/audio-001.mp3",
+      "type": "audio",
+      "extension": ".mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 8768,
+      "sha256": "8dddd52bdc77a9ebba9a636027a8272c56b131f3f0a44f1052400bd931137be5"
+    },
+    {
+      "path": "site/audio-fallback/assets/audio/audio-002.mp3",
+      "type": "audio",
+      "extension": ".mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 8436,
+      "sha256": "d4563681341242ef6660aa483343b966414feec42dda4ac2fcfe755742ee025d"
+    },
+    {
+      "path": "site/audio-fallback/assets/audio/audio-003.mp3",
+      "type": "audio",
+      "extension": ".mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 7337,
+      "sha256": "37141d4bfae2c2a7b6cf9b207b95d4f187af0336b866d2f69d195406965c1a36"
+    },
+    {
+      "path": "site/audio-fallback/assets/audio/audio-004.mp3",
+      "type": "audio",
+      "extension": ".mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 7836,
+      "sha256": "2332540f3f5f7a8f1c055e5f386e8ae18493b70ccc8883dc5e8bcdf1fa996c62"
+    },
+    {
+      "path": "site/audio-fallback/assets/audio/audio-005.mp3",
+      "type": "audio",
+      "extension": ".mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 2747882,
+      "sha256": "4a0241265dee6e17a7fecc43f9c119f9c31f5b49b929ab66c7ebe3556dd12bc9"
+    },
+    {
+      "path": "site/audio-fallback/assets/audio/audio-006.mp3",
+      "type": "audio",
+      "extension": ".mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 3061,
+      "sha256": "fa5d2da1faf2cdb318f4aee758e75f78fcbee220f0d291d8ae593846edb46946"
+    },
+    {
+      "path": "site/audio-fallback/assets/audio/audio-007.mp3",
+      "type": "audio",
+      "extension": ".mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 8314,
+      "sha256": "deef0b9e89ba5dd3a94b7a9f12c0acdf980ee80d80764b9a905bca7bc56c5c2c"
+    },
+    {
+      "path": "site/audio-fallback/assets/audio/audio-008.mp3",
+      "type": "audio",
+      "extension": ".mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 31772,
+      "sha256": "59a3d239902dd5a47fb17c815dced106359e1998da716185a6f34840e730cb89"
+    },
+    {
+      "path": "site/audio-fallback/assets/audio/audio-009.mp3",
+      "type": "audio",
+      "extension": ".mp3",
+      "mimeType": "audio/mpeg",
+      "bytes": 2412,
+      "sha256": "7f30a1023fd1be4a0eeeefdf219e8dc828e571bba9dfd6721b7f0429d90110f3"
+    }
+  ]
+}

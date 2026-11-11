@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
   "origin": "https://algorithomus.com.br",
-  "generatedAtUtc": "2026-11-10T23:24:16.764593+00:00",
+  "generatedAtUtc": "2026-11-11T00:01:14.352275+00:00",
   "pagesAndTextDownloaded": 183,
-  "mediaDownloadedThisRun": 76,
+  "mediaDownloadedThisRun": 85,
   "bundledFileCountsByType": {
-    "audio": 11,
+    "audio": 20,
     "video": 0,
     "imagem": 69,
     "outro": 176
   },
-  "bundledFileCount": 256,
+  "bundledFileCount": 265,
   "downloaded": [
     {
       "url": "https://algorithomus.com.br/",
@@ -669,6 +669,14 @@
       "extension": ".ogg"
     },
     {
+      "url": "https://algorithomus.com.br/audio-fallback/assets/audio/audio-009.mp3",
+      "path": "audio-fallback/assets/audio/audio-009.mp3",
+      "bytes": 2412,
+      "sha256": "7f30a1023fd1be4a0eeeefdf219e8dc828e571bba9dfd6721b7f0429d90110f3",
+      "contentType": "audio/mpeg",
+      "extension": ".mp3"
+    },
+    {
       "url": "https://algorithomus.com.br/assets/img/Icones/cobrinha.webp",
       "path": "assets/img/Icones/cobrinha.webp",
       "bytes": 4734,
@@ -683,6 +691,14 @@
       "sha256": "d18de1179b23abfcd9fe1232f234ce0ef0c8deb10987bc08cae6677503df8173",
       "contentType": "audio/ogg",
       "extension": ".ogg"
+    },
+    {
+      "url": "https://algorithomus.com.br/audio-fallback/assets/audio/audio-006.mp3",
+      "path": "audio-fallback/assets/audio/audio-006.mp3",
+      "bytes": 3061,
+      "sha256": "fa5d2da1faf2cdb318f4aee758e75f78fcbee220f0d291d8ae593846edb46946",
+      "contentType": "audio/mpeg",
+      "extension": ".mp3"
     },
     {
       "url": "https://algorithomus.com.br/apps/mensagens/pfp/imagem-006.webp",
@@ -709,6 +725,14 @@
       "extension": ".ogg"
     },
     {
+      "url": "https://algorithomus.com.br/audio-fallback/assets/audio/audio-003.mp3",
+      "path": "audio-fallback/assets/audio/audio-003.mp3",
+      "bytes": 7337,
+      "sha256": "37141d4bfae2c2a7b6cf9b207b95d4f187af0336b866d2f69d195406965c1a36",
+      "contentType": "audio/mpeg",
+      "extension": ".mp3"
+    },
+    {
       "url": "https://algorithomus.com.br/assets/audio/audio-007.ogg",
       "path": "assets/audio/audio-007.ogg",
       "bytes": 9624,
@@ -717,12 +741,28 @@
       "extension": ".ogg"
     },
     {
+      "url": "https://algorithomus.com.br/audio-fallback/assets/audio/audio-007.mp3",
+      "path": "audio-fallback/assets/audio/audio-007.mp3",
+      "bytes": 8314,
+      "sha256": "deef0b9e89ba5dd3a94b7a9f12c0acdf980ee80d80764b9a905bca7bc56c5c2c",
+      "contentType": "audio/mpeg",
+      "extension": ".mp3"
+    },
+    {
       "url": "https://algorithomus.com.br/assets/audio/audio-004.ogg",
       "path": "assets/audio/audio-004.ogg",
       "bytes": 9857,
       "sha256": "ccd923b8a4336beac4de0df4a16d4851f18886710126e85bf716a4f956039f18",
       "contentType": "audio/ogg",
       "extension": ".ogg"
+    },
+    {
+      "url": "https://algorithomus.com.br/audio-fallback/assets/audio/audio-004.mp3",
+      "path": "audio-fallback/assets/audio/audio-004.mp3",
+      "bytes": 7836,
+      "sha256": "2332540f3f5f7a8f1c055e5f386e8ae18493b70ccc8883dc5e8bcdf1fa996c62",
+      "contentType": "audio/mpeg",
+      "extension": ".mp3"
     },
     {
       "url": "https://algorithomus.com.br/apps/y/pfp/imagem-015.webp",
@@ -741,12 +781,28 @@
       "extension": ".ogg"
     },
     {
+      "url": "https://algorithomus.com.br/audio-fallback/assets/audio/audio-002.mp3",
+      "path": "audio-fallback/assets/audio/audio-002.mp3",
+      "bytes": 8436,
+      "sha256": "d4563681341242ef6660aa483343b966414feec42dda4ac2fcfe755742ee025d",
+      "contentType": "audio/mpeg",
+      "extension": ".mp3"
+    },
+    {
       "url": "https://algorithomus.com.br/assets/audio/audio-001.ogg",
       "path": "assets/audio/audio-001.ogg",
       "bytes": 10302,
       "sha256": "486672129c508518b4a62d9e0d0d309ba4a261552364ded88ce57510759294c1",
       "contentType": "audio/ogg",
       "extension": ".ogg"
+    },
+    {
+      "url": "https://algorithomus.com.br/audio-fallback/assets/audio/audio-001.mp3",
+      "path": "audio-fallback/assets/audio/audio-001.mp3",
+      "bytes": 8768,
+      "sha256": "8dddd52bdc77a9ebba9a636027a8272c56b131f3f0a44f1052400bd931137be5",
+      "contentType": "audio/mpeg",
+      "extension": ".mp3"
     },
     {
       "url": "https://algorithomus.com.br/apps/mensagens/pfp/imagem-013.webp",
@@ -891,6 +947,14 @@
       "sha256": "f016dfa4f6ce4eb0ab363bbf8bc11435eae3080e8c96457e3cdd34dfd1b264df",
       "contentType": "audio/ogg",
       "extension": ".ogg"
+    },
+    {
+      "url": "https://algorithomus.com.br/audio-fallback/assets/audio/audio-008.mp3",
+      "path": "audio-fallback/assets/audio/audio-008.mp3",
+      "bytes": 31772,
+      "sha256": "59a3d239902dd5a47fb17c815dced106359e1998da716185a6f34840e730cb89",
+      "contentType": "audio/mpeg",
+      "extension": ".mp3"
     },
     {
       "url": "https://algorithomus.com.br/apps/mensagens/pfp/imagem-017.webp",
@@ -1195,6 +1259,14 @@
       "sha256": "f15a9117163f95c066e86adfea5d3c655e73387f709fb4882b6ec57c55437e81",
       "contentType": "audio/ogg",
       "extension": ".ogg"
+    },
+    {
+      "url": "https://algorithomus.com.br/audio-fallback/assets/audio/audio-005.mp3",
+      "path": "audio-fallback/assets/audio/audio-005.mp3",
+      "bytes": 2747882,
+      "sha256": "4a0241265dee6e17a7fecc43f9c119f9c31f5b49b929ab66c7ebe3556dd12bc9",
+      "contentType": "audio/mpeg",
+      "extension": ".mp3"
     },
     {
       "url": "https://algorithomus.com.br/apps/galeria/img/Wallpapers/6.webp",

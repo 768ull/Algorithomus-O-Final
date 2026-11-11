@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "sources": [],
+  "media": [],
+  "errors": [
+    {
+      "source": "algorithomus-hybrid-apk",
+      "url": "https://raw.githubusercontent.com/768ull/Algorithomus/main/algorithomus_offline_hibrido_assinado.apk",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "source": "algorithomus-v1-v2-v3-v4-archive",
+      "url": "https://raw.githubusercontent.com/768ull/Algorithomus/main/algorithomus_assinado_V1_V2_V3_V4.zip",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "source": "cobrinha-apk",
+      "url": "https://raw.githubusercontent.com/768ull/https-algorithomus.com.br-/main/originals/apk/Cobrinha.apk",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "source": "frutris-apk",
+      "url": "https://raw.githubusercontent.com/768ull/https-algorithomus.com.br-/main/originals/apk/Frutris.apk",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "source": "algorithomus-app-v1.9-web-tree",
+      "url": "https://api.github.com/repos/768ull/Algorithomus-App/git/trees/main?recursive=1",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "source": "cobrinha-full-web-module",
+      "url": "https://api.github.com/repos/768ull/https-algorithomus.com.br-/git/trees/main?recursive=1",
+      "error": "HTTP Error 404: Not Found"
+    },
+    {
+      "source": "frutris-full-web-module",
+      "url": "https://api.github.com/repos/768ull/https-algorithomus.com.br-/git/trees/main?recursive=1",
+      "error": "HTTP Error 404: Not Found"
+    }
+  ],
+  "summary": {
+    "mediaEntryRecords": 0,
+    "sourcesProcessed": 0,
+    "sourceErrors": 7,
+    "noOriginalMediaWasOverwritten": true,
+    "allCopiedBytesPreservedWithoutReencoding": true
+  }
+}
