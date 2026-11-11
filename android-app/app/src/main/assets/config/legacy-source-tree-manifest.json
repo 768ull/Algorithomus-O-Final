@@ -1,0 +1,246 @@
+{
+  "schemaVersion": 1,
+  "policy": "Original bytes are preserved. These trees are archived references, not canonical files used instead of the live site.",
+  "sources": [
+    {
+      "repository": "768ull/Algorithomus-App",
+      "path": "app/src/main/assets/www/",
+      "files": 16,
+      "label": "algorithomus-app-v1.9"
+    },
+    {
+      "repository": "768ull/https-algorithomus.com.br-",
+      "path": "android/apps/cobrinha/src/main/assets/www/",
+      "files": 18,
+      "label": "cobrinha"
+    },
+    {
+      "repository": "768ull/https-algorithomus.com.br-",
+      "path": "android/apps/frutris/src/main/assets/www/",
+      "files": 21,
+      "label": "frutris"
+    }
+  ],
+  "files": [
+    {
+      "assetPath": "reference/legacy-source-trees/algorithomus-app-v1.9/css/animations.css",
+      "gitBlobSha": "2340387890ce324f1e56aae120d47954a359843f"
+    },
+    {
+      "assetPath": "reference/legacy-source-trees/algorithomus-app-v1.9/css/apps.css",
+      "gitBlobSha": "f3f96012814051a74bd13c2979a6569ce027629e"
+    },
+    {
+      "assetPath": "reference/legacy-source-trees/algorithomus-app-v1.9/css/charge.css",
+      "gitBlobSha": "c2708bc31a1f06ca6a6a0a0ab801afa3773fb31b"
+    },
+    {
+      "assetPath": "reference/legacy-source-trees/algorithomus-app-v1.9/css/device.css",
+      "gitBlobSha": "1b1987812188f04265cf57f8ae76813b6529973f"
+    },
+    {
+      "assetPath": "reference/legacy-source-trees/algorithomus-app-v1.9/css/diary-test.css",
+      "gitBlobSha": "db5387631c9e3c5763501e2cf747d4fe6e3d902e"
+    },
+    {
+      "assetPath": "reference/legacy-source-trees/algorithomus-app-v1.9/css/emergency.css",
+      "gitBlobSha": "836887a653d0edce49bbe61ca2bda18a0132c26c"
+    },
+    {
+      "assetPath": "reference/legacy-source-trees/algorithomus-app-v1.9/css/glitch.css",
+      "gitBlobSha": "b7dde6c2be7255e40ac18ab15336d38d25295554"
+    },
+    {
+      "assetPath": "reference/legacy-source-trees/algorithomus-app-v1.9/css/home.css",
+      "gitBlobSha": "45db417ac36e29a4e7a9cb5254a64477a1491f13"
+    },
+    {
+      "assetPath": "reference/legacy-source-trees/algorithomus-app-v1.9/css/intro.css",
+      "gitBlobSha": "bb3f7f4d15ee07e5ab7aea589b030a8eff37b5e2"
+    },
+    {
+      "assetPath": "reference/legacy-source-trees/algorithomus-app-v1.9/css/lock.css",
+      "gitBlobSha": "caeb6a6aeb76b654f3ce920610442b2eef7de3b0"
+    },
+    {
+      "assetPath": "reference/legacy-source-trees/algorithomus-app-v1.9/css/overload.css",
+      "gitBlobSha": "8e8ae9a77226e46ad934113e3ac745905d30f401"
+    },
+    {
+      "assetPath": "reference/legacy-source-trees/algorithomus-app-v1.9/css/secret-install.css",
+      "gitBlobSha": "0cf5fd7f2f0a85942bd333a0e4a5812e60645a7f"
+    },
+    {
+      "assetPath": "reference/legacy-source-trees/algorithomus-app-v1.9/css/system.css",
+      "gitBlobSha": "8ab07fb5b6bca97e39387e21943db49ae62a4582"
+    },
+    {
+      "assetPath": "reference/legacy-source-trees/algorithomus-app-v1.9/css/tokens.css",
+      "gitBlobSha": "ee3599680a45cb71538fa1df0fb7730bb58967b7"
+    },
+    {
+      "assetPath": "reference/legacy-source-trees/algorithomus-app-v1.9/css/update.css",
+      "gitBlobSha": "067e41babe5112706b419ca5ea9ccb0d4204c586"
+    },
+    {
+      "assetPath": "reference/legacy-source-trees/algorithomus-app-v1.9/index.html",
+      "gitBlobSha": "8ac18c7641102d8d0694f5c440dd6b1c5ead11a8"
+    },
+    {
+      "assetPath": "reference/legacy-source-trees/cobrinha/apps/cobrinha/css/controls.css",
+      "gitBlobSha": "32acdd6d50514dadad7d1e51929b96a7487b9cc2"
+    },
+    {
+      "assetPath": "reference/legacy-source-trees/cobrinha/apps/cobrinha/css/layout.css",
+      "gitBlobSha": "94c032f55f8be8bea7e7abf6f802c19fe095e8b7"
+    },
+    {
+      "assetPath": "reference/legacy-source-trees/cobrinha/apps/cobrinha/css/overlays.css",
+      "gitBlobSha": "073cd22d619b98db775c0c4e74af2a826b6e00ed"
+    },
+    {
+      "assetPath": "reference/legacy-source-trees/cobrinha/apps/cobrinha/css/tokens.css",
+      "gitBlobSha": "dba8bfbea94ad42d42b240947d2bd1c9b34fe8d9"
+    },
+    {
+      "assetPath": "reference/legacy-source-trees/cobrinha/apps/cobrinha/game.webp",
+      "gitBlobSha": "06da76fb6f9995dd69351e7e1aa66662ca213fc5"
+    },
+    {
+      "assetPath": "reference/legacy-source-trees/cobrinha/apps/cobrinha/index.html",
+      "gitBlobSha": "c6d81e2c733f431eb83d7ca40b6b15f53b5aa0c4"
+    },
+    {
+      "assetPath": "reference/legacy-source-trees/cobrinha/apps/cobrinha/js/config.js",
+      "gitBlobSha": "ecd42bd564642dff59ef6b65c94f00fd0a81eaf7"
+    },
+    {
+      "assetPath": "reference/legacy-source-trees/cobrinha/apps/cobrinha/js/engine.js",
+      "gitBlobSha": "0ee4e3f6916efae23faef3a7327ffe6e9f279f24"
+    },
+    {
+      "assetPath": "reference/legacy-source-trees/cobrinha/apps/cobrinha/js/host.js",
+      "gitBlobSha": "9bbd4537ea3607b5a69c88f1d3e157cdca7280d2"
+    },
+    {
+      "assetPath": "reference/legacy-source-trees/cobrinha/apps/cobrinha/js/icons.js",
+      "gitBlobSha": "de774a347d9d6b2f9cd1b481b50591de8a07b051"
+    },
+    {
+      "assetPath": "reference/legacy-source-trees/cobrinha/apps/cobrinha/js/input.js",
+      "gitBlobSha": "8d3991800fd1fc28272b888cb27feacf54c2f83c"
+    },
+    {
+      "assetPath": "reference/legacy-source-trees/cobrinha/apps/cobrinha/js/main.js",
+      "gitBlobSha": "7cffb23d2743e2aa8b2b68316b55e08d07aa4182"
+    },
+    {
+      "assetPath": "reference/legacy-source-trees/cobrinha/apps/cobrinha/js/render.js",
+      "gitBlobSha": "d7371b090826685a7bcfb0e8d0569b304539f183"
+    },
+    {
+      "assetPath": "reference/legacy-source-trees/cobrinha/apps/cobrinha/js/state.js",
+      "gitBlobSha": "a0eb7a4671584073001f4e052140bf5adef9d724"
+    },
+    {
+      "assetPath": "reference/legacy-source-trees/cobrinha/apps/cobrinha/js/ui.js",
+      "gitBlobSha": "0cf1724b639e5cda3ef86bfbc903bd78797a6daf"
+    },
+    {
+      "assetPath": "reference/legacy-source-trees/cobrinha/apps/ghost-touch.js",
+      "gitBlobSha": "53e2b92432f2487f94a0077c83011a91ed8cf1b6"
+    },
+    {
+      "assetPath": "reference/legacy-source-trees/cobrinha/assets/img/Icones/cobrinha.webp",
+      "gitBlobSha": "6f86efbf23e20c05103387b9dd818c92a7d0bd5d"
+    },
+    {
+      "assetPath": "reference/legacy-source-trees/cobrinha/js/app-theme.js",
+      "gitBlobSha": "3fac2a6d912d33324c1c1219401c3e7269db46d5"
+    },
+    {
+      "assetPath": "reference/legacy-source-trees/frutris/apps/ghost-touch.js",
+      "gitBlobSha": "53e2b92432f2487f94a0077c83011a91ed8cf1b6"
+    },
+    {
+      "assetPath": "reference/legacy-source-trees/frutris/apps/tetris/css/components.css",
+      "gitBlobSha": "8d228ec388515d2a91be0909004a6c41a0f58414"
+    },
+    {
+      "assetPath": "reference/legacy-source-trees/frutris/apps/tetris/css/intro.css",
+      "gitBlobSha": "82d2e5baeadffc7d60f708b679f23e13a0b20ebe"
+    },
+    {
+      "assetPath": "reference/legacy-source-trees/frutris/apps/tetris/css/layout.css",
+      "gitBlobSha": "bdd1255fcdc67a809a13af76d44340bd42eaea7f"
+    },
+    {
+      "assetPath": "reference/legacy-source-trees/frutris/apps/tetris/css/tokens.css",
+      "gitBlobSha": "bba614544d04cac86671e761fac958b76bf8c274"
+    },
+    {
+      "assetPath": "reference/legacy-source-trees/frutris/apps/tetris/css/tutorial.css",
+      "gitBlobSha": "89f550edb8c7e65bdcfec3ed9034c1abc7f88383"
+    },
+    {
+      "assetPath": "reference/legacy-source-trees/frutris/apps/tetris/index.html",
+      "gitBlobSha": "9be69604f9df794432b87a88b923326cc7555d72"
+    },
+    {
+      "assetPath": "reference/legacy-source-trees/frutris/apps/tetris/js/audio.js",
+      "gitBlobSha": "c4906a49262f1eed2d4b4624915609d213832d15"
+    },
+    {
+      "assetPath": "reference/legacy-source-trees/frutris/apps/tetris/js/bridge-capture.js",
+      "gitBlobSha": "4c18a7827fe8fe0ebe5dd36c884ed9c2ffbf0b3d"
+    },
+    {
+      "assetPath": "reference/legacy-source-trees/frutris/apps/tetris/js/config.js",
+      "gitBlobSha": "ad9d8ea0a38600e4170bcbea4aae6ccb0f43e356"
+    },
+    {
+      "assetPath": "reference/legacy-source-trees/frutris/apps/tetris/js/engine.js",
+      "gitBlobSha": "f4ee9383fc3b052ac83b30e23d74a38d89450df1"
+    },
+    {
+      "assetPath": "reference/legacy-source-trees/frutris/apps/tetris/js/host.js",
+      "gitBlobSha": "89a3112736813d0ddc27c399e055c9a270104436"
+    },
+    {
+      "assetPath": "reference/legacy-source-trees/frutris/apps/tetris/js/input.js",
+      "gitBlobSha": "58e0444f06c954946144edb283191a985c3fa233"
+    },
+    {
+      "assetPath": "reference/legacy-source-trees/frutris/apps/tetris/js/intro.js",
+      "gitBlobSha": "300fb2f2e32a47342bb9f0b4a692c8b420fead08"
+    },
+    {
+      "assetPath": "reference/legacy-source-trees/frutris/apps/tetris/js/main.js",
+      "gitBlobSha": "4fd88c1e17c63eaa39c02b9b66ce94dac088750b"
+    },
+    {
+      "assetPath": "reference/legacy-source-trees/frutris/apps/tetris/js/render.js",
+      "gitBlobSha": "1ff81c5ac76e1969d4906d7705e2b6ba1d89e4b7"
+    },
+    {
+      "assetPath": "reference/legacy-source-trees/frutris/apps/tetris/js/state.js",
+      "gitBlobSha": "e6ec8cd769453187de63f5de660122b6aa791001"
+    },
+    {
+      "assetPath": "reference/legacy-source-trees/frutris/apps/tetris/js/tutorial.js",
+      "gitBlobSha": "6323abdafc3092cb4af8f249383c2014b066b683"
+    },
+    {
+      "assetPath": "reference/legacy-source-trees/frutris/apps/tetris/js/ui.js",
+      "gitBlobSha": "6405a6339049edf62da97ecb3c8c62c518d77435"
+    },
+    {
+      "assetPath": "reference/legacy-source-trees/frutris/assets/img/Icones/tetris.webp",
+      "gitBlobSha": "f5cc8b7a08f6766617cf4bd001caee6e74eeacdc"
+    },
+    {
+      "assetPath": "reference/legacy-source-trees/frutris/js/app-theme.js",
+      "gitBlobSha": "3fac2a6d912d33324c1c1219401c3e7269db46d5"
+    }
+  ]
+}

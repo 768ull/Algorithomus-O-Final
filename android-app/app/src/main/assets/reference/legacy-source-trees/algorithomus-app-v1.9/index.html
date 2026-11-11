@@ -1,0 +1,437 @@
+<!DOCTYPE html><html lang="pt-BR" class="is-cold is-held is-intro-armed" style="--device-scale: 0.7523364485981309;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="color-scheme" content="dark">
+    <meta name="description" content="Isso é tudo que precisavam saber.">
+    <meta name="theme-color" content="#000000">
+    <title>Algorithomus — O final</title>
+
+    <link rel="icon" type="image/webp" href="https://algorithomus.com.br/assets/img/icon.webp?v=1">
+    <link rel="stylesheet" href="https://algorithomus.com.br/css/tokens.css?v=2">
+    <link rel="stylesheet" href="https://algorithomus.com.br/css/intro.css">
+    <link rel="stylesheet" href="https://algorithomus.com.br/css/glitch.css">
+    <link rel="stylesheet" href="https://algorithomus.com.br/css/charge.css?v=2">
+    <link rel="stylesheet" href="https://algorithomus.com.br/css/update.css?v=2">
+    <link rel="stylesheet" href="https://algorithomus.com.br/css/animations.css?v=2">
+    <link rel="stylesheet" href="https://algorithomus.com.br/css/device.css?v=5">
+    <link rel="stylesheet" href="https://algorithomus.com.br/css/system.css?v=16">
+    <link rel="stylesheet" href="https://algorithomus.com.br/css/emergency.css?v=1">
+    <link rel="stylesheet" href="https://algorithomus.com.br/css/home.css?v=30">
+    <link rel="stylesheet" href="https://algorithomus.com.br/css/apps.css?v=3">
+    <link rel="stylesheet" href="https://algorithomus.com.br/css/lock.css?v=3">
+    <link rel="stylesheet" href="https://algorithomus.com.br/css/overload.css?v=4">
+    <link rel="stylesheet" href="https://algorithomus.com.br/css/secret-install.css?v=1">
+    <link rel="stylesheet" href="https://algorithomus.com.br/css/diary-test.css?v=88">
+
+</head>
+<body>
+<div class="diary-rabiscos-overlay" id="diaryRabiscosOverlay" aria-hidden="true">
+    <iframe data-src="apps/sem-nome/rabiscos/index.html?v=2" title="Animação de rabiscos" tabindex="-1" loading="lazy"></iframe>
+</div>
+<div class="diary-day-six-background" id="diaryDaySixBackground" aria-hidden="true">
+    <video id="diaryDaySixVideo" muted="" playsinline="" preload="none"></video>
+</div>
+<div class="stage">
+    <div class="device" id="device">
+
+        <span class="device__key device__key--vol-up" data-action="volume-up" title="Volume +"></span>
+        <span class="device__key device__key--vol-down" data-action="volume-down" title="Volume −"></span>
+        <span class="device__key device__key--power" data-action="power" title="Liga / desliga"></span>
+
+        <span class="device__port" id="device-port" aria-hidden="true"></span>
+
+        <div class="cable" id="cable" aria-hidden="true">
+            <svg class="cable__line" viewBox="0 0 24 200" preserveAspectRatio="none">
+                <path d="M12 0 V200"></path>
+            </svg>
+            <span class="cable__plug"></span>
+        </div>
+
+        <div class="screen" id="screen">
+
+
+            <div class="charge" aria-hidden="true">
+                <div class="charge__gauge">
+                    <div class="charge__battery">
+                        <span class="charge__tip"></span>
+                        <div class="charge__cell"><span class="charge__fill"></span></div>
+                    </div>
+                    <span class="charge__pct" id="charge-pct">0%</span>
+                </div>
+                <p class="charge__status">carregando<span class="charge__dots" aria-hidden="true"><span></span><span></span><span></span></span></p>
+                <div class="charge__meta">
+                    <p class="charge__slow">carga completa</p>
+                    <p class="charge__note">iniciando sistema</p>
+                </div>
+            </div>
+
+            <div class="screen__glitch" aria-hidden="true">
+                <span class="glitch__static"></span><span class="glitch__bars"></span>
+                <span class="glitch__slice glitch__slice--1"></span><span class="glitch__slice glitch__slice--2"></span>
+                <span class="glitch__slice glitch__slice--3"></span><span class="glitch__slice glitch__slice--4"></span>
+                <span class="glitch__roll"></span><span class="glitch__tear"></span>
+            </div>
+
+            <div class="screen__texto" id="screen-texto" aria-hidden="true">
+                <img class="screen__texto-img" id="screen-texto-img" src="https://algorithomus.com.br/assets/img/texto1.webp" alt="">
+            </div>
+
+
+            <div class="wallpaper">
+                <div class="wallpaper__grid"></div>
+            </div>
+
+
+            <main class="home" id="home">
+                <div class="home__viewport" id="homeViewport">
+                    <div class="home__pages" id="homePages">
+                        <section class="home__page is-active" id="homePage0" role="tabpanel" aria-labelledby="homeTab0" aria-hidden="false">
+                            <div class="home__widgets" id="homeWidgetsPage0" aria-label="Widgets da tela inicial">
+                                <section class="home-widget home-widget--clock" data-widget="clock" aria-label="Relógio e data">
+                                    <span class="home-widget__eyebrow">Agora</span>
+                                    <time class="home-clock__time" id="homeClock"><span class="home-clock__hours">00</span><span class="home-clock__separator">:</span><span class="home-clock__minutes">00</span></time>
+                                    <time class="home-clock__date" id="homeDate"></time>
+                                    <button class="home-widget__resize" type="button" aria-label="Redimensionar widget do relógio"></button>
+                                </section>
+
+                                <section class="home-widget home-widget--weather" data-widget="weather" aria-label="Previsão do tempo: nublado com chuva, 20 graus">
+                                    <span class="home-widget__eyebrow">Clima de hoje</span>
+                                    <div class="home-weather__main">
+                                        <svg class="home-weather__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                            <path d="M20 16.2A4.5 4.5 0 0 0 18.5 7h-1.1A7 7 0 1 0 4 15.25"></path>
+                                            <path d="M8 16v2M8 22v1M16 16v2M16 22v1M12 18v2"></path>
+                                        </svg>
+                                        <strong class="home-weather__temperature">20°</strong>
+                                    </div>
+                                    <span class="home-weather__condition">Nublado com chuva</span>
+                                    <button class="home-widget__resize" type="button" aria-label="Redimensionar widget do clima"></button>
+                                </section>
+                            </div>
+                            <div class="home__grid" id="homeGrid"></div>
+                        </section>
+
+                        <section class="home__page" id="homePage1" role="tabpanel" aria-labelledby="homeTab1" aria-hidden="true">
+                            <div class="home__widgets" id="homeWidgetsPage1" aria-label="Widgets da tela inicial"></div>
+                            <div class="home__grid" id="homeGridSecondary"></div>
+                        </section>
+                    </div>
+                </div>
+                <div class="home__dots" id="homeDots" role="tablist" aria-label="Páginas da tela inicial">
+                    <button class="home__dot is-active" id="homeTab0" type="button" role="tab" data-action="home-page" data-page="0" aria-label="Página 1" aria-selected="true" aria-controls="homePage0"></button>
+                    <button class="home__dot" id="homeTab1" type="button" role="tab" data-action="home-page" data-page="1" aria-label="Página 2" aria-selected="false" aria-controls="homePage1"></button>
+                </div>
+
+                <div class="home__dock" id="homeDock" role="toolbar" aria-label="Aplicativos favoritos"></div>
+                
+
+            </main>
+
+
+            <div class="app-layer" id="appLayer"></div>
+            <div class="diary-screen-break" id="diaryScreenBreak" aria-hidden="true">
+                <canvas id="diaryScreenStatic"></canvas>
+                <canvas class="diary-screen-particles" id="diaryScreenParticles"></canvas>
+                <div class="diary-screen-fragments" id="diaryScreenFragments"></div>
+                <svg id="diaryScreenFractureSvg" viewBox="0 0 1000 1600" preserveAspectRatio="none">
+                    <g id="diaryScreenOutlines"></g>
+                    <g id="diaryScreenCutLines"></g>
+                </svg>
+            </div>
+            <div class="secret-install" id="secretInstall" aria-hidden="true"></div>
+            
+
+
+
+
+
+            <div class="recents" id="recents" data-action="close-recents">
+                <div class="recents__head">Recentes</div>
+            </div>
+            <div class="recents-rail-layer" id="recentsRailLayer">
+                <div class="recents__rail" id="recentsRail"></div>
+            </div>
+
+
+            <div class="shade" id="shade">
+                <div class="shade__grip" data-action="toggle-shade"></div>
+                <div class="shade__head">
+                    <span>Notificações</span>
+                    <button class="shade__head-action" data-action="clear-notes">Limpar tudo</button>
+                </div>
+                <div class="shade__list" id="noteList"></div>
+                <div class="shade__foot">
+
+
+
+
+                    <span>Morajo</span>
+                    <span class="shade__foot-dot"></span>
+                    <span id="noteCount">0 alertas</span>
+                </div>
+            </div>
+
+
+
+
+
+
+            <div class="lock is-locked" id="lock">
+
+                <div class="lock__rest">
+                    <div class="lock__head">
+                        <div class="lock__time" id="lockClock">00:00</div>
+                        <div class="lock__date" id="lockDate"></div>
+                    </div>
+
+                    <div class="lock__list" id="lockList"></div>
+
+                    <button class="lock__handle" data-action="lock-passcode" type="button">
+                        <i data-icon="chevron-up"></i>
+                        <span>deslize para cima</span>
+                    </button>
+                </div>
+
+                <div class="lock__code" id="lockCode">
+                    <p class="lock__code-title">desenhe o padrão</p>
+
+                    <div class="lock__pad" id="lockPad">
+                        <svg class="lock__svg" viewBox="0 0 300 300" aria-hidden="true">
+                            <g class="lock__grid"></g>
+                            <path class="lock__fill" id="lockFill"></path>
+                            <path class="lock__line" id="lockLine"></path>
+                        </svg>
+                    </div>
+
+                    <p class="lock__hint" id="lockHint"></p>
+
+                    <div class="lock__sos-row">
+                        <button class="lock__sos" data-action="open-keypad" type="button">
+                            <i data-icon="phone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.2 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></i>
+                            <span>Emergência</span>
+                        </button>
+                    </div>
+                </div>
+
+
+                <div class="keypad" id="keypad">
+                    <div class="keypad__head">
+                        <button class="keypad__close" data-action="keypad-close" aria-label="Fechar">
+                            <i data-icon="close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 6 6 18M6 6l12 12"></path></svg></i>
+                        </button>
+                        <span class="keypad__title">Emergência</span>
+                    </div>
+
+                    <div class="keypad__screen" id="keypadScreen">—</div>
+
+                    <p class="keypad__note" id="keypadNote"></p>
+
+                    <div class="keypad__keys">
+                        <button class="keypad__key" data-action="keypad-digit" data-digit="1"><span>1</span><small></small></button>
+                        <button class="keypad__key" data-action="keypad-digit" data-digit="2"><span>2</span><small>abc</small></button>
+                        <button class="keypad__key" data-action="keypad-digit" data-digit="3"><span>3</span><small>def</small></button>
+                        <button class="keypad__key" data-action="keypad-digit" data-digit="4"><span>4</span><small>ghi</small></button>
+                        <button class="keypad__key" data-action="keypad-digit" data-digit="5"><span>5</span><small>jkl</small></button>
+                        <button class="keypad__key" data-action="keypad-digit" data-digit="6"><span>6</span><small>mno</small></button>
+                        <button class="keypad__key" data-action="keypad-digit" data-digit="7"><span>7</span><small>pqrs</small></button>
+                        <button class="keypad__key" data-action="keypad-digit" data-digit="8"><span>8</span><small>tuv</small></button>
+                        <button class="keypad__key" data-action="keypad-digit" data-digit="9"><span>9</span><small>wxyz</small></button>
+                        <button class="keypad__key" data-action="keypad-back" aria-label="Apagar">
+                            <i data-icon="backspace"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 5H9.5L3 12l6.5 7H20a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1z"></path><path d="m17 9-5 6M12 9l5 6"></path></svg></i>
+                        </button>
+                        <button class="keypad__key" data-action="keypad-digit" data-digit="0"><span>0</span><small></small></button>
+                        <button class="keypad__key" data-action="keypad-digit" data-digit="#"><span>#</span><small></small></button>
+                    </div>
+
+                    <button class="keypad__call" data-action="keypad-call">
+                        <i data-icon="phone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.2 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></i>
+                        <span>Chamar</span>
+                    </button>
+                </div>
+            </div>
+
+
+            <div class="toast" id="toast" data-action="open-toast">
+                <div class="toast__icon" id="toastIcon"><i data-icon="chat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg></i></div>
+                <div class="toast__body">
+                    <div class="toast__title" id="toastTitle">Mensagens</div>
+                    <div class="toast__text" id="toastText"></div>
+                </div>
+            </div>
+
+
+
+
+            <div class="pull-zone" id="pullZone" data-action="toggle-shade"></div>
+
+
+            <header class="status-bar" id="statusBar" data-action="toggle-shade">
+                <div class="status-bar__side status-bar__side--left">
+                    <span class="status-bar__clock" id="clock">00:00</span>
+                    <div class="status-bar__notes" id="statusNotes"></div>
+                </div>
+                <div class="status-bar__side status-bar__side--right">
+                    <div class="status-bar__icons" id="statusIcons"></div>
+                </div>
+            </header>
+
+            <div class="island" id="island"><span class="island__lens"></span></div>
+
+
+
+
+
+            <div class="dim" id="dim"></div>
+
+
+            <nav class="nav-bar" id="navBar">
+                <div class="nav-bar__row">
+                    <button class="nav-btn" data-action="back" aria-label="Voltar"><i data-icon="back"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m15 18-6-6 6-6"></path></svg></i></button>
+                    <button class="nav-btn" data-action="home" aria-label="Início"><i data-icon="home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8.2"></circle></svg></i></button>
+                    <button class="nav-btn" data-action="recents" aria-label="Recentes"><i data-icon="recents"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="4" y="4" width="16" height="16" rx="3.5"></rect></svg></i></button>
+                </div>
+            </nav>
+
+
+            
+
+
+            <div class="call call--in" id="callIn">
+                <div class="call__avatar" id="callInAvatar">👁️</div>
+                <div class="call__kind">Chamada de voz</div>
+                <div class="call__name" id="callInName">Número desconhecido</div>
+                <div class="call__actions">
+                    <button class="call-btn call-btn--decline" data-action="decline-call" aria-label="Recusar"><i data-icon="decline"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><g transform="rotate(135 12 12)"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.2 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></g></svg></i></button>
+                    <button class="call-btn call-btn--accept" data-action="accept-call" aria-label="Atender"><i data-icon="accept"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.2 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></i></button>
+                </div>
+            </div>
+
+
+            <div class="call call--active" id="callActive">
+                <div class="call__avatar" id="callActiveAvatar">👁️</div>
+                <div class="call__name" id="callActiveName">Número desconhecido</div>
+                <div class="call__timer" id="callTimer">00:00</div>
+                <div class="call__wave"><span></span><span></span><span></span><span></span><span></span></div>
+                <div class="call__actions">
+                    <button class="call-btn call-btn--decline" id="callEndButton" data-action="end-call" aria-label="Desligar"><i data-icon="decline"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><g transform="rotate(135 12 12)"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.2 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></g></svg></i></button>
+                </div>
+            </div>
+
+
+            <div class="call call--sos" id="callSos">
+                <div class="call__avatar">
+                    <span id="sosInitial">—</span>
+                </div>
+
+                <p class="call__kind" id="sosKind">chamando</p>
+                <p class="call__name" id="sosName">—</p>
+                <p class="call__service" id="sosNumber">—</p>
+
+                <div class="call__wave" aria-hidden="true">
+                    <span></span><span></span><span></span><span></span><span></span>
+                </div>
+
+                <p class="call__timer" id="sosTimer"></p>
+
+                <div class="call__actions">
+                    <button class="call-btn call-btn--decline" data-action="call-hangup" type="button" aria-label="Desligar">
+                        <i data-icon="decline"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><g transform="rotate(135 12 12)"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.2 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></g></svg></i>
+                    </button>
+                </div>
+            </div>
+
+            
+
+
+            
+
+
+            <div class="screen__layer screen__pixels"></div>
+            <div class="screen__layer screen__scanlines"></div>
+            <div class="screen__layer screen__vignette"></div>
+            <div class="boot-flash"></div>
+            <div class="boot-logo">Algorithomus</div>
+
+            <div class="boot-progress" id="bootProgress" aria-hidden="true">
+                <p class="boot-progress__label">inicializando o celular<span class="boot-progress__dots" aria-hidden="true"><span></span><span></span><span></span></span></p>
+                <div class="boot-progress__track" role="progressbar" aria-label="Inicialização do celular" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span class="boot-progress__fill"></span></div>
+                <p class="boot-progress__step" id="bootStep" aria-live="polite">preparando mídias e aplicativos</p>
+                <p class="boot-progress__percent" id="bootProgressPct">0%</p>
+                
+            </div>
+
+            <div class="screen-black" id="screenBlack" aria-hidden="true"></div>
+            <div class="update" id="update" aria-hidden="true">
+                <div class="update__logo">Algorithomus</div>
+                <p class="update__title" id="updateTitle">atualizando sistema</p>
+                <div class="update__track"><span class="update__fill"></span></div>
+                <p class="update__pct" id="updatePct">--%</p>
+                <p class="update__note" id="updateNote">instalando arquivos</p>
+        </div>
+
+    </div>
+        <div class="device__burst" aria-hidden="true"></div>
+    </div>
+</div>
+
+
+
+<div class="intro-white" id="intro-white" aria-hidden="true"></div>
+<div class="intro-whiteout" aria-hidden="true"></div>
+<div class="intro-site" aria-hidden="true"></div>
+<div class="intro-blink" aria-hidden="true"></div>
+
+<div class="intro-warn" id="intro-warn" role="dialog" aria-modal="true" aria-labelledby="intro-warn-title" aria-describedby="intro-warn-lead">
+    <div class="intro-warn__card">
+        <h1 class="intro-warn__title" id="intro-warn-title">Aviso</h1>
+        <p class="intro-warn__lead" id="intro-warn-lead">Esta página tem <strong>luzes piscantes</strong> e inversões de cor.</p>
+        <p class="intro-warn__body">Se você tem epilepsia fotossensível ou já teve crise, feche a página.</p>
+        <button class="intro-warn__btn" id="intro-warn-btn" type="button">Entendi</button>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

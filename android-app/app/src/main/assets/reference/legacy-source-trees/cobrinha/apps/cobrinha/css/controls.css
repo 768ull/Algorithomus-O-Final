@@ -1,0 +1,153 @@
+.board {
+  --ctrl-alpha: 1;
+  --dpad-alpha: 0.82
+}
+.board.is-playing {
+  --ctrl-alpha: 0.55;
+  --dpad-alpha: 0.5
+}
+.ctrl {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  z-index: 7;
+  display: flex;
+  gap: 5px;
+  pointer-events: none
+}
+.ctrl__btn {
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: 1px solid rgba(0, 0, 0, 0.35);
+  color: #fff;
+  cursor: pointer;
+  pointer-events: auto
+}
+.ctrl__btn svg {
+  width: 15px;
+  height: 15px;
+  display: block
+}
+.ctrl__btn--gear {
+  background: var(--gear);
+  background: color-mix(in srgb, var(--gear) calc(var(--ctrl-alpha) * 100%), transparent)
+}
+.ctrl__btn--pause {
+  background: var(--pause);
+  background: color-mix(in srgb, var(--pause) calc(var(--ctrl-alpha) * 100%), transparent)
+}
+.ctrl__btn:active {
+  background: var(--gear);
+  background: color-mix(in srgb, var(--gear) 100%, transparent)
+}
+.ctrl__btn--pause:active {
+  background: var(--pause);
+  background: color-mix(in srgb, var(--pause) 100%, transparent)
+}
+.ctrl__btn[disabled] {
+  opacity: 0.35;
+  cursor: default
+}
+.ctrl__btn[disabled]:active {
+  background: var(--gear);
+  background: color-mix(in srgb, var(--gear) calc(var(--ctrl-alpha) * 100%), transparent)
+}
+.gear {
+  position: absolute;
+  top: 36px;
+  right: 6px;
+  z-index: 8;
+  width: 158px;
+  background: var(--panel-bg);
+  border: 1px solid var(--frame-line);
+  pointer-events: auto
+}
+.gear[hidden] {
+  display: none
+}
+.gear__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  width: 100%;
+  padding: 9px 10px;
+  background: none;
+  border: 0;
+  border-bottom: 1px solid var(--frame-line);
+  color: var(--text);
+  font: inherit;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-align: left;
+  cursor: pointer
+}
+.gear__row:last-child {
+  border-bottom: 0
+}
+.gear__row:active {
+  background: var(--frame)
+}
+.gear__label {
+  color: var(--text-dim)
+}
+.gear__value {
+  color: var(--text)
+}
+.dpad {
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 5;
+  display: grid;
+  grid-template-columns: repeat(3, 34px);
+  grid-template-rows: repeat(3, 30px);
+  gap: 4px;
+  pointer-events: none
+}
+.dpad[hidden] {
+  display: none
+}
+.dpad__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: var(--btn);
+  background: color-mix(in srgb, var(--btn) calc(var(--dpad-alpha) * 100%), transparent);
+  border: 1px solid var(--frame-line);
+  color: var(--btn-text);
+  font: inherit;
+  font-size: 11px;
+  cursor: pointer;
+  pointer-events: auto
+}
+.dpad__btn:active {
+  background: var(--btn);
+  background: color-mix(in srgb, var(--btn) 100%, transparent)
+}
+.dpad__btn--up {
+  grid-column: 2;
+  grid-row: 1
+}
+.dpad__btn--left {
+  grid-column: 1;
+  grid-row: 2
+}
+.dpad__btn--mid {
+  grid-column: 2;
+  grid-row: 2
+}
+.dpad__btn--right {
+  grid-column: 3;
+  grid-row: 2
+}
+.dpad__btn--down {
+  grid-column: 2;
+  grid-row: 3
+}

@@ -1,0 +1,246 @@
+.coach {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 150;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .2s ease
+}
+.coach.hidden {
+  display: none
+}
+.coach.show {
+  opacity: 1
+}
+.coach-stage {
+  width: 100%;
+  height: auto
+}
+.coach-name {
+  max-width: 100%;
+  padding: 6px 10px;
+  border-bottom: 2px solid var(--accent);
+  background: #0b0b12dd;
+  text-align: center;
+  font-size: clamp(16px, 4vw, 23px);
+  font-weight: 800;
+  letter-spacing: 1px;
+  line-height: 1.2;
+  color: #fff
+}
+.coach.ready .coach-name,
+.coach.success .coach-name {
+  color: #8ce6b7;
+  border-color: #8ce6b7
+}
+@keyframes coachEnter {
+  from {
+    opacity: 0;
+    transform: translateY(6px)
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0)
+  }
+}
+.coach.step-enter .coach-name {
+  animation: coachEnter .22s ease-out
+}
+.coach.practice-intro .coach-name {
+  animation: coachEnter .4s ease-out
+}
+@keyframes coachSuccess {
+  50% {
+    transform: scale(1.08)
+  }
+}
+.coach.success .coach-name {
+  animation: coachSuccess .3s ease-out
+}
+@keyframes coachShake {
+  0%,
+  100% {
+    transform: translateX(0)
+  }
+  25%,
+  75% {
+    transform: translateX(-3px)
+  }
+  50% {
+    transform: translateX(3px)
+  }
+}
+.coach-name.shake,
+.coach.step-enter .coach-name.shake {
+  animation: coachShake .28s ease-out
+}
+.tutorial-hud {
+  position: absolute;
+  inset: 0;
+  z-index: 160;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 8px;
+  pointer-events: none;
+  background: #171624
+}
+.tutorial-hud.hidden {
+  display: none
+}
+.tutorial-step {
+  min-width: 0;
+  font-size: clamp(9px, 2vw, 12px);
+  color: var(--text-muted);
+  font-weight: 700
+}
+.tutorial-stage-name {
+  max-width: 100%;
+  color: #fff;
+  font-size: clamp(16px, 4vw, 24px);
+  font-weight: 900;
+  letter-spacing: .08em;
+  line-height: 1.1;
+  text-align: center;
+  text-shadow: 0 1px 8px rgba(0,0,0,.45)
+}
+.tutorial-tools {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+  pointer-events: none
+}
+.tutorial-tools.hidden {
+  display: none
+}
+.tutorial-progress {
+  display: flex;
+  gap: 4px;
+  padding: 3px 0
+}
+.tutorial-progress span {
+  width: 7px;
+  height: 7px;
+  border: 1px solid #72798b;
+  transition: background .2s,border-color .2s
+}
+.tutorial-progress .active {
+  background: var(--accent);
+  border-color: var(--accent)
+}
+.tutorial-progress .done {
+  background: #8ce6b7;
+  border-color: #8ce6b7
+}
+.tutorial-hud.compact .tutorial-progress {
+  gap: 3px
+}
+.tutorial-hud.compact .tutorial-progress span {
+  width: 5px;
+  height: 5px
+}
+.tutorial-hud.tiny .tutorial-progress {
+  gap: 2px
+}
+.tutorial-hud.tiny .tutorial-progress span {
+  width: 3px;
+  height: 4px
+}
+.tutorial-hud.tiny {
+  padding: 3px
+}
+.tutorial-hud.tiny .tutorial-stage-name {
+  font-size: 12px
+}
+.tutorial-hud.tiny .coach-name {
+  font-size: 10px
+}
+.tutorial-hud.tiny .tutorial-exit {
+  width: 16px;
+  height: 16px;
+  font-size: 15px
+}
+.coach.compact {
+  gap: 4px
+}
+.tutorial-exit {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  background: #161923dd;
+  border: 1px solid #72798b;
+  color: #fff;
+  font: 20px monospace;
+  line-height: 1;
+  pointer-events: auto;
+  cursor: pointer
+}
+.tutorial-exit:hover {
+  background: #343848
+}
+@keyframes tutorialPanelPulse {
+  50% {
+    border-color: var(--accent);
+    background: #252033
+  }
+}
+.tutorial-highlight {
+  animation: tutorialPanelPulse 1s ease-in-out infinite
+}
+.tutorial-mode {
+  background: #11101c
+}
+.tutorial-mode .panel {
+  background: #171624;
+  border-color: #655183
+}
+.tutorial-mode .score-panel > .record-line,
+.tutorial-mode .score-panel > .stat-value,
+.tutorial-mode .score-panel > h3 {
+  visibility: hidden;
+  display: none
+}
+.tutorial-mode .hold-panel h3,
+.tutorial-mode .next-panel h3 {
+  color: var(--accent-edge)
+}
+.tutorial-mode .level-panel,
+.tutorial-mode .panel-controls {
+  visibility: hidden
+}
+.tutorial-mode .board-shell {
+  outline: 1px solid #655183
+}
+.tutorial-mode .game-wrapper {
+  background: #11101c
+}
+@media (max-height: 440px) {
+  .coach {
+    gap: 4px
+  }
+  .coach-name {
+    padding: 4px 6px;
+    font-size: 15px
+  }
+  .tutorial-hud {
+    padding: 4px
+  }
+  .coach-name {
+    padding: 4px 6px;
+    font-size: 14px
+  }
+  .tutorial-hud .tutorial-exit {
+    width: 20px;
+    height: 20px;
+    font-size: 18px
+  }
+}

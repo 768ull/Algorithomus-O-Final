@@ -1,0 +1,145 @@
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  padding: 22px;
+  text-align: center;
+  color: var(--ink);
+  background: rgba(37, 51, 32, .78);
+  line-height: 1.2
+}
+.overlay[hidden] {
+  display: none
+}
+.overlay__title {
+  max-width: 90%;
+  margin: 0;
+  color: #f4efd9;
+  font-size: clamp(19px, 4vw, 29px);
+  font-weight: 800;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  text-shadow: 0 2px 8px rgba(20,30,17,.25)
+}
+.overlay__sub {
+  margin: 0;
+  color: #d0d0b6;
+  font-size: 14px
+}
+.overlay__count {
+  color: #e3ce91;
+  font-size: clamp(38px, 8vw, 62px);
+  font-weight: 800;
+  text-shadow: 0 2px 8px rgba(20,30,17,.25)
+}
+.overlay__final {
+  margin: 0;
+  color: #f0d394;
+  font-size: 15px;
+  font-weight: 700
+}
+.overlay__actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center
+}
+.btn {
+  min-width: 130px;
+  padding: 12px 22px;
+  border: 1px solid rgba(255,255,255,.62);
+  border-radius: 24px;
+  background: #f0ead5;
+  color: #3f5034;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .09em;
+  box-shadow: 0 4px 10px rgba(22,32,18,.25),inset 0 1px rgba(255,255,255,.8);
+  transition: transform .15s ease,box-shadow .15s ease,filter .15s ease
+}
+.btn:active {
+  transform: scale(.96) translateY(1px);
+  filter: brightness(.94);
+  box-shadow: 0 2px 6px rgba(22,32,18,.2)
+}
+.btn[hidden] {
+  display: none
+}
+.overlay__hint {
+  max-width: 240px;
+  color: #d0d0b6;
+  font-size: 12px;
+  font-weight: 600
+}
+.overlay[data-mode="countdown"] .overlay__count {
+  animation: count-pop .55s ease-out
+}
+.overlay[data-mode="over"] .overlay__title {
+  animation: title-pop .5s cubic-bezier(.2,1.4,.4,1) both
+}
+.overlay[data-mode="over"] {
+  background: transparent;
+  animation: death-veil .38s ease-out .22s forwards
+}
+.overlay[data-mode="over"] .overlay__actions,
+.overlay[data-mode="over"] .overlay__final,
+.overlay[data-mode="over"] .overlay__sub,
+.overlay[data-mode="over"] .overlay__title {
+  animation-delay: .2s
+}
+.overlay[data-mode="over"] .overlay__actions,
+.overlay[data-mode="over"] .overlay__final,
+.overlay[data-mode="over"] .overlay__sub {
+  animation: death-content .28s ease-out .22s both
+}
+.overlay[data-mode="pause"] {
+  background: rgba(37, 51, 32, .64)
+}
+@keyframes count-pop {
+  from {
+    opacity: 0;
+    transform: scale(1.7)
+  }
+  to {
+    opacity: 1;
+    transform: scale(1)
+  }
+}
+@keyframes title-pop {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(.85)
+  }
+  to {
+    opacity: 1;
+    transform: none
+  }
+}
+@keyframes death-veil {
+  to {
+    background: rgba(37, 51, 32, .78)
+  }
+}
+@keyframes death-content {
+  from {
+    opacity: 0;
+    transform: translateY(8px)
+  }
+  to {
+    opacity: 1;
+    transform: none
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::after,
+  *::before {
+    scroll-behavior: auto!important;
+    animation-duration: .01ms!important;
+    animation-delay: 0ms!important
+  }
+}

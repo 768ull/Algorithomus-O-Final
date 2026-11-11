@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="lcd">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>Cobrinha</title>
+
+    <link rel="stylesheet" href="css/tokens.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/controls.css">
+    <link rel="stylesheet" href="css/overlays.css">
+</head>
+<body>
+
+
+
+
+    <header class="hud">
+        <div class="hud__metrics">
+            <div class="hud__score"><svg class="score-mark" viewBox="0 0 36 40" aria-hidden="true"><path d="M18 11c-7-5-16 1-15 13 1 9 7 14 14 13 1 0 2 0 3 0 7 1 12-5 13-14 1-11-8-17-15-12Z"/><path d="M19 8C18 3 22 1 28 2c-1 5-4 7-9 6Z"/></svg><span class="hud__number"><small>PONTOS</small><b id="score">0</b></span></div>
+            <div class="hud__record"><span>RECORDE</span><b id="best">0</b></div>
+        </div>
+        <div class="hud__hidden" aria-hidden="true"><b id="level">1</b></div>
+    </header>
+
+
+
+
+    <div class="board" id="stage">
+        <div class="board__frame">
+            <canvas id="board" class="board__canvas"></canvas>
+
+
+
+
+
+
+            <div class="ctrl">
+                <button class="ctrl__btn ctrl__btn--gear" id="gearBtn" data-action="gear" aria-label="Opções" aria-expanded="false">
+                    <span data-icon="gear"></span>
+                </button>
+                <button class="ctrl__btn ctrl__btn--pause" id="pauseBtn" data-action="pause" aria-label="Pausar">
+                    <span data-icon="pause"></span>
+                </button>
+            </div>
+
+
+            <div class="gear" id="gearPanel" hidden>
+                <button class="gear__row" data-action="toggle-dpad">
+                    <span class="gear__label">Direcional</span>
+                    <span class="gear__value" id="dpadValue">DESLIGADO</span>
+                </button>
+                <button class="gear__row" data-action="theme">
+                    <span class="gear__label">Tema</span>
+                    <span class="gear__value" id="themeValue">LCD</span>
+                </button>
+            </div>
+
+
+
+            <div class="overlay" id="overlay" data-mode="start">
+                <h1 class="overlay__title" id="overlayTitle">COBRINHA</h1>
+                <p class="overlay__sub" id="overlaySub"></p>
+                <div class="overlay__count" id="overlayCount"></div>
+                <p class="overlay__final" id="overlayFinal" hidden></p>
+                <span class="overlay__hint" id="overlayHint" hidden></span>
+                <div class="overlay__actions">
+                    <button class="btn btn--primary" id="btnRestart" data-action="restart">JOGAR</button>
+                    <button class="btn" id="btnResume" data-action="resume" hidden>CONTINUAR</button>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+        <div class="dpad" id="dpad" hidden>
+            <button class="dpad__btn dpad__btn--up" data-dir="up" aria-label="Para cima">▲</button>
+            <button class="dpad__btn dpad__btn--left" data-dir="left" aria-label="Para a esquerda">◀</button>
+            <button class="dpad__btn dpad__btn--mid" data-action="pause" aria-label="Pausar">❚❚</button>
+            <button class="dpad__btn dpad__btn--right" data-dir="right" aria-label="Para a direita">▶</button>
+            <button class="dpad__btn dpad__btn--down" data-dir="down" aria-label="Para baixo">▼</button>
+        </div>
+    </div>
+
+    <script src="js/icons.js?v=protected-dia6-4"></script>
+    <script src="../../js/app-theme.js?v=protected-dia6-4"></script>
+    <script src="js/config.js?v=protected-dia6-4"></script>
+    <script src="js/state.js?v=protected-dia6-4"></script>
+    <script src="js/host.js?v=protected-dia6-4"></script>
+    <script src="js/render.js?v=protected-dia6-4"></script>
+    <script src="js/engine.js?v=protected-dia6-4"></script>
+    <script src="js/ui.js?v=protected-dia6-4"></script>
+    <script src="js/input.js?v=protected-dia6-4"></script>
+    <script src="../ghost-touch.js?v=protected-dia6-4"></script>
+    <script src="js/main.js?v=protected-dia6-4"></script>
+<!-- Cloudflare analytics beacon removed for fully local/offline gameplay. -->
+</body>
+</html>

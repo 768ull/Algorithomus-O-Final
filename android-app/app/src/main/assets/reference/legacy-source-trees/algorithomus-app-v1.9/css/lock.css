@@ -1,0 +1,135 @@
+@charset "utf-8";
+
+.lock { position: absolute; inset: 0px; z-index: var(--z-lock); display: flex; flex-direction: column; padding: calc(var(--status-h) + 14px) 16px calc(var(--nav-h) + 6px); color: var(--text); opacity: 0; visibility: hidden; transform: translateY(4%); pointer-events: none; --lock-drag: 0; transition: opacity var(--dur-lock) var(--ease-out),transform var(--dur-lock) var(--ease-out),visibility var(--dur-lock) linear; }
+
+.lock.is-locked { opacity: 1; visibility: visible; transform: translateY(0px); pointer-events: auto; background: radial-gradient(64% 34% at 50% 50%, rgba(2, 2, 5, 0.58) 0, rgba(2, 2, 5, 0) 100%),linear-gradient(180deg,
+            rgba(4, 4, 7, 0.86) 0,
+            rgba(4, 4, 7, 0.74) 20%,
+            rgba(5, 5, 9, 0.52) 44%,
+            rgba(3, 3, 6, 0.58) 74%,
+            rgba(2, 2, 5, 0.82) 100%),var(--phone-wallpaper, url("../assets/img/bg.webp?v=1")) var(--phone-wallpaper-position, center)/var(--phone-wallpaper-size, cover) no-repeat; }
+
+.lock.is-dragging .lock__code, .lock.is-dragging .lock__handle, .lock.is-dragging .lock__head, .lock.is-dragging .lock__list, .lock.is-dragging .lock__rest { transition: none; }
+
+.lock__rest { position: relative; z-index: 1; flex: 1 1 0%; min-height: 0px; display: flex; flex-direction: column; transform: translateY(calc(var(--lock-drag, 0) * -10px)); transition: transform var(--dur-lock) var(--ease-snap); }
+
+.lock__head { flex-shrink: 0; text-align: center; animation: fade-rise var(--dur-slow) var(--ease-out) both 120ms; }
+
+.lock__time { font-size: calc(58px - var(--lock-drag, 0) * 24px); font-weight: 200; line-height: 1; letter-spacing: -1px; font-variant-numeric: tabular-nums; transition: font-size var(--dur-lock) var(--ease-out); }
+
+.lock__date { margin-top: 4px; font-size: 12.5px; font-weight: 500; letter-spacing: 0.3px; color: var(--text-dim); transition: font-size var(--dur-lock) var(--ease-out); }
+
+.lock__list { flex: 1 1 0%; min-height: 0px; margin-top: 14px; display: flex; flex-direction: column; gap: 8px; overflow-y: auto; pointer-events: none; opacity: calc(1 - var(--lock-drag, 0) * 1.7); transform: translateY(calc(var(--lock-drag, 0) * -22px)); transition: opacity var(--dur-lock) var(--ease-out),transform var(--dur-lock) var(--ease-snap); mask-image: linear-gradient(rgb(0, 0, 0) 0%, rgb(0, 0, 0) 86%, transparent 100%); }
+
+.lock__list .note { flex-shrink: 0; animation-delay: 0ms; background: rgba(16, 16, 24, 0.68); border-color: rgba(255, 255, 255, 0.1); backdrop-filter: blur(14px) saturate(130%); box-shadow: rgba(0, 0, 0, 0.45) 0px 8px 20px; }
+
+.lock__empty { margin: auto; font-size: 11px; letter-spacing: 0.6px; color: var(--text-faint); }
+
+.lock__handle { flex-shrink: 0; align-self: center; display: flex; flex-direction: column; align-items: center; gap: 1px; margin-top: 10px; padding: 6px 16px; border-radius: 999px; font-size: 10px; font-weight: 600; letter-spacing: 1.6px; text-transform: uppercase; color: var(--text-faint); opacity: calc(1 - var(--lock-drag, 0) * 2); transform: translateY(calc(var(--lock-drag, 0) * 12px)); transition: opacity var(--dur-lock) var(--ease-out),transform var(--dur-lock) var(--ease-snap),color var(--dur-fast) var(--ease-out),background var(--dur-fast) var(--ease-out); }
+
+.lock__handle svg { width: 17px; height: 17px; animation: 2.6s ease-in-out 0s infinite normal none running lock-breathe; }
+
+.lock__handle:hover { color: var(--text-dim); background: rgba(255, 255, 255, 0.07); }
+
+.lock__code { position: absolute; inset: 0px; z-index: 2; display: flex; flex-direction: column; align-items: center; padding: calc(var(--status-h) + 86px) 16px calc(var(--nav-h) + 14px); opacity: var(--lock-drag, 0); transform: translateY(calc(100% - var(--lock-drag, 0) * 100%)); pointer-events: none; transition: transform var(--dur-lock) var(--ease-snap),opacity var(--dur-lock) var(--ease-out); }
+
+.lock.is-passcode .lock__code { pointer-events: auto; }
+
+.lock__code-title { flex-shrink: 0; font-size: 11.5px; font-weight: 600; letter-spacing: 2.4px; text-transform: uppercase; color: var(--text-dim); }
+
+.lock__pad { flex-shrink: 0; width: 100%; max-width: 236px; margin: auto; touch-action: none; user-select: none; animation: fade-rise var(--dur-slow) var(--ease-out) both 220ms; }
+
+.lock__svg { display: block; width: 100%; height: auto; overflow: visible; }
+
+.lock__dot { fill: rgba(255, 255, 255, 0.09); stroke: rgba(255, 255, 255, 0.38); stroke-width: 2; transition: fill 120ms var(--ease-out),stroke 120ms var(--ease-out); }
+
+.lock__dot.is-on { fill: var(--lock-ink); stroke: var(--lock-ink); }
+
+.lock__dot.is-closeable { animation: 1.1s ease-in-out 0s infinite normal none running lock-breathe; filter: drop-shadow(rgba(255, 45, 85, 0.85) 0px 0px 6px); }
+
+.lock__fill { fill: rgba(255, 255, 255, 0.16); stroke: none; }
+
+.lock__line { fill: none; stroke: var(--lock-ink); stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+
+.lock__pad.is-wrong { animation: lock-shake 420ms var(--ease-in-out) both; }
+
+.lock__pad.is-wrong .lock__line { animation: 220ms steps(2) 0s 3 normal none running corrupt-flicker; stroke: var(--danger); }
+
+.lock__pad.is-wrong .lock__fill { fill: rgba(255, 45, 85, 0.16); }
+
+.lock__pad.is-wrong .lock__dot { stroke: var(--danger); }
+
+.lock__pad.is-right .lock__dot, .lock__pad.is-right .lock__dot.is-on { fill: var(--lock-ok); stroke: var(--lock-ok); }
+
+.lock__pad.is-right .lock__line { stroke: var(--lock-ok); filter: drop-shadow(rgba(48, 209, 88, 0.6) 0px 0px 8px); }
+
+.lock__pad.is-right .lock__fill { fill: rgba(48, 209, 88, 0.16); }
+
+.lock__hint { flex-shrink: 0; min-height: 15px; margin-top: 6px; font-size: 10.5px; font-weight: 600; letter-spacing: 1.6px; text-transform: uppercase; text-align: center; color: var(--text-faint); }
+
+.lock__hint.is-wrong { color: var(--danger); }
+
+.lock__sos-row { flex-shrink: 0; margin-top: 14px; display: flex; justify-content: center; }
+
+.lock__sos { display: flex; align-items: center; gap: 9px; padding: 12px 24px; border-radius: 999px; font-size: 12px; font-weight: 700; letter-spacing: 1.8px; text-transform: uppercase; color: var(--danger); background: rgba(255, 45, 85, 0.14); border: 1px solid rgba(255, 45, 85, 0.38); transition: background var(--dur-fast) var(--ease-out),transform var(--dur-tap) var(--ease-out); }
+
+.lock__sos svg { width: 15px; height: 15px; }
+
+.lock__sos:hover { background: rgba(255, 45, 85, 0.24); }
+
+.lock__sos:active { transform: scale(0.95); background: rgba(255, 45, 85, 0.34); }
+
+.keypad { position: absolute; inset: 0px; z-index: 3; display: flex; flex-direction: column; padding: calc(var(--status-h) + 14px) 24px calc(var(--nav-h) + 14px); background: rgba(4, 4, 9, 0.88); backdrop-filter: blur(28px) saturate(80%); opacity: 0; visibility: hidden; transform: translateY(8%); pointer-events: none; transition: opacity var(--dur-lock) var(--ease-out),transform var(--dur-lock) var(--ease-out),visibility var(--dur-lock) linear; }
+
+.keypad.is-open { opacity: 1; visibility: visible; transform: translateY(0px); pointer-events: auto; animation: keypad-in 320ms var(--ease-out) both; }
+
+@keyframes keypad-in { 
+  0% { opacity: 0; transform: translateY(12px); }
+  100% { opacity: 1; transform: translateY(0px); }
+}
+
+.keypad__head { display: flex; align-items: center; gap: 12px; }
+
+.keypad__close { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--text-dim); background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.08); transition: background var(--dur-fast) var(--ease-out),color var(--dur-fast) var(--ease-out),border-color var(--dur-fast) var(--ease-out),transform var(--dur-tap) var(--ease-out); }
+
+.keypad__close svg { width: 15px; height: 15px; }
+
+.keypad__close:hover { background: rgba(255, 255, 255, 0.16); color: var(--text); border-color: rgba(255, 255, 255, 0.14); }
+
+.keypad__close:active { transform: scale(0.9); }
+
+.keypad__title { font-size: 13px; font-weight: 700; letter-spacing: 2.4px; text-transform: uppercase; color: var(--danger); }
+
+.keypad__screen { margin-top: 14px; height: 48px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-size: 26px; font-weight: 200; letter-spacing: 5px; text-indent: 5px; font-variant-numeric: tabular-nums; color: var(--text); background: linear-gradient(rgba(255, 255, 255, 0.08) 0px, rgba(255, 255, 255, 0.03) 100%); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 14px; box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 8px inset, rgba(255, 255, 255, 0.05) 0px 1px 0px; }
+
+.keypad__screen.is-wrong { animation: lock-shake 420ms var(--ease-in-out) both; color: var(--danger); border-color: rgba(255, 45, 85, 0.6); background: rgba(255, 45, 85, 0.12); box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 8px inset; }
+
+.keypad__note { flex-shrink: 0; min-height: 16px; margin-top: 10px; font-size: 11px; font-weight: 600; letter-spacing: 1.6px; text-transform: uppercase; text-align: center; color: var(--danger); }
+
+.keypad__keys { flex-shrink: 0; width: 100%; max-width: 220px; margin: auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; justify-items: center; }
+
+.keypad__key { position: relative; width: 100%; max-width: 60px; aspect-ratio: 1 / 1; display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 22px; font-weight: 300; line-height: 1; color: var(--text); text-shadow: rgba(0, 0, 0, 0.3) 0px 1px 2px; background: linear-gradient(rgba(255, 255, 255, 0.1) 0px, rgba(255, 255, 255, 0.04) 100%); border: 1px solid rgba(255, 255, 255, 0.14); border-radius: 50%; box-shadow: rgba(255, 255, 255, 0.08) 0px 1px 0px inset, rgba(0, 0, 0, 0.2) 0px 4px 12px; transition: background var(--dur-tap) var(--ease-out),border-color var(--dur-tap) var(--ease-out),transform var(--dur-tap) var(--ease-out),box-shadow var(--dur-tap) var(--ease-out); overflow: hidden; }
+
+.keypad__key::after { content: ""; position: absolute; inset: 0px; border-radius: 50%; background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 0px, transparent 70%); opacity: 0; pointer-events: none; transition: opacity 200ms var(--ease-out); }
+
+.keypad__key:active::after { opacity: 1; transition: none; }
+
+.keypad__key small { height: 11px; margin-top: 4px; font-size: 9px; font-weight: 700; letter-spacing: 2.6px; color: var(--text-faint); text-shadow: rgba(0, 0, 0, 0.2) 0px 1px 1px; }
+
+.keypad__key svg { width: 22px; height: 22px; color: var(--text-dim); }
+
+.keypad__key:hover { background: linear-gradient(rgba(255, 255, 255, 0.16) 0px, rgba(255, 255, 255, 0.08) 100%); border-color: rgba(255, 255, 255, 0.2); box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 0px inset, rgba(0, 0, 0, 0.25) 0px 6px 16px; }
+
+.keypad__key:active { transform: scale(0.92); background: linear-gradient(rgba(255, 255, 255, 0.22) 0px, rgba(255, 255, 255, 0.12) 100%); border-color: rgba(255, 255, 255, 0.25); box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px inset; }
+
+.keypad__call { position: relative; flex-shrink: 0; margin-top: 16px; padding: 12px; display: flex; align-items: center; justify-content: center; gap: 8px; border-radius: 999px; font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: rgb(255, 255, 255); background: rgb(217, 30, 62); transition: transform var(--dur-tap) var(--ease-out),filter var(--dur-fast) var(--ease-out); overflow: hidden; }
+
+.keypad__call::after { content: ""; position: absolute; inset: 0px; border-radius: 999px; background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0px, transparent 70%); opacity: 0; pointer-events: none; transition: opacity 200ms var(--ease-out); }
+
+.keypad__call:active::after { opacity: 1; transition: none; }
+
+.keypad__call svg { width: 16px; height: 16px; }
+
+.keypad__call:hover { filter: brightness(1.05); }
+
+.keypad__call:active { transform: scale(0.97); filter: brightness(1.12); }

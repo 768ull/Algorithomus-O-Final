@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>Frutris</title>
+
+    <link rel="stylesheet" href="css/tokens.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/tutorial.css">
+    <link rel="stylesheet" href="css/intro.css">
+</head>
+<body>
+
+    <div class="tetris-intro" id="tetrisIntro" aria-hidden="true">
+        <div class="intro-tiles" id="introTiles"></div>
+        <section class="record-card" id="recordCard" role="dialog" aria-modal="true" aria-labelledby="recordTitle" aria-describedby="recordMessage">
+            <div class="record-crown" aria-hidden="true">★</div>
+            <h1 id="recordTitle">VOCÊ É O MELHOR!</h1>
+            <p id="recordMessage">Você alcançou o recorde mensal do Frutris!<br>Quer ser meu amigo(a)?</p>
+            <button type="button" id="recordReturn">VOLTAR AO JOGO</button>
+        </section>
+    </div>
+
+    <div id="gameOverModal" class="modal-overlay hidden">
+        <div class="modal">
+            <h2>FIM DE JOGO</h2>
+            <p class="result-label">Sua pontuação</p>
+            <div id="finalScore" class="final-score">0</div>
+            <p class="result-record">RECORDE SEMANAL <strong id="finalRecord">0</strong></p>
+            <p class="result-record">RECORDE MENSAL <strong>30000</strong></p>
+            <div id="newRecord" class="record-badge hidden">NOVO RECORDE!</div>
+            <div class="modal-actions">
+            <button data-action="restart">JOGAR NOVAMENTE</button>
+            <button class="alt" data-action="tutorial">TUTORIAL</button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div id="tutorialCoach" class="coach hidden">
+        <canvas id="coachCanvas" class="coach-stage" width="320" height="170"></canvas>
+        <div class="coach-name" id="coachName" aria-live="polite">ESQUERDA</div>
+    </div>
+
+    <div class="game-wrapper">
+        <div class="game-container" id="gameArea">
+            <div class="game-hud" id="gameHud">
+                <div class="panel score-panel">
+                    <h3>PONTOS</h3>
+                    <div id="score" class="stat-value">0</div>
+                    <div class="record-line">
+                        <span class="record-label">RECORDE</span>
+                        <span class="record-value"><span id="bestScore">0</span>/<span id="monthlyRecord">30000</span></span>
+                    </div>
+                    <div id="tutorialHud" class="tutorial-hud hidden">
+                        <div id="tutorialTools" class="tutorial-tools">
+                            <span id="tutorialStep" class="tutorial-step">ETAPA 1 DE 9</span>
+                            <button class="tutorial-exit" data-action="exitTutorial" aria-label="Sair do treino">×</button>
+                        </div>
+                        <div class="tutorial-stage-name" id="tutorialStageName" aria-live="polite">ETAPA 1</div>
+                        <div id="tutorialProgress" class="tutorial-progress" aria-hidden="true"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-controls">
+                <button class="help-btn" id="helpBtn" aria-label="Abrir tutorial">?</button>
+            </div>
+            <div class="panel hold-panel">
+                <h3>GUARDAR</h3>
+                <canvas id="holdCanvas" width="140" height="140"></canvas>
+            </div>
+
+            <div class="board-shell">
+                <canvas id="entryCanvas" width="400" height="80" aria-hidden="true"></canvas>
+                <canvas id="gameCanvas" width="400" height="800"></canvas>
+                <div class="level-panel" id="levelPanel">
+                    <div class="level-heading">NÍVEL <strong id="level" aria-live="polite">1</strong></div>
+                    <div class="level-status" id="levelStatus">10 LINHAS PARA SUBIR</div>
+                </div>
+                <div class="celebration-toast hidden" id="celebrationToast" role="status" aria-live="polite"></div>
+            </div>
+
+                <div class="panel next-panel">
+                    <h3 id="nextTitle">PRÓXIMO</h3>
+                    <canvas id="nextCanvas" width="160" height="620" aria-label="Fila de próximas peças"></canvas>
+                </div>
+        </div>
+    </div>
+
+    <script src="js/config.js?v=protected-dia6-4"></script>
+    <script src="../../js/app-theme.js?v=protected-dia6-4"></script>
+    <script src="js/intro.js?v=protected-dia6-4"></script>
+    <script src="js/state.js?v=protected-dia6-4"></script>
+    <script src="js/audio.js?v=protected-dia6-4"></script>
+    <script src="js/host.js?v=protected-dia6-4"></script>
+    <script src="js/render.js?v=protected-dia6-4"></script>
+    <script src="js/engine.js?v=protected-dia6-4"></script>
+    <script src="js/ui.js?v=protected-dia6-4"></script>
+    <script src="js/input.js?v=protected-dia6-4"></script>
+    <script src="js/tutorial.js?v=protected-dia6-4"></script>
+    <script src="../ghost-touch.js?v=protected-dia6-4"></script>
+    <script src="js/main.js?v=protected-dia6-4"></script>
+    <script src="js/bridge-capture.js?v=protected-dia6-4"></script>
+<!-- Cloudflare analytics beacon removed for fully local/offline gameplay. -->
+</body>
+</html>

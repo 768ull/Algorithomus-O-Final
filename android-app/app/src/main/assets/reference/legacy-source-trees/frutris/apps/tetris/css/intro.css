@@ -1,0 +1,156 @@
+.tetris-intro {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: #11141d;
+  pointer-events: auto;
+  animation: introReveal 2.35s ease-in forwards
+}
+.tetris-intro.record-intro {
+  opacity: 1;
+  visibility: visible;
+  animation: none;
+  background: rgba(12, 14, 23, .96)
+}
+.intro-tiles {
+  position: absolute;
+  inset: -2px;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(12, 1fr)
+}
+.intro-tile {
+  margin: 1px;
+  border: 1px solid rgba(255,255,255,.25);
+  border-radius: 3px;
+  background: var(--tile-color);
+  box-shadow: inset 3px 3px rgba(255,255,255,.22),inset -3px -3px rgba(0,0,0,.2),0 0 15px color-mix(in srgb, var(--tile-color), transparent 55%);
+  transform: scale(0) rotate(-12deg);
+  animation: introTile 1.72s cubic-bezier(.2,.8,.25,1) var(--tile-delay) both
+}
+.record-card {
+  position: relative;
+  z-index: 2;
+  width: min(88vw, 440px);
+  padding: clamp(22px, 6vw, 38px) clamp(18px, 6vw, 34px);
+  border: 2px solid var(--accent, #75e6c2);
+  border-radius: 16px;
+  background: #191d2b;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 0 45px rgba(117, 230, 194, .3),0 20px 60px #0009;
+  opacity: 0;
+  transform: translateY(20px) scale(.88);
+  pointer-events: none
+}
+.record-card .record-crown {
+  color: #f4d35e;
+  font: 900 46px/1 sans-serif;
+  text-shadow: 0 0 20px #f4d35e88
+}
+.record-card h1 {
+  margin: 12px 0;
+  color: var(--accent, #75e6c2);
+  font: 900 clamp(22px, 6vw, 34px)/1.1 monospace
+}
+.record-card p {
+  margin: 0 0 24px;
+  font: 600 clamp(15px, 4vw, 19px)/1.55 system-ui,sans-serif
+}
+.record-card button {
+  border: 0;
+  border-radius: 8px;
+  padding: 12px 18px;
+  background: var(--accent, #75e6c2);
+  color: #151821;
+  font: 800 14px monospace;
+  cursor: pointer
+}
+.record-card button:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 4px
+}
+.record-intro.show-card .record-card {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  animation: recordCardIn .45s cubic-bezier(.2,.85,.3,1.2) both;
+  pointer-events: auto
+}
+.record-intro .intro-tile {
+  animation: recordTileCover .42s cubic-bezier(.2,.8,.25,1) var(--tile-delay) both
+}
+.record-intro.record-leave .record-card {
+  animation: recordCardOut .35s ease-in both
+}
+@keyframes introTile {
+  0% {
+    transform: translateY(-35vh) scale(.08) rotate(-12deg)
+  }
+  38%,
+  72% {
+    transform: translateY(0) scale(1) rotate(0)
+  }
+  100% {
+    transform: translateY(30vh) scale(.08) rotate(10deg)
+  }
+}
+@keyframes introReveal {
+  0%,
+  68% {
+    opacity: 1;
+    visibility: visible
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none
+  }
+}
+@keyframes recordCardIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(.88)
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1)
+  }
+}
+@keyframes recordCardOut {
+  to {
+    opacity: 0;
+    transform: translateY(-12px) scale(.94)
+  }
+}
+@keyframes recordOverlayOut {
+  to {
+    opacity: 0;
+    visibility: hidden
+  }
+}
+@keyframes recordTilesOut {
+  to {
+    transform: translateY(35vh) scale(.05) rotate(10deg);
+    opacity: 0
+  }
+}
+@keyframes recordTileCover {
+  from {
+    transform: translateY(-25vh) scale(.08) rotate(-12deg)
+  }
+  to {
+    transform: translateY(0) scale(1) rotate(0)
+  }
+}
+.record-intro.record-leave {
+  animation: recordOverlayOut .9s ease-in forwards
+}
+.record-intro.record-leave .intro-tile {
+  animation: recordTilesOut .85s ease-in both
+}
+.first-tutorial .tutorial-exit {
+  display: none
+}

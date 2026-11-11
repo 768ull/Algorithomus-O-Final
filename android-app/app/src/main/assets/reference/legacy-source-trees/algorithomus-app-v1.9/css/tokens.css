@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+:root { --void: #000000; --shell-dark: #14141a; --shell-mid: #23232c; --shell-light: #3a3a46; --screen: #08080c; --surface-1: #101018; --surface-2: #16161f; --surface-3: #1f1f2b; --line: #282836; --line-soft: #1b1b25; --text: #f3f3f7; --text-dim: #9a9aab; --text-faint: #61616f; --accent: #7c5cff; --accent-glow: rgba(124, 92, 255, 0.45); --accent-2: #00e5c0; --danger: #ff2d55; --success: #30d158; --warn: #ff9f0a; --app-mensagens: #25d366; --app-telefone: #34c759; --app-galeria: #f56040; --app-tetris: #9c27b0; --app-calculadora: #6e6e80; --app-configuracoes: #8e8e93; --screen-w: 320px; --screen-h: 640px; --bezel: 8px; --radius-device: 38px; --status-h: 32px; --nav-h: 44px; --island-w: 16px; --island-h: 16px; --card-w: 168px; --card-gap: 14px; --dur-tap: 110ms; --dur-fast: 180ms; --dur: 260ms; --dur-slow: 420ms; --dur-app: 460ms; --dur-snap: 500ms; --dur-lock: 380ms; --ease-snap: cubic-bezier(0.32, 0.72, 0.24, 1); --ease-out: cubic-bezier(0.22, 0.61, 0.36, 1); --ease-in: cubic-bezier(0.55, 0.06, 0.68, 0.19); --spring: cubic-bezier(0.22, 1.16, 0.36, 1); --spring-soft: cubic-bezier(0.34, 1.32, 0.64, 1); --z-wallpaper: 0; --z-home: 10; --z-app: 40; --z-recents: 70; --z-recents-shot: 72; --z-recents-rail: 74; --z-shade: 80; --z-lock: 85; --z-toast: 78; --z-call: 110; --z-call-glitch: 112; --z-bar: 120; --z-dim: 260; --z-off: 300; --z-black: 310; --z-update: 320; --glass: rgba(14, 14, 22, 0.72); --glass-line: rgba(255, 255, 255, 0.09); --blur: 18px; --lock-ink: #ffffff; --lock-ok: #30d158; --px: 1px; --glitch-r: 255 0 68; --glitch-b: 0 232 255; --glitch-g: 205 255 92; --glitch-burst: 340ms; --over-light: 0; --over-rgb: 0; --over-block: 0; --over-wash: 0; --over-chaos-step: 90ms; --over-show-ms: 7000ms; --whiteout-ms: 1800ms; --intro-warn-w: min(34rem, calc(100vw - 40px)); --intro-warn-pad: clamp(1.25rem, 4vw, 2rem); --intro-warn-radius: 6px; }
+
+* { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+body { margin: 0px; min-height: 100dvh; display: flex; align-items: center; justify-content: center; background: var(--void); color: var(--text); font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; overflow: hidden; user-select: none; }
+
+::-webkit-scrollbar { width: 4px; height: 4px; }
+
+::-webkit-scrollbar-track { background: transparent; }
+
+::-webkit-scrollbar-thumb { background: var(--shell-light); border-radius: 4px; }
+
+::-webkit-scrollbar-thumb:hover { background: var(--text-faint); }
+
+button { font: inherit; color: inherit; border: 0px; background: none; padding: 0px; cursor: pointer; }
+
+svg { display: block; pointer-events: none; }
+
+[hidden] { display: none !important; }

@@ -1,0 +1,67 @@
+@charset "utf-8";
+
+.stage { position: relative; display: flex; align-items: center; justify-content: center; padding: 16px; }
+
+.device { position: relative; padding: var(--bezel); border-radius: var(--radius-device); background: linear-gradient(160deg, var(--shell-light) 0, var(--shell-mid) 32%, var(--shell-dark) 70%, #0b0b10 100%); box-shadow: rgba(255, 255, 255, 0.07) 0px 0px 0px 1px, rgba(0, 0, 0, 0.85) 0px 30px 70px; transform: scale(var(--device-scale, 1)); transition: transform var(--dur) var(--ease-out); }
+
+.device::after { content: ""; position: absolute; inset: 2px; border-radius: calc(var(--radius-device) - 2px); background: linear-gradient(115deg, rgba(255, 255, 255, 0.16) 0px, transparent 26%, transparent 72%, rgba(255, 255, 255, 0.07) 100%); pointer-events: none; }
+
+.device__key { position: absolute; width: 3px; border-radius: 3px; background: linear-gradient(90deg, var(--shell-light), var(--shell-mid)); box-shadow: rgba(0, 0, 0, 0.6) 0px 1px 2px; cursor: pointer; transition: background var(--dur-tap) var(--ease-out),box-shadow var(--dur-tap) var(--ease-out); }
+
+.device__key:hover { background: linear-gradient(90deg, #55555f, var(--shell-light)); }
+
+.device__key:active { background: var(--accent); box-shadow: 0 0 8px var(--accent-glow); }
+
+.device__key--vol-up { left: -3px; top: 132px; height: 52px; }
+
+.device__key--vol-down { left: -3px; top: 196px; height: 52px; }
+
+.device__key--power { right: -3px; top: 164px; height: 74px; }
+
+.screen { position: relative; width: var(--screen-w); height: var(--screen-h); border-radius: calc(var(--radius-device) - var(--bezel) - 2px); background: var(--screen); overflow: hidden; isolation: isolate; transform-origin: center center; }
+
+html.is-booting .screen { animation: power-on 700ms var(--ease-out) both; }
+
+html.is-cold .screen > :not(.charge):not(.screen__layer):not(.screen__glitch):not(.screen__texto):not(.boot-flash):not(.boot-logo):not(.boot-progress) { visibility: hidden; }
+
+.wallpaper { position: absolute; inset: 0px; z-index: var(--z-wallpaper); background: radial-gradient(120% 80% at 50% 0px, rgb(27, 27, 34) 0px, transparent 58%), radial-gradient(90% 60% at 20% 100%, rgb(16, 16, 20) 0px, transparent 60%), linear-gradient(170deg, rgb(13, 13, 17) 0px, rgb(5, 5, 6) 60%, rgb(8, 8, 10) 100%); overflow: hidden; }
+
+.has-custom-wallpaper .wallpaper { background: var(--phone-wallpaper) var(--phone-wallpaper-position, center)/var(--phone-wallpaper-size, cover) no-repeat; }
+
+.has-custom-wallpaper .wallpaper__grid { display: none; }
+
+.wallpaper__grid { position: absolute; inset: 0px; background-image: linear-gradient(rgba(255, 255, 255, 0.043) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.043) 1px, transparent 1px); background-size: 26px 26px; mask-image: radial-gradient(120% 90% at 50% 40%, rgb(0, 0, 0) 30%, transparent 78%); }
+
+.island { position: absolute; top: 8px; left: 50%; transform: translateX(-50%); width: var(--island-w); height: var(--island-h); border-radius: 50%; background: radial-gradient(circle at 50% 40%, rgb(10, 10, 16) 0px, rgb(0, 0, 0) 70%); z-index: var(--z-bar); box-shadow: rgba(255, 255, 255, 0.08) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.35) 0px 0px 0px 3px; display: flex; align-items: center; justify-content: center; padding: 0px; pointer-events: none; }
+
+.island__lens { width: 9px; height: 9px; border-radius: 50%; background: radial-gradient(circle at 35% 35%, rgb(51, 65, 95) 0px, rgb(10, 18, 38) 45%, rgb(2, 3, 6) 100%); box-shadow: rgba(70, 120, 255, 0.35) 0px 0px 4px, rgba(140, 180, 255, 0.4) 0px 0px 2px inset; transition: background var(--dur) var(--ease-out),box-shadow var(--dur) var(--ease-out); }
+
+.island--alert .island__lens { background: radial-gradient(circle at 35% 35%, rgb(255, 90, 118) 0px, rgb(64, 6, 15) 70%); box-shadow: rgba(255, 45, 85, 0.9) 0px 0px 10px; animation: 1.1s ease-in-out 0s infinite normal none running breathe; }
+
+.screen__layer { position: absolute; inset: 0px; pointer-events: none; }
+
+.screen__pixels { position: absolute; inset: 0px; background-image: linear-gradient(rgba(0, 0, 0, 0.16) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 0, 0, 0.16) 1px, transparent 1px); background-size: 2px 2px; opacity: 0.55; }
+
+.screen__scanlines { position: absolute; inset: -4px 0px; background: repeating-linear-gradient(rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0) 2px, rgba(0, 0, 0, 0.22) 4px) 0% 0% / 100% 4px; opacity: 0.5; animation: 7s linear 0s infinite normal none running scanline-drift; }
+
+@media (prefers-reduced-motion: reduce) {
+  .screen__scanlines { animation: auto ease 0s 1 normal none running none; }
+}
+
+.screen__vignette { position: absolute; inset: 0px; background: radial-gradient(120% 100%, transparent 52%, rgba(0, 0, 0, 0.55) 100%); }
+
+.boot-flash, .boot-logo { position: absolute; inset: 0px; z-index: var(--z-off); display: flex; align-items: center; justify-content: center; pointer-events: none; opacity: 0; background: rgb(0, 0, 0); }
+
+html.is-booting .boot-flash { animation: boot-flash 620ms var(--ease-out) 120ms both; }
+
+.boot-logo { background: rgb(0, 0, 0); color: var(--text); font-size: 15px; font-weight: 700; letter-spacing: 0.34em; text-transform: uppercase; }
+
+html.is-booting .boot-logo { animation: logo-in 1.5s var(--ease-out) 260ms both; }
+
+.device.is-glitching .screen { animation: 60ms steps(2) 0s infinite normal none running glitch-shift, 90ms steps(3) 0s infinite normal none running jitter; filter: invert(1) contrast(200%) hue-rotate(90deg); }
+
+.device.is-glitching .wallpaper { display: none; }
+
+.device.is-ringing { animation: 90ms linear 0s infinite normal none running device-shake; }
+
+.device.is-in-call { animation: 1.6s ease-in-out 0s infinite normal none running device-tremor; }

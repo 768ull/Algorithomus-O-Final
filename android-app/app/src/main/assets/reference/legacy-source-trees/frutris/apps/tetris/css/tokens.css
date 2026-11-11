@@ -1,0 +1,29 @@
+:root {
+  --bg-color: #10121a;
+  --grid-bg: #15151a;
+  --panel-bg: #191c26;
+  --border-color: #343946;
+  --text-color: #e0e0e0;
+  --accent: #b78aff;
+  --accent-edge: #d4bcff;
+  --text-muted: #a4aabb
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: none
+}
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Consolas','Courier New',monospace;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100dvh;
+  overflow: hidden;
+  position: relative
+}

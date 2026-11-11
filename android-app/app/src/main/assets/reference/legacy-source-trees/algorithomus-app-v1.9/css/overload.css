@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+.device-smoke { position: fixed; inset: 0px; z-index: 1500; overflow: hidden; pointer-events: none; }
+
+.smoke-particle { position: absolute; top: 0px; left: 0px; border-radius: 50%; opacity: 0; background: radial-gradient(rgba(225, 228, 235, 0.95), rgba(156, 164, 178, 0.55) 32%, rgba(111, 120, 133, 0.16) 56%, transparent 72%); will-change: transform, opacity; }
+
+.device.is-overloading .screen { pointer-events: none; }
+
+.device.is-overloading .device__key { pointer-events: none; }
+
+.device.is-shutdown .screen > :not(.screen-off) { visibility: hidden; }
+
+.device.is-shutdown { animation: auto ease 0s 1 normal none running none; filter: none; }
+
+.device.is-shutdown .screen { filter: none; }
+
+.device.is-shutdown .device__burst { display: none; }
+
+html.is-overload-chaos.is-chaos { animation: 90ms steps(1) 0s infinite normal none running site-shake; }
+
+html.is-overload-chaos .screen__texto.is-texto { animation: texto-flash var(--texto-ms, 1000ms) steps(1, end) 1 both; }
