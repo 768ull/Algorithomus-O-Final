@@ -2,13 +2,13 @@
   "schemaVersion": 1,
   "policy": "Original media files are not deleted, renamed, or re-encoded. Exact duplicates and perceptual candidates are recorded for review only.",
   "counts": {
-    "totalMediaFiles": 126,
-    "images": 106,
+    "totalMediaFiles": 178,
+    "images": 158,
     "audio": 20,
     "video": 0,
     "fonts": 0,
-    "exactDuplicateGroups": 12,
-    "perceptualDuplicateCandidates": 52,
+    "exactDuplicateGroups": 14,
+    "perceptualDuplicateCandidates": 321,
     "pdfPerceptualDuplicatePairs": 2
   },
   "exactDuplicateGroups": [
@@ -107,6 +107,22 @@
         "site/apps/mensagens/pfp/imagem-018.webp",
         "site/apps/y/pfp/imagem-018.webp"
       ]
+    },
+    {
+      "type": "image",
+      "sha256": "4c3d1e5c90dc10df939c0ef9dcd84090ee2d31fc109beb93c6318d61387a43d1",
+      "paths": [
+        "site/assets/img/Icones/anotacoes-unicode.webp",
+        "site/assets/img/Icones/anotações.webp"
+      ]
+    },
+    {
+      "type": "image",
+      "sha256": "f42029eb579be7e07e444a2ca7c9d35412c269030f4765703cd1866e39446de3",
+      "paths": [
+        "site/assets/img/Icones/configuracoes-unicode.webp",
+        "site/assets/img/Icones/configurações.webp"
+      ]
     }
   ],
   "perceptualDuplicateCandidates": [
@@ -149,6 +165,90 @@
     {
       "pathA": "media/app-icons/pdf-page-11.jpg",
       "pathB": "media/app-icons/pdf-page-12.jpg",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/images/branding/pdf-page-01.jpg",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/3z.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/images/branding/pdf-page-01.jpg",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/6h.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/images/branding/pdf-page-01.jpg",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Gx.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/images/branding/pdf-page-01.jpg",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/I2.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/images/branding/pdf-page-01.jpg",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/cV.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/images/branding/pdf-page-01.jpg",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/3z.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/images/branding/pdf-page-01.jpg",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/6h.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/images/branding/pdf-page-01.jpg",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/Gx.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/images/branding/pdf-page-01.jpg",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/I2.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/images/branding/pdf-page-01.jpg",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/Ul.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/images/branding/pdf-page-01.jpg",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/Yt.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/images/branding/pdf-page-01.jpg",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/_q.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/images/branding/pdf-page-01.jpg",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/cV.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/images/branding/pdf-page-01.jpg",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/mU.png",
       "averageHashDistance": 0,
       "note": "Visual similarity candidate only; both original files are retained."
     },
@@ -383,6 +483,1536 @@
     {
       "pathA": "media/images/scenes/pdf-page-27.jpg",
       "pathB": "site/apps/galeria/img/Wallpapers/2.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/3z.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/6h.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/3z.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Gx.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/3z.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/I2.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/3z.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/cV.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/3z.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/3z.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/3z.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/6h.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/3z.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/Gx.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/3z.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/I2.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/3z.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/Ul.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/3z.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/Yt.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/3z.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/_q.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/3z.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/cV.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/3z.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/mU.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/3z.png",
+      "pathB": "reference/legacy-source-trees/cobrinha/apps/cobrinha/game.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/3z.png",
+      "pathB": "site/apps/cobrinha/game.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/3z.png",
+      "pathB": "site/assets/img/icon.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/3z.png",
+      "pathB": "site/assets/img/logo/logotest.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/6h.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Gx.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/6h.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/I2.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/6h.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/cV.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/6h.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/3z.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/6h.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/6h.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/6h.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/Gx.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/6h.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/I2.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/6h.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/Ul.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/6h.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/Yt.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/6h.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/_q.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/6h.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/cV.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/6h.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/mU.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/6h.png",
+      "pathB": "reference/legacy-source-trees/cobrinha/apps/cobrinha/game.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/6h.png",
+      "pathB": "site/apps/cobrinha/game.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/6h.png",
+      "pathB": "site/assets/img/icon.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/6h.png",
+      "pathB": "site/assets/img/logo/logotest.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/8c.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Gc.png",
+      "averageHashDistance": 1,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/8c.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/fO.png",
+      "averageHashDistance": 1,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/8c.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/wb.png",
+      "averageHashDistance": 1,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/8c.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/zR.png",
+      "averageHashDistance": 2,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/9w.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/FS.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/9w.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Gc.png",
+      "averageHashDistance": 2,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/9w.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/RJ.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/9w.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/fO.png",
+      "averageHashDistance": 2,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/9w.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/o-.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/9w.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/wb.png",
+      "averageHashDistance": 2,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/9w.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/yn.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Em.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Lf.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Em.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Me.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Em.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/QZ.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Em.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Ul.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Em.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Yt.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Em.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/_q.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Em.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/as.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Em.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/mU.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Em.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/zr.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/FS.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Gc.png",
+      "averageHashDistance": 2,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/FS.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/RJ.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/FS.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/fO.png",
+      "averageHashDistance": 2,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/FS.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/o-.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/FS.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/wb.png",
+      "averageHashDistance": 2,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/FS.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/yn.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Gc.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/RJ.png",
+      "averageHashDistance": 2,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Gc.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/fO.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Gc.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/o-.png",
+      "averageHashDistance": 2,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Gc.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/wb.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Gc.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/yn.png",
+      "averageHashDistance": 2,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Gx.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/I2.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Gx.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/cV.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Gx.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/3z.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Gx.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/6h.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Gx.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/Gx.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Gx.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/I2.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Gx.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/Ul.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Gx.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/Yt.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Gx.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/_q.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Gx.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/cV.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Gx.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/mU.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Gx.png",
+      "pathB": "reference/legacy-source-trees/cobrinha/apps/cobrinha/game.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Gx.png",
+      "pathB": "site/apps/cobrinha/game.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Gx.png",
+      "pathB": "site/assets/img/icon.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Gx.png",
+      "pathB": "site/assets/img/logo/logotest.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/I2.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/cV.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/I2.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/3z.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/I2.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/6h.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/I2.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/Gx.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/I2.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/I2.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/I2.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/Ul.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/I2.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/Yt.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/I2.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/_q.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/I2.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/cV.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/I2.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/mU.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/I2.png",
+      "pathB": "reference/legacy-source-trees/cobrinha/apps/cobrinha/game.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/I2.png",
+      "pathB": "site/apps/cobrinha/game.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/I2.png",
+      "pathB": "site/assets/img/icon.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/I2.png",
+      "pathB": "site/assets/img/logo/logotest.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Lf.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Me.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Lf.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/QZ.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Lf.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Ul.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Lf.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Yt.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Lf.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/_q.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Lf.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/as.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Lf.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/mU.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Lf.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/zr.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Me.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/QZ.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Me.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Ul.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Me.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Yt.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Me.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/_q.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Me.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/as.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Me.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/mU.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Me.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/zr.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/QZ.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Ul.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/QZ.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Yt.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/QZ.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/_q.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/QZ.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/as.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/QZ.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/mU.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/QZ.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/zr.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/RJ.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/fO.png",
+      "averageHashDistance": 2,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/RJ.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/o-.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/RJ.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/wb.png",
+      "averageHashDistance": 2,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/RJ.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/yn.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Ul.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Yt.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Ul.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/_q.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Ul.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/as.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Ul.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/mU.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Ul.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/zr.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Yt.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/_q.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Yt.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/as.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Yt.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/mU.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Yt.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/zr.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/_q.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/as.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/_q.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/mU.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/_q.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/zr.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/as.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/mU.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/as.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/zr.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/cV.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/3z.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/cV.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/6h.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/cV.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/Gx.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/cV.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/I2.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/cV.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/Ul.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/cV.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/Yt.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/cV.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/_q.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/cV.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/cV.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/cV.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/mU.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/cV.png",
+      "pathB": "reference/legacy-source-trees/cobrinha/apps/cobrinha/game.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/cV.png",
+      "pathB": "site/apps/cobrinha/game.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/cV.png",
+      "pathB": "site/assets/img/icon.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/cV.png",
+      "pathB": "site/assets/img/logo/logotest.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/fO.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/o-.png",
+      "averageHashDistance": 2,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/fO.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/wb.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/fO.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/yn.png",
+      "averageHashDistance": 2,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/mU.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/zr.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/o-.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/wb.png",
+      "averageHashDistance": 2,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/o-.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/yn.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/wb.png",
+      "pathB": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/yn.png",
+      "averageHashDistance": 2,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/3z.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/6h.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/3z.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/Gx.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/3z.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/I2.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/3z.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/Ul.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/3z.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/Yt.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/3z.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/_q.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/3z.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/cV.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/3z.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/mU.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/3z.png",
+      "pathB": "reference/legacy-source-trees/cobrinha/apps/cobrinha/game.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/3z.png",
+      "pathB": "site/apps/cobrinha/game.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/3z.png",
+      "pathB": "site/assets/img/icon.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/3z.png",
+      "pathB": "site/assets/img/logo/logotest.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/6h.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/Gx.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/6h.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/I2.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/6h.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/Ul.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/6h.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/Yt.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/6h.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/_q.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/6h.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/cV.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/6h.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/mU.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/6h.png",
+      "pathB": "reference/legacy-source-trees/cobrinha/apps/cobrinha/game.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/6h.png",
+      "pathB": "site/apps/cobrinha/game.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/6h.png",
+      "pathB": "site/assets/img/icon.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/6h.png",
+      "pathB": "site/assets/img/logo/logotest.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/8c.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/Gc.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/8c.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/fO.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/8c.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/wb.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/9w.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/FS.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/9w.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/RJ.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/9w.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/o-.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/9w.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/yn.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/9w.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/zR.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/Em.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/Lf.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/Em.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/QZ.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/Em.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/as.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/Em.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/zr.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/FS.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/RJ.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/FS.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/o-.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/FS.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/yn.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/FS.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/zR.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/Gc.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/fO.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/Gc.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/wb.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/Gx.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/I2.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/Gx.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/Ul.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/Gx.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/Yt.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/Gx.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/_q.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/Gx.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/cV.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/Gx.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/mU.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/Gx.png",
+      "pathB": "reference/legacy-source-trees/cobrinha/apps/cobrinha/game.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/Gx.png",
+      "pathB": "site/apps/cobrinha/game.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/Gx.png",
+      "pathB": "site/assets/img/icon.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/Gx.png",
+      "pathB": "site/assets/img/logo/logotest.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/I2.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/Ul.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/I2.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/Yt.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/I2.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/_q.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/I2.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/cV.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/I2.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/mU.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/I2.png",
+      "pathB": "reference/legacy-source-trees/cobrinha/apps/cobrinha/game.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/I2.png",
+      "pathB": "site/apps/cobrinha/game.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/I2.png",
+      "pathB": "site/assets/img/icon.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/I2.png",
+      "pathB": "site/assets/img/logo/logotest.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/Lf.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/QZ.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/Lf.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/as.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/Lf.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/zr.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/QZ.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/as.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/QZ.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/zr.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/RJ.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/o-.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/RJ.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/yn.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/RJ.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/zR.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/Ul.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/Yt.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/Ul.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/_q.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/Ul.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/cV.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/Ul.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/mU.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/Ul.png",
+      "pathB": "reference/legacy-source-trees/cobrinha/apps/cobrinha/game.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/Ul.png",
+      "pathB": "site/apps/cobrinha/game.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/Ul.png",
+      "pathB": "site/assets/img/icon.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/Ul.png",
+      "pathB": "site/assets/img/logo/logotest.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/Yt.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/_q.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/Yt.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/cV.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/Yt.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/mU.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/Yt.png",
+      "pathB": "reference/legacy-source-trees/cobrinha/apps/cobrinha/game.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/Yt.png",
+      "pathB": "site/apps/cobrinha/game.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/Yt.png",
+      "pathB": "site/assets/img/icon.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/Yt.png",
+      "pathB": "site/assets/img/logo/logotest.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/_q.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/cV.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/_q.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/mU.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/_q.png",
+      "pathB": "reference/legacy-source-trees/cobrinha/apps/cobrinha/game.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/_q.png",
+      "pathB": "site/apps/cobrinha/game.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/_q.png",
+      "pathB": "site/assets/img/icon.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/_q.png",
+      "pathB": "site/assets/img/logo/logotest.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/as.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/zr.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/cV.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/mU.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/cV.png",
+      "pathB": "reference/legacy-source-trees/cobrinha/apps/cobrinha/game.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/cV.png",
+      "pathB": "site/apps/cobrinha/game.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/cV.png",
+      "pathB": "site/assets/img/icon.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/cV.png",
+      "pathB": "site/assets/img/logo/logotest.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/fO.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/wb.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/mU.png",
+      "pathB": "reference/legacy-source-trees/cobrinha/apps/cobrinha/game.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/mU.png",
+      "pathB": "site/apps/cobrinha/game.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/mU.png",
+      "pathB": "site/assets/img/icon.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/mU.png",
+      "pathB": "site/assets/img/logo/logotest.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/o-.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/yn.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/o-.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/zR.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/frutris-apk/Frutris.apk/res/yn.png",
+      "pathB": "media/legacy-apks/frutris-apk/Frutris.apk/res/zR.png",
       "averageHashDistance": 0,
       "note": "Visual similarity candidate only; both original files are retained."
     },
@@ -786,6 +2416,456 @@
       "bytes": 91007,
       "sha256": "0556f0064d1d794b4015035f9f09d3c8b9dc59770f345c1b63c4bcfc818efbf4",
       "averageHash8x8": "000038ddff00fdff"
+    },
+    {
+      "path": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/3z.png",
+      "type": "image",
+      "extension": ".png",
+      "mimeType": "image/png",
+      "bytes": 106,
+      "sha256": "c0bcaf39a39fc7bffc848e1712dd09fc8b91337b6ced3d37a39c5d0bad5d5a90",
+      "averageHash8x8": "ffffffffffffffff"
+    },
+    {
+      "path": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/6h.png",
+      "type": "image",
+      "extension": ".png",
+      "mimeType": "image/png",
+      "bytes": 140,
+      "sha256": "14816aadc42d2886d47fec0ed1cdb052ef923710d3369467b7267310d56a36d3",
+      "averageHash8x8": "ffffffffffffffff"
+    },
+    {
+      "path": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/8c.png",
+      "type": "image",
+      "extension": ".png",
+      "mimeType": "image/png",
+      "bytes": 5894,
+      "sha256": "3e6b6a68665e5a6dc78130573665c29e32ef99c53ef7d73b7ced0d88143b5ae2",
+      "averageHash8x8": "ffc3c1819181c1ff"
+    },
+    {
+      "path": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/9w.png",
+      "type": "image",
+      "extension": ".png",
+      "mimeType": "image/png",
+      "bytes": 3087,
+      "sha256": "d1d1e9d217959be5d510db4ec006ab73296f5ead1dd2dbfe349325fd4b29b311",
+      "averageHash8x8": "ff83c181998181ff"
+    },
+    {
+      "path": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Em.png",
+      "type": "image",
+      "extension": ".png",
+      "mimeType": "image/png",
+      "bytes": 20057,
+      "sha256": "fd26e6ff8363c686677782bbaeb328ae18f58e2d6243ecc248a44364d771d99b",
+      "averageHash8x8": "003c7e7e7e7e3c00"
+    },
+    {
+      "path": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/FS.png",
+      "type": "image",
+      "extension": ".png",
+      "mimeType": "image/png",
+      "bytes": 8654,
+      "sha256": "5e416cdf53bf49dca73744c65a992a1ade0466a9150a2a602df8cf72b32f8299",
+      "averageHash8x8": "ff83c181998181ff"
+    },
+    {
+      "path": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Gc.png",
+      "type": "image",
+      "extension": ".png",
+      "mimeType": "image/png",
+      "bytes": 24843,
+      "sha256": "93c7f7775acfc8d85ea3948cf9fb600fdb6ffa1f51492658da7e4f84dad75840",
+      "averageHash8x8": "ffc3c181918181ff"
+    },
+    {
+      "path": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Gx.png",
+      "type": "image",
+      "extension": ".png",
+      "mimeType": "image/png",
+      "bytes": 275,
+      "sha256": "7c4eed725c1b854a1c2bdeed733b21fb4c32a0fac93c2212da1289516b63a831",
+      "averageHash8x8": "ffffffffffffffff"
+    },
+    {
+      "path": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/I2.png",
+      "type": "image",
+      "extension": ".png",
+      "mimeType": "image/png",
+      "bytes": 120,
+      "sha256": "f16667c8d1e2b895a85a7842ab19ba63f02f4410dedb1d77adb37f4c6d54cbd7",
+      "averageHash8x8": "ffffffffffffffff"
+    },
+    {
+      "path": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Lf.png",
+      "type": "image",
+      "extension": ".png",
+      "mimeType": "image/png",
+      "bytes": 35809,
+      "sha256": "aa5253808ca87d1b4d983ad7913381c522a05db023d2cab4251d10e46f650e5b",
+      "averageHash8x8": "003c7e7e7e7e3c00"
+    },
+    {
+      "path": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Me.png",
+      "type": "image",
+      "extension": ".png",
+      "mimeType": "image/png",
+      "bytes": 227,
+      "sha256": "dda2309ad3ab74cc19c9084a23c42f8af85efa2c1640cf45063c9bb13451d9d7",
+      "averageHash8x8": "003c7e7e7e7e3c00"
+    },
+    {
+      "path": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/QZ.png",
+      "type": "image",
+      "extension": ".png",
+      "mimeType": "image/png",
+      "bytes": 7161,
+      "sha256": "a033f1a2dbd1533c174bfed91e2a022fb8be05e202c6ba47f20f169f6c92f37a",
+      "averageHash8x8": "003c7e7e7e7e3c00"
+    },
+    {
+      "path": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/RJ.png",
+      "type": "image",
+      "extension": ".png",
+      "mimeType": "image/png",
+      "bytes": 15887,
+      "sha256": "62ddc4775881069d34afb16f2e21d70d66e76aa64f5bb45aa2afe9a038e09640",
+      "averageHash8x8": "ff83c181998181ff"
+    },
+    {
+      "path": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Ul.png",
+      "type": "image",
+      "extension": ".png",
+      "mimeType": "image/png",
+      "bytes": 422,
+      "sha256": "5ec4dbe3ca872069a2eb4384c4ad89af5a1f3396db382a63f067c41d257b9f2c",
+      "averageHash8x8": "003c7e7e7e7e3c00"
+    },
+    {
+      "path": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/Yt.png",
+      "type": "image",
+      "extension": ".png",
+      "mimeType": "image/png",
+      "bytes": 315,
+      "sha256": "99c5591628cd94e360ea2a3aea1d79bc96868020d4636f791c2fdb6389003233",
+      "averageHash8x8": "003c7e7e7e7e3c00"
+    },
+    {
+      "path": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/_q.png",
+      "type": "image",
+      "extension": ".png",
+      "mimeType": "image/png",
+      "bytes": 1041,
+      "sha256": "294fb22a7335f618ce9d96687a9a4ea1293b9c8409717ad760c4bbbf7b4adcb8",
+      "averageHash8x8": "003c7e7e7e7e3c00"
+    },
+    {
+      "path": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/as.png",
+      "type": "image",
+      "extension": ".png",
+      "mimeType": "image/png",
+      "bytes": 52718,
+      "sha256": "991f9edab4834a572e89185cb4b21aa5e6aabfff39c90972e042509f91d44140",
+      "averageHash8x8": "003c7e7e7e7e3c00"
+    },
+    {
+      "path": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/cV.png",
+      "type": "image",
+      "extension": ".png",
+      "mimeType": "image/png",
+      "bytes": 197,
+      "sha256": "b90fd9b8ce206f248858f07d1ffeb739ab4616c545c74607fbb8c8be0ec98e38",
+      "averageHash8x8": "ffffffffffffffff"
+    },
+    {
+      "path": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/fO.png",
+      "type": "image",
+      "extension": ".png",
+      "mimeType": "image/png",
+      "bytes": 16550,
+      "sha256": "8da8440dfee56ae2372b0bb9a75c1dbd762186f729e0cbc6985581cd9e0c2de4",
+      "averageHash8x8": "ffc3c181918181ff"
+    },
+    {
+      "path": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/mU.png",
+      "type": "image",
+      "extension": ".png",
+      "mimeType": "image/png",
+      "bytes": 684,
+      "sha256": "8c28ef16ae21df761052d609e19a6ed6d059dde511b6c592d7ba701017601e6b",
+      "averageHash8x8": "003c7e7e7e7e3c00"
+    },
+    {
+      "path": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/o-.png",
+      "type": "image",
+      "extension": ".png",
+      "mimeType": "image/png",
+      "bytes": 24186,
+      "sha256": "ab5f8e766885fbe28f3b62cd0abc7b5a1adeb617de6cc5328cb702da0fabd420",
+      "averageHash8x8": "ff83c181998181ff"
+    },
+    {
+      "path": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/wb.png",
+      "type": "image",
+      "extension": ".png",
+      "mimeType": "image/png",
+      "bytes": 9209,
+      "sha256": "dae4487558878b8e1e271dc10469839187749cd6143b334d968e3b04394ed10c",
+      "averageHash8x8": "ffc3c181918181ff"
+    },
+    {
+      "path": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/yn.png",
+      "type": "image",
+      "extension": ".png",
+      "mimeType": "image/png",
+      "bytes": 5634,
+      "sha256": "6d56cafbbb55795531834161df6e8b2bbea71e657391f083cdbfd71490092eea",
+      "averageHash8x8": "ff83c181998181ff"
+    },
+    {
+      "path": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/zR.png",
+      "type": "image",
+      "extension": ".png",
+      "mimeType": "image/png",
+      "bytes": 3251,
+      "sha256": "c7eaf585d399c87715f227cc8e8c8a754e61d9d9f9eba84d70d29df29a5395ef",
+      "averageHash8x8": "ff83c1819181c3ff"
+    },
+    {
+      "path": "media/legacy-apks/cobrinha-apk/Cobrinha.apk/res/zr.png",
+      "type": "image",
+      "extension": ".png",
+      "mimeType": "image/png",
+      "bytes": 13048,
+      "sha256": "ebc3508567f22fb1bc5d3dd81297c661dfb711091cf004c2522acdf42c544e07",
+      "averageHash8x8": "003c7e7e7e7e3c00"
+    },
+    {
+      "path": "media/legacy-apks/frutris-apk/Frutris.apk/res/3z.png",
+      "type": "image",
+      "extension": ".png",
+      "mimeType": "image/png",
+      "bytes": 106,
+      "sha256": "72c0e969955f6acd8b0f67ca9f42ada7eb274d46889a92a562de2df9f0dd6009",
+      "averageHash8x8": "ffffffffffffffff"
+    },
+    {
+      "path": "media/legacy-apks/frutris-apk/Frutris.apk/res/6h.png",
+      "type": "image",
+      "extension": ".png",
+      "mimeType": "image/png",
+      "bytes": 140,
+      "sha256": "3b3eac261b4b334967eb7bfcfddf4b341579ca7299a548d8c3bae93fa734a194",
+      "averageHash8x8": "ffffffffffffffff"
+    },
+    {
+      "path": "media/legacy-apks/frutris-apk/Frutris.apk/res/8c.png",
+      "type": "image",
+      "extension": ".png",
+      "mimeType": "image/png",
+      "bytes": 6409,
+      "sha256": "c6d5e72ecbd66750bb7f2419afd7b0855399478ca9e9bbbd7eb68ff3febe9151",
+      "averageHash8x8": "3c7effff3c180000"
+    },
+    {
+      "path": "media/legacy-apks/frutris-apk/Frutris.apk/res/9w.png",
+      "type": "image",
+      "extension": ".png",
+      "mimeType": "image/png",
+      "bytes": 3456,
+      "sha256": "185f2237e716c4706dfa6afac86b9547601e3fb12fbfd2b447a822273b4762a4",
+      "averageHash8x8": "7eff7e7e3c180000"
+    },
+    {
+      "path": "media/legacy-apks/frutris-apk/Frutris.apk/res/Em.png",
+      "type": "image",
+      "extension": ".png",
+      "mimeType": "image/png",
+      "bytes": 19437,
+      "sha256": "05887e62f4c9437a032de3684369039b64b1f9231f444b78268e4928aecc65d0",
+      "averageHash8x8": "007e7e7e7e7e2400"
+    },
+    {
+      "path": "media/legacy-apks/frutris-apk/Frutris.apk/res/FS.png",
+      "type": "image",
+      "extension": ".png",
+      "mimeType": "image/png",
+      "bytes": 9004,
+      "sha256": "9e2b974e6e2f5e7ca3e6a41f28a21d621936797d5d53e33e0d8399e7689bf095",
+      "averageHash8x8": "7eff7e7e3c180000"
+    },
+    {
+      "path": "media/legacy-apks/frutris-apk/Frutris.apk/res/Gc.png",
+      "type": "image",
+      "extension": ".png",
+      "mimeType": "image/png",
+      "bytes": 25049,
+      "sha256": "206d01516aa7243c557566b7864249a5f7f72b69b3bdf49d663c4fac4596d583",
+      "averageHash8x8": "3c7effff3c180000"
+    },
+    {
+      "path": "media/legacy-apks/frutris-apk/Frutris.apk/res/Gx.png",
+      "type": "image",
+      "extension": ".png",
+      "mimeType": "image/png",
+      "bytes": 275,
+      "sha256": "8a7e645c669ce9bb45c1e839c36a0c3a2f5f2ad6ee69a1f507726d729bdedc3f",
+      "averageHash8x8": "ffffffffffffffff"
+    },
+    {
+      "path": "media/legacy-apks/frutris-apk/Frutris.apk/res/I2.png",
+      "type": "image",
+      "extension": ".png",
+      "mimeType": "image/png",
+      "bytes": 120,
+      "sha256": "b6209c9a4392555e4f33633c789b91c904f0adece2b91c9ad9143b5cd8d852bb",
+      "averageHash8x8": "ffffffffffffffff"
+    },
+    {
+      "path": "media/legacy-apks/frutris-apk/Frutris.apk/res/Lf.png",
+      "type": "image",
+      "extension": ".png",
+      "mimeType": "image/png",
+      "bytes": 35592,
+      "sha256": "51d150cf6e906a456aea07c2bd51227889dc756741fa5a3222382416a25f2772",
+      "averageHash8x8": "007e7e7e7e7e2400"
+    },
+    {
+      "path": "media/legacy-apks/frutris-apk/Frutris.apk/res/Me.png",
+      "type": "image",
+      "extension": ".png",
+      "mimeType": "image/png",
+      "bytes": 334,
+      "sha256": "85d1f95353daca77cf969fe4aae145a6ab7ef1d2c2ec391000ae805218fe2f12",
+      "averageHash8x8": "007e7e7efe1a2418"
+    },
+    {
+      "path": "media/legacy-apks/frutris-apk/Frutris.apk/res/QZ.png",
+      "type": "image",
+      "extension": ".png",
+      "mimeType": "image/png",
+      "bytes": 7204,
+      "sha256": "8692ca74b8197a093f423bee6d45d75a31f9bcb6d80743bc77c8519e02c92ad9",
+      "averageHash8x8": "007e7e7e7e7e2400"
+    },
+    {
+      "path": "media/legacy-apks/frutris-apk/Frutris.apk/res/RJ.png",
+      "type": "image",
+      "extension": ".png",
+      "mimeType": "image/png",
+      "bytes": 16089,
+      "sha256": "2bec437dd4070a573e342f6615c61d25923b847273aca15970ac939a17112aac",
+      "averageHash8x8": "7eff7e7e3c180000"
+    },
+    {
+      "path": "media/legacy-apks/frutris-apk/Frutris.apk/res/Ul.png",
+      "type": "image",
+      "extension": ".png",
+      "mimeType": "image/png",
+      "bytes": 575,
+      "sha256": "f27efc755549423050e4f817321f2410e54cb0de83041ebd9441c63335c1decc",
+      "averageHash8x8": "ffffffffffffffff"
+    },
+    {
+      "path": "media/legacy-apks/frutris-apk/Frutris.apk/res/Yt.png",
+      "type": "image",
+      "extension": ".png",
+      "mimeType": "image/png",
+      "bytes": 456,
+      "sha256": "cb3470570660a5fef628af7e199c284d83fb31673e5da3788057833a6bfa8d3c",
+      "averageHash8x8": "ffffffffffffffff"
+    },
+    {
+      "path": "media/legacy-apks/frutris-apk/Frutris.apk/res/_q.png",
+      "type": "image",
+      "extension": ".png",
+      "mimeType": "image/png",
+      "bytes": 1249,
+      "sha256": "6f763980cc70eb599229c127d53e811f0ebf94bfa09e8ee472b461e43cb765ce",
+      "averageHash8x8": "ffffffffffffffff"
+    },
+    {
+      "path": "media/legacy-apks/frutris-apk/Frutris.apk/res/as.png",
+      "type": "image",
+      "extension": ".png",
+      "mimeType": "image/png",
+      "bytes": 55438,
+      "sha256": "da6eede5b0ef92e8aeac116864a4f5254903b6e1356e4ab19df8368812fb443e",
+      "averageHash8x8": "007e7e7e7e7e2400"
+    },
+    {
+      "path": "media/legacy-apks/frutris-apk/Frutris.apk/res/cV.png",
+      "type": "image",
+      "extension": ".png",
+      "mimeType": "image/png",
+      "bytes": 197,
+      "sha256": "f0c9fd9c4979823da856e7a73249b7ef82ed49fbf264e6a1ff863cca4c26050d",
+      "averageHash8x8": "ffffffffffffffff"
+    },
+    {
+      "path": "media/legacy-apks/frutris-apk/Frutris.apk/res/fO.png",
+      "type": "image",
+      "extension": ".png",
+      "mimeType": "image/png",
+      "bytes": 17070,
+      "sha256": "554e7c5c27c175cbe8dc6a0a7000abf0d44971f048b19531ecbbf90ad087134a",
+      "averageHash8x8": "3c7effff3c180000"
+    },
+    {
+      "path": "media/legacy-apks/frutris-apk/Frutris.apk/res/mU.png",
+      "type": "image",
+      "extension": ".png",
+      "mimeType": "image/png",
+      "bytes": 891,
+      "sha256": "27c06a2649764083957916828df7ed2daff59cdf4113d8cf868fca8d53014bcb",
+      "averageHash8x8": "ffffffffffffffff"
+    },
+    {
+      "path": "media/legacy-apks/frutris-apk/Frutris.apk/res/o-.png",
+      "type": "image",
+      "extension": ".png",
+      "mimeType": "image/png",
+      "bytes": 24673,
+      "sha256": "592dd7068a7e9bb31debe5d94d913bdf89f5aa62dedd1e9b29d8043981c6a55b",
+      "averageHash8x8": "7eff7e7e3c180000"
+    },
+    {
+      "path": "media/legacy-apks/frutris-apk/Frutris.apk/res/wb.png",
+      "type": "image",
+      "extension": ".png",
+      "mimeType": "image/png",
+      "bytes": 9638,
+      "sha256": "6f96d091eff420a772ac05e22d2d7147c17064921bce5a744348879e37b85645",
+      "averageHash8x8": "3c7effff3c180000"
+    },
+    {
+      "path": "media/legacy-apks/frutris-apk/Frutris.apk/res/yn.png",
+      "type": "image",
+      "extension": ".png",
+      "mimeType": "image/png",
+      "bytes": 6024,
+      "sha256": "9c2b065443c244e463d9b47f857cdac77d8fb87595f87b268929cd1d28664a84",
+      "averageHash8x8": "7eff7e7e3c180000"
+    },
+    {
+      "path": "media/legacy-apks/frutris-apk/Frutris.apk/res/zR.png",
+      "type": "image",
+      "extension": ".png",
+      "mimeType": "image/png",
+      "bytes": 3710,
+      "sha256": "b9eb099b077070ea93b249498292e6fb53a84e25ad98b22317ace84c19264ece",
+      "averageHash8x8": "7eff7e7e3c180000"
+    },
+    {
+      "path": "media/legacy-apks/frutris-apk/Frutris.apk/res/zr.png",
+      "type": "image",
+      "extension": ".png",
+      "mimeType": "image/png",
+      "bytes": 12810,
+      "sha256": "45fbb83f7e028d2e292c2a599ea71d562bd955ee6e5650df41c7e4d90572830e",
+      "averageHash8x8": "007e7e7e7e7e2400"
     },
     {
       "path": "reference/legacy-source-trees/cobrinha/apps/cobrinha/game.webp",
@@ -1299,6 +3379,15 @@
       "sha256": "7e01c3df7029070c32b1b3106bf0cee38c5bbcb9d480f7a6b926660f27b8675e"
     },
     {
+      "path": "site/assets/img/Icones/anotacoes-unicode.webp",
+      "type": "image",
+      "extension": ".webp",
+      "mimeType": "image/webp",
+      "bytes": 70682,
+      "sha256": "4c3d1e5c90dc10df939c0ef9dcd84090ee2d31fc109beb93c6318d61387a43d1",
+      "averageHash8x8": "ffffbf9d18000081"
+    },
+    {
       "path": "site/assets/img/Icones/anotações.webp",
       "type": "image",
       "extension": ".webp",
@@ -1333,6 +3422,15 @@
       "bytes": 4734,
       "sha256": "b310496af877aba9ec9e9171f15b9e387e31dec7c632656a39459f0b36efc6bb",
       "averageHash8x8": "7e81fd813f81817e"
+    },
+    {
+      "path": "site/assets/img/Icones/configuracoes-unicode.webp",
+      "type": "image",
+      "extension": ".webp",
+      "mimeType": "image/webp",
+      "bytes": 35864,
+      "sha256": "f42029eb579be7e07e444a2ca7c9d35412c269030f4765703cd1866e39446de3",
+      "averageHash8x8": "ffffdb9999000081"
     },
     {
       "path": "site/assets/img/Icones/configuracoes.webp",
