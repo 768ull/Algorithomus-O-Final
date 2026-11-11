@@ -18,6 +18,7 @@ SITE = ASSETS / "site"
 MEDIA = ASSETS / "media"
 CONFIG = ASSETS / "config"
 LOCAL_APKS = [
+    ("uploaded-base-apk", ROOT / "base.apk"),
     ("cobrinha-apk", ROOT / "android-app/tools/private-sources/Cobrinha.apk"),
     ("frutris-apk", ROOT / "android-app/tools/private-sources/Frutris.apk"),
 ]
