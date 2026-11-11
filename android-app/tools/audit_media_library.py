@@ -8,6 +8,7 @@ from __future__ import annotations
 import hashlib
 import json
 import mimetypes
+import shutil
 from collections import defaultdict, Counter
 from itertools import combinations
 from pathlib import Path
@@ -53,7 +54,38 @@ def media_type(ext: str) -> str:
     if ext in FONT_EXT: return "font"
     return "other"
 
+UNICODE_ALIASES = [
+    {
+        "path": "site/assets/img/Icones/anotações.webp",
+        "aliasPath": "site/assets/img/Icones/anotacoes-unicode.webp"
+    },
+    {
+        "path": "site/assets/img/Icones/configurações.webp",
+        "aliasPath": "site/assets/img/Icones/configuracoes-unicode.webp"
+    }
+]
+
+def ensure_unicode_aliases():
+    aliases = []
+    for item in UNICODE_ALIASES:
+        source = ASSETS / item["path"]
+        alias = ASSETS / item["aliasPath"]
+        if not source.is_file():
+            continue
+        alias.parent.mkdir(parents=True, exist_ok=True)
+        if not alias.exists():
+            shutil.copyfile(source, alias)
+        aliases.append({
+            "originalPath": item["path"],
+            "aliasPath": item["aliasPath"],
+            "bytes": alias.stat().st_size,
+            "sha256": sha_file(alias),
+            "reason": "ASCII fallback for Android asset packaging; original filename remains preserved."
+        })
+    return aliases
+
 def main():
+    unicode_aliases = ensure_unicode_aliases()
     records = []
     by_sha = defaultdict(list)
     by_type = Counter()

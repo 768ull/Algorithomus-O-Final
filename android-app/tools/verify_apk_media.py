@@ -2,6 +2,7 @@
 """Verify that every inventoried media file is packaged inside the APK."""
 import json
 import sys
+import hashlib
 import zipfile
 from pathlib import Path
 
@@ -18,10 +19,23 @@ def main():
             return 1
         manifest = json.loads(z.read(manifest_path).decode("utf-8"))
         missing = []
+        alias_by_original = {
+            item["originalPath"]: item["aliasPath"]
+            for item in manifest.get("unicodeAliases", [])
+        }
+        alias_substitutions = []
         for record in manifest.get("files", []):
             entry = "assets/" + record["path"]
-            if entry not in names:
-                missing.append(entry)
+            if entry in names:
+                continue
+            alias_path = alias_by_original.get(record["path"])
+            alias_entry = "assets/" + alias_path if alias_path else None
+            if alias_entry and alias_entry in names:
+                digest = hashlib.sha256(z.read(alias_entry)).hexdigest()
+                if digest == record["sha256"]:
+                    alias_substitutions.append((entry, alias_entry))
+                    continue
+            missing.append(entry)
         if missing:
             print("[apk-media-check] missing %d media files:" % len(missing), file=sys.stderr)
             for item in missing[:100]: print(item, file=sys.stderr)
@@ -35,6 +49,7 @@ def main():
             return 1
         print("[apk-media-check] PASS: %d media files present (images=%d audio=%d video=%d)" % (
             len(manifest["files"]), len(images), len(audio), len(videos)))
+        print("[apk-media-check] Unicode aliases used: %d" % len(alias_substitutions))
         print("[apk-media-check] APK size: %d bytes" % apk.stat().st_size)
     return 0
 

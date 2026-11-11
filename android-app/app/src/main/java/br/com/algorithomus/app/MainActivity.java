@@ -32,6 +32,7 @@ import java.io.InputStream;
 import java.io.FilterInputStream;
 import java.io.IOException;
 import java.net.URLDecoder;
+import java.text.Normalizer;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.regex.Matcher;
@@ -577,7 +578,14 @@ public class MainActivity extends Activity {
         }
 
         try {
-            InputStream stream = assets.open(assetPath);
+            InputStream stream;
+            try {
+                stream = assets.open(assetPath);
+            } catch (Exception originalNameMissing) {
+                String fallbackPath = unicodeFallbackAssetPath(assetPath);
+                if (fallbackPath.equals(assetPath)) throw originalNameMissing;
+                stream = assets.open(fallbackPath);
+            }
             Map<String, String> headers = new HashMap<>();
             headers.put("Access-Control-Allow-Origin", "*");
             if (isRangeMediaPath(path)) headers.put("Accept-Ranges", "bytes");
@@ -588,6 +596,24 @@ public class MainActivity extends Activity {
             InputStream empty = new ByteArrayInputStream(new byte[0]);
             return new WebResourceResponse("text/plain", "utf-8", 404, "Not Found", headers, empty);
         }
+    }
+
+    /**
+     * Android asset packaging can omit/decompose a small set of accented file
+     * names. ASCII aliases keep the original files intact and let WebView serve
+     * the exact original content when the accented ZIP path is unavailable.
+     */
+    private String unicodeFallbackAssetPath(String assetPath) {
+        String normalized = Normalizer.normalize(assetPath, Normalizer.Form.NFC);
+        if (normalized.endsWith("/anotações.webp")) {
+            return normalized.substring(0, normalized.length() - "anotações.webp".length())
+                    + "anotacoes-unicode.webp";
+        }
+        if (normalized.endsWith("/configurações.webp")) {
+            return normalized.substring(0, normalized.length() - "configurações.webp".length())
+                    + "configuracoes-unicode.webp";
+        }
+        return assetPath;
     }
 
     private boolean isRangeMediaPath(String path) {

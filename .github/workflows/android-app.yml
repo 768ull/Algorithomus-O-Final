@@ -69,15 +69,13 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y poppler-utils python3-pil
 
       - name: Prepare offline site and bundled media
-        env:
-          LEGACY_REPOS_TOKEN: ${{ secrets.LEGACY_REPOS_TOKEN }}
         run: bash android-app/tools/mirror_site.sh
 
       - name: Commit prepared offline assets
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add android-app/app/src/main/assets/site android-app/app/src/main/assets/media android-app/app/src/main/assets/config
+          git add -f android-app/app/src/main/assets/site android-app/app/src/main/assets/media android-app/app/src/main/assets/config
           if ! git diff --cached --quiet; then
             git commit -m "Import offline site snapshot and PDF media [skip ci]"
           fi
