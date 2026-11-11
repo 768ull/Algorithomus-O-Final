@@ -2,13 +2,13 @@
   "schemaVersion": 1,
   "policy": "Original media files are not deleted, renamed, or re-encoded. Exact duplicates and perceptual candidates are recorded for review only.",
   "counts": {
-    "totalMediaFiles": 126,
-    "images": 106,
+    "totalMediaFiles": 139,
+    "images": 119,
     "audio": 20,
     "video": 0,
     "fonts": 0,
-    "exactDuplicateGroups": 12,
-    "perceptualDuplicateCandidates": 52,
+    "exactDuplicateGroups": 14,
+    "perceptualDuplicateCandidates": 97,
     "pdfPerceptualDuplicatePairs": 2
   },
   "exactDuplicateGroups": [
@@ -107,6 +107,22 @@
         "site/apps/mensagens/pfp/imagem-018.webp",
         "site/apps/y/pfp/imagem-018.webp"
       ]
+    },
+    {
+      "type": "image",
+      "sha256": "4c3d1e5c90dc10df939c0ef9dcd84090ee2d31fc109beb93c6318d61387a43d1",
+      "paths": [
+        "site/assets/img/Icones/anotacoes-unicode.webp",
+        "site/assets/img/Icones/anotações.webp"
+      ]
+    },
+    {
+      "type": "image",
+      "sha256": "f42029eb579be7e07e444a2ca7c9d35412c269030f4765703cd1866e39446de3",
+      "paths": [
+        "site/assets/img/Icones/configuracoes-unicode.webp",
+        "site/assets/img/Icones/configurações.webp"
+      ]
     }
   ],
   "perceptualDuplicateCandidates": [
@@ -149,6 +165,36 @@
     {
       "pathA": "media/app-icons/pdf-page-11.jpg",
       "pathB": "media/app-icons/pdf-page-12.jpg",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/images/branding/pdf-page-01.jpg",
+      "pathB": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-hdpi-v4/ic_site_settings.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/images/branding/pdf-page-01.jpg",
+      "pathB": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-mdpi-v4/ic_site_settings.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/images/branding/pdf-page-01.jpg",
+      "pathB": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-xhdpi-v4/ic_site_settings.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/images/branding/pdf-page-01.jpg",
+      "pathB": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-xxhdpi-v4/ic_site_settings.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/images/branding/pdf-page-01.jpg",
+      "pathB": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-xxxhdpi-v4/ic_site_settings.png",
       "averageHashDistance": 0,
       "note": "Visual similarity candidate only; both original files are retained."
     },
@@ -383,6 +429,246 @@
     {
       "pathA": "media/images/scenes/pdf-page-27.jpg",
       "pathB": "site/apps/galeria/img/Wallpapers/2.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-hdpi-v4/ic_site_settings.png",
+      "pathB": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-mdpi-v4/ic_site_settings.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-hdpi-v4/ic_site_settings.png",
+      "pathB": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-xhdpi-v4/ic_site_settings.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-hdpi-v4/ic_site_settings.png",
+      "pathB": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-xxhdpi-v4/ic_site_settings.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-hdpi-v4/ic_site_settings.png",
+      "pathB": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-xxxhdpi-v4/ic_site_settings.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-hdpi-v4/ic_site_settings.png",
+      "pathB": "reference/legacy-source-trees/cobrinha/apps/cobrinha/game.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-hdpi-v4/ic_site_settings.png",
+      "pathB": "site/apps/cobrinha/game.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-hdpi-v4/ic_site_settings.png",
+      "pathB": "site/assets/img/icon.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-hdpi-v4/ic_site_settings.png",
+      "pathB": "site/assets/img/logo/logotest.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-hdpi-v4/notification_badge.png",
+      "pathB": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-mdpi-v4/notification_badge.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-hdpi-v4/notification_badge.png",
+      "pathB": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-xhdpi-v4/notification_badge.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-hdpi-v4/notification_badge.png",
+      "pathB": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-xxhdpi-v4/notification_badge.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-hdpi-v4/notification_badge.png",
+      "pathB": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-xxxhdpi-v4/notification_badge.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-mdpi-v4/ic_site_settings.png",
+      "pathB": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-xhdpi-v4/ic_site_settings.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-mdpi-v4/ic_site_settings.png",
+      "pathB": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-xxhdpi-v4/ic_site_settings.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-mdpi-v4/ic_site_settings.png",
+      "pathB": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-xxxhdpi-v4/ic_site_settings.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-mdpi-v4/ic_site_settings.png",
+      "pathB": "reference/legacy-source-trees/cobrinha/apps/cobrinha/game.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-mdpi-v4/ic_site_settings.png",
+      "pathB": "site/apps/cobrinha/game.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-mdpi-v4/ic_site_settings.png",
+      "pathB": "site/assets/img/icon.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-mdpi-v4/ic_site_settings.png",
+      "pathB": "site/assets/img/logo/logotest.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-mdpi-v4/notification_badge.png",
+      "pathB": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-xhdpi-v4/notification_badge.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-mdpi-v4/notification_badge.png",
+      "pathB": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-xxhdpi-v4/notification_badge.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-mdpi-v4/notification_badge.png",
+      "pathB": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-xxxhdpi-v4/notification_badge.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-xhdpi-v4/ic_site_settings.png",
+      "pathB": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-xxhdpi-v4/ic_site_settings.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-xhdpi-v4/ic_site_settings.png",
+      "pathB": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-xxxhdpi-v4/ic_site_settings.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-xhdpi-v4/ic_site_settings.png",
+      "pathB": "reference/legacy-source-trees/cobrinha/apps/cobrinha/game.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-xhdpi-v4/ic_site_settings.png",
+      "pathB": "site/apps/cobrinha/game.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-xhdpi-v4/ic_site_settings.png",
+      "pathB": "site/assets/img/icon.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-xhdpi-v4/ic_site_settings.png",
+      "pathB": "site/assets/img/logo/logotest.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-xhdpi-v4/notification_badge.png",
+      "pathB": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-xxhdpi-v4/notification_badge.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-xhdpi-v4/notification_badge.png",
+      "pathB": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-xxxhdpi-v4/notification_badge.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-xxhdpi-v4/ic_site_settings.png",
+      "pathB": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-xxxhdpi-v4/ic_site_settings.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-xxhdpi-v4/ic_site_settings.png",
+      "pathB": "reference/legacy-source-trees/cobrinha/apps/cobrinha/game.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-xxhdpi-v4/ic_site_settings.png",
+      "pathB": "site/apps/cobrinha/game.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-xxhdpi-v4/ic_site_settings.png",
+      "pathB": "site/assets/img/icon.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-xxhdpi-v4/ic_site_settings.png",
+      "pathB": "site/assets/img/logo/logotest.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-xxhdpi-v4/notification_badge.png",
+      "pathB": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-xxxhdpi-v4/notification_badge.png",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-xxxhdpi-v4/ic_site_settings.png",
+      "pathB": "reference/legacy-source-trees/cobrinha/apps/cobrinha/game.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-xxxhdpi-v4/ic_site_settings.png",
+      "pathB": "site/apps/cobrinha/game.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-xxxhdpi-v4/ic_site_settings.png",
+      "pathB": "site/assets/img/icon.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-xxxhdpi-v4/ic_site_settings.png",
+      "pathB": "site/assets/img/logo/logotest.png",
       "averageHashDistance": 0,
       "note": "Visual similarity candidate only; both original files are retained."
     },
@@ -786,6 +1072,105 @@
       "bytes": 91007,
       "sha256": "0556f0064d1d794b4015035f9f09d3c8b9dc59770f345c1b63c4bcfc818efbf4",
       "averageHash8x8": "000038ddff00fdff"
+    },
+    {
+      "path": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-hdpi-v4/ic_site_settings.png",
+      "type": "image",
+      "extension": ".png",
+      "mimeType": "image/png",
+      "bytes": 602,
+      "sha256": "3254e797209ee256c35da664978bcff3e0cc32088950b020ddbca2b37e0ece0e",
+      "averageHash8x8": "ffffffffffffffff"
+    },
+    {
+      "path": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-hdpi-v4/last_resort_runtime_host_logo.png",
+      "type": "image",
+      "extension": ".png",
+      "mimeType": "image/png",
+      "bytes": 1758,
+      "sha256": "d85811d9aa28dd71c96f5131e9e3666aa676c8668907432e9668bdb28951a54c",
+      "averageHash8x8": "e7818187078787ef"
+    },
+    {
+      "path": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-hdpi-v4/notification_badge.png",
+      "type": "image",
+      "extension": ".png",
+      "mimeType": "image/png",
+      "bytes": 255,
+      "sha256": "89d910ed328db4dd53703b8a3f09aa3cf0c3cac64336ba7bd8b7ab09cabd5b12",
+      "averageHash8x8": "183c3c7e3c7e7e00"
+    },
+    {
+      "path": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-mdpi-v4/ic_site_settings.png",
+      "type": "image",
+      "extension": ".png",
+      "mimeType": "image/png",
+      "bytes": 438,
+      "sha256": "66de0d6e0d7cb16dcf5d37dea59e0800136ec9e3b60aa2a6cb1bbf52fcd7fbb0",
+      "averageHash8x8": "ffffffffffffffff"
+    },
+    {
+      "path": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-mdpi-v4/notification_badge.png",
+      "type": "image",
+      "extension": ".png",
+      "mimeType": "image/png",
+      "bytes": 190,
+      "sha256": "f97827206c967ddcaa77f7063d7ff11d21da9e47e6d47e59ed125504254e49de",
+      "averageHash8x8": "183c3c7e3c7e7e00"
+    },
+    {
+      "path": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-xhdpi-v4/ic_site_settings.png",
+      "type": "image",
+      "extension": ".png",
+      "mimeType": "image/png",
+      "bytes": 772,
+      "sha256": "02f7545b6e74c4d5759aedd2154870e2a03df45315cdde7d265fd90717483aab",
+      "averageHash8x8": "ffffffffffffffff"
+    },
+    {
+      "path": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-xhdpi-v4/notification_badge.png",
+      "type": "image",
+      "extension": ".png",
+      "mimeType": "image/png",
+      "bytes": 255,
+      "sha256": "58a07deae1426b075118f044a01bd8b556d7869ceb4f2b3941cb1b823a34bbc7",
+      "averageHash8x8": "183c3c7e3c7e7e00"
+    },
+    {
+      "path": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-xxhdpi-v4/ic_site_settings.png",
+      "type": "image",
+      "extension": ".png",
+      "mimeType": "image/png",
+      "bytes": 1129,
+      "sha256": "2ca9fe9f428e3588ed6b825011289cc856134ffa46baf1817ee53c78d125aca9",
+      "averageHash8x8": "ffffffffffffffff"
+    },
+    {
+      "path": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-xxhdpi-v4/notification_badge.png",
+      "type": "image",
+      "extension": ".png",
+      "mimeType": "image/png",
+      "bytes": 396,
+      "sha256": "2b72879753eabefa842a4a8ed164f15f009c3b5197bc91ad661ccb73201a6f77",
+      "averageHash8x8": "183c3c7e3c7e7e00"
+    },
+    {
+      "path": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-xxxhdpi-v4/ic_site_settings.png",
+      "type": "image",
+      "extension": ".png",
+      "mimeType": "image/png",
+      "bytes": 1409,
+      "sha256": "e6d735d3fdaf0f017e0cedf74d8387e880c3322248edd37a5c38c1f30970ad34",
+      "averageHash8x8": "ffffffffffffffff"
+    },
+    {
+      "path": "media/legacy-apks/uploaded-base-apk/base.apk/res/drawable-xxxhdpi-v4/notification_badge.png",
+      "type": "image",
+      "extension": ".png",
+      "mimeType": "image/png",
+      "bytes": 479,
+      "sha256": "9f00ff3e281a881c5aba2da8cf578096b35c2290c457c48aec9e1cdd27130ceb",
+      "averageHash8x8": "183c3c7e3c7e7e00"
     },
     {
       "path": "reference/legacy-source-trees/cobrinha/apps/cobrinha/game.webp",
@@ -1299,6 +1684,15 @@
       "sha256": "7e01c3df7029070c32b1b3106bf0cee38c5bbcb9d480f7a6b926660f27b8675e"
     },
     {
+      "path": "site/assets/img/Icones/anotacoes-unicode.webp",
+      "type": "image",
+      "extension": ".webp",
+      "mimeType": "image/webp",
+      "bytes": 70682,
+      "sha256": "4c3d1e5c90dc10df939c0ef9dcd84090ee2d31fc109beb93c6318d61387a43d1",
+      "averageHash8x8": "ffffbf9d18000081"
+    },
+    {
       "path": "site/assets/img/Icones/anotações.webp",
       "type": "image",
       "extension": ".webp",
@@ -1333,6 +1727,15 @@
       "bytes": 4734,
       "sha256": "b310496af877aba9ec9e9171f15b9e387e31dec7c632656a39459f0b36efc6bb",
       "averageHash8x8": "7e81fd813f81817e"
+    },
+    {
+      "path": "site/assets/img/Icones/configuracoes-unicode.webp",
+      "type": "image",
+      "extension": ".webp",
+      "mimeType": "image/webp",
+      "bytes": 35864,
+      "sha256": "f42029eb579be7e07e444a2ca7c9d35412c269030f4765703cd1866e39446de3",
+      "averageHash8x8": "ffffdb9999000081"
     },
     {
       "path": "site/assets/img/Icones/configuracoes.webp",
