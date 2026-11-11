@@ -721,6 +721,24 @@
       "averageHashDistance": 0
     }
   ],
+  "unicodeAliases": [
+    {
+      "originalPath": "site/assets/img/Icones/anotações.webp",
+      "aliasPath": "site/assets/img/Icones/anotacoes-unicode.webp",
+      "bytes": 70682,
+      "sha256": "4c3d1e5c90dc10df939c0ef9dcd84090ee2d31fc109beb93c6318d61387a43d1",
+      "originalSha256": "4c3d1e5c90dc10df939c0ef9dcd84090ee2d31fc109beb93c6318d61387a43d1",
+      "reason": "ASCII fallback for Android asset packaging; original filename remains preserved."
+    },
+    {
+      "originalPath": "site/assets/img/Icones/configurações.webp",
+      "aliasPath": "site/assets/img/Icones/configuracoes-unicode.webp",
+      "bytes": 35864,
+      "sha256": "f42029eb579be7e07e444a2ca7c9d35412c269030f4765703cd1866e39446de3",
+      "originalSha256": "f42029eb579be7e07e444a2ca7c9d35412c269030f4765703cd1866e39446de3",
+      "reason": "ASCII fallback for Android asset packaging; original filename remains preserved."
+    }
+  ],
   "files": [
     {
       "path": "media/app-icons/pdf-page-02.jpg",

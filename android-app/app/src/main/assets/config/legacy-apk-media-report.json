@@ -21,7 +21,7 @@
       "mimeType": "image/png",
       "bytes": 438,
       "sha256": "66de0d6e0d7cb16dcf5d37dea59e0800136ec9e3b60aa2a6cb1bbf52fcd7fbb0",
-      "action": "copied"
+      "action": "identical-existing-file"
     },
     {
       "source": "uploaded-base-apk",
@@ -33,7 +33,7 @@
       "mimeType": "image/png",
       "bytes": 190,
       "sha256": "f97827206c967ddcaa77f7063d7ff11d21da9e47e6d47e59ed125504254e49de",
-      "action": "copied"
+      "action": "identical-existing-file"
     },
     {
       "source": "uploaded-base-apk",
@@ -45,7 +45,7 @@
       "mimeType": "image/png",
       "bytes": 602,
       "sha256": "3254e797209ee256c35da664978bcff3e0cc32088950b020ddbca2b37e0ece0e",
-      "action": "copied"
+      "action": "identical-existing-file"
     },
     {
       "source": "uploaded-base-apk",
@@ -57,7 +57,7 @@
       "mimeType": "image/png",
       "bytes": 1758,
       "sha256": "d85811d9aa28dd71c96f5131e9e3666aa676c8668907432e9668bdb28951a54c",
-      "action": "copied"
+      "action": "identical-existing-file"
     },
     {
       "source": "uploaded-base-apk",
@@ -69,7 +69,7 @@
       "mimeType": "image/png",
       "bytes": 255,
       "sha256": "89d910ed328db4dd53703b8a3f09aa3cf0c3cac64336ba7bd8b7ab09cabd5b12",
-      "action": "copied"
+      "action": "identical-existing-file"
     },
     {
       "source": "uploaded-base-apk",
@@ -81,7 +81,7 @@
       "mimeType": "image/png",
       "bytes": 772,
       "sha256": "02f7545b6e74c4d5759aedd2154870e2a03df45315cdde7d265fd90717483aab",
-      "action": "copied"
+      "action": "identical-existing-file"
     },
     {
       "source": "uploaded-base-apk",
@@ -93,7 +93,7 @@
       "mimeType": "image/png",
       "bytes": 255,
       "sha256": "58a07deae1426b075118f044a01bd8b556d7869ceb4f2b3941cb1b823a34bbc7",
-      "action": "copied"
+      "action": "identical-existing-file"
     },
     {
       "source": "uploaded-base-apk",
@@ -105,7 +105,7 @@
       "mimeType": "image/png",
       "bytes": 1129,
       "sha256": "2ca9fe9f428e3588ed6b825011289cc856134ffa46baf1817ee53c78d125aca9",
-      "action": "copied"
+      "action": "identical-existing-file"
     },
     {
       "source": "uploaded-base-apk",
@@ -117,7 +117,7 @@
       "mimeType": "image/png",
       "bytes": 396,
       "sha256": "2b72879753eabefa842a4a8ed164f15f009c3b5197bc91ad661ccb73201a6f77",
-      "action": "copied"
+      "action": "identical-existing-file"
     },
     {
       "source": "uploaded-base-apk",
@@ -129,7 +129,7 @@
       "mimeType": "image/png",
       "bytes": 1409,
       "sha256": "e6d735d3fdaf0f017e0cedf74d8387e880c3322248edd37a5c38c1f30970ad34",
-      "action": "copied"
+      "action": "identical-existing-file"
     },
     {
       "source": "uploaded-base-apk",
@@ -141,7 +141,7 @@
       "mimeType": "image/png",
       "bytes": 479,
       "sha256": "9f00ff3e281a881c5aba2da8cf578096b35c2290c457c48aec9e1cdd27130ceb",
-      "action": "copied"
+      "action": "identical-existing-file"
     }
   ],
   "errors": [],

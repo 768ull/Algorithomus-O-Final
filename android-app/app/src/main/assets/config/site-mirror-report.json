@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
   "origin": "https://algorithomus.com.br",
-  "generatedAtUtc": "2026-11-11T00:30:33.199265+00:00",
+  "generatedAtUtc": "2026-11-11T00:36:32.334458+00:00",
   "pagesAndTextDownloaded": 183,
   "mediaDownloadedThisRun": 85,
   "bundledFileCountsByType": {
     "audio": 20,
     "video": 0,
-    "imagem": 69,
+    "imagem": 71,
     "outro": 176
   },
-  "bundledFileCount": 265,
+  "bundledFileCount": 267,
   "downloaded": [
     {
       "url": "https://algorithomus.com.br/",
