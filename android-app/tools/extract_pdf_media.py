@@ -12,6 +12,7 @@ import shutil
 import subprocess
 import sys
 import tempfile
+from collections import Counter
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -74,6 +75,8 @@ def main():
                     "height": int(match.group(3))
                 })
 
+        page_counts = Counter(row["sourcePage"] for row in rows)
+
         with tempfile.TemporaryDirectory(prefix="algorithomus-pdf-") as td:
             prefix = str(Path(td) / "asset")
             run(["pdfimages", "-j", str(pdf), prefix])
@@ -96,8 +99,12 @@ def main():
                 digest = sha(raw)
                 suffix = src.suffix.lower() or ".bin"
 
-                if pdf.name == PRIMARY_PDF:
-                    relative = Path(page_group(page)) / ("pdf-page-%02d%s" % (page, suffix))
+                if pdf.name == PRIMARY_PDF and page_counts.get(page, 0) <= 1:
+                    filename = "pdf-page-%02d%s" % (page, suffix)
+                    relative = Path(page_group(page)) / filename
+                elif pdf.name == PRIMARY_PDF:
+                    filename = "pdf-page-%02d-image-%03d%s" % (page, index + 1, suffix)
+                    relative = Path(page_group(page)) / filename
                 else:
                     relative = Path("media/pdf") / slug / ("page-%03d-image-%03d%s" % (page, index + 1, suffix))
 
