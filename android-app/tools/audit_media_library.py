@@ -73,13 +73,15 @@ def ensure_unicode_aliases():
         if not source.is_file():
             continue
         alias.parent.mkdir(parents=True, exist_ok=True)
-        if not alias.exists():
+        source_sha = sha_file(source)
+        if not alias.exists() or sha_file(alias) != source_sha:
             shutil.copyfile(source, alias)
         aliases.append({
             "originalPath": item["path"],
             "aliasPath": item["aliasPath"],
             "bytes": alias.stat().st_size,
             "sha256": sha_file(alias),
+            "originalSha256": source_sha,
             "reason": "ASCII fallback for Android asset packaging; original filename remains preserved."
         })
     return aliases
@@ -156,6 +158,7 @@ def main():
         "exactDuplicateGroups": exact_groups,
         "perceptualDuplicateCandidates": candidates,
         "pdfPerceptualDuplicatePairs": pdf_pairs,
+        "unicodeAliases": unicode_aliases,
         "files": records
     }
     OUT.parent.mkdir(parents=True, exist_ok=True)
