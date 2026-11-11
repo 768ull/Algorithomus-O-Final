@@ -15,12 +15,12 @@ def main():
         "protected void onResume()",
         "PAUSE_NUDGE_JS",
         "RESUME_NUDGE_JS",
-        "webView.onPause()",
+        "pausingView.onPause()",
         "webView.onResume()",
         "pauseTimers()",
         "resumeTimers()",
         "querySelectorAll('audio,video')",
-        "m.pause()",
+        "all[j].pause()",
         "m.play()"
     ]
     required_sound = [
