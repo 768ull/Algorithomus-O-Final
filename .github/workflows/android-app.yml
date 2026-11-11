@@ -83,6 +83,9 @@ jobs:
           git rebase "origin/${GITHUB_REF_NAME}"
           git push origin "HEAD:${GITHUB_REF_NAME}"
 
+      - name: Verify background and foreground audio behavior
+        run: python3 android-app/tools/verify_audio_lifecycle.py
+
       - name: Build debug APK
         working-directory: android-app
         run: ./gradlew --no-daemon assembleDebug
