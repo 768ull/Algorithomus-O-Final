@@ -2,16 +2,40 @@
   "schemaVersion": 1,
   "policy": "Original media files are not deleted, renamed, or re-encoded. Exact duplicates and perceptual candidates are recorded for review only.",
   "counts": {
-    "totalMediaFiles": 123,
-    "images": 103,
+    "totalMediaFiles": 126,
+    "images": 106,
     "audio": 20,
     "video": 0,
     "fonts": 0,
-    "exactDuplicateGroups": 9,
-    "perceptualDuplicateCandidates": 48,
+    "exactDuplicateGroups": 12,
+    "perceptualDuplicateCandidates": 52,
     "pdfPerceptualDuplicatePairs": 2
   },
   "exactDuplicateGroups": [
+    {
+      "type": "image",
+      "sha256": "f12ea3bed48c05587b4d2c5b05f3c54b092fb52ca3b3646aeecabe7689743bad",
+      "paths": [
+        "reference/legacy-source-trees/cobrinha/apps/cobrinha/game.webp",
+        "site/apps/cobrinha/game.webp"
+      ]
+    },
+    {
+      "type": "image",
+      "sha256": "b310496af877aba9ec9e9171f15b9e387e31dec7c632656a39459f0b36efc6bb",
+      "paths": [
+        "reference/legacy-source-trees/cobrinha/assets/img/Icones/cobrinha.webp",
+        "site/assets/img/Icones/cobrinha.webp"
+      ]
+    },
+    {
+      "type": "image",
+      "sha256": "a4d87199f94e2df1b3f5724dc5f7e3d5f6dae17c6f1b955af8f3e507c7479221",
+      "paths": [
+        "reference/legacy-source-trees/frutris/assets/img/Icones/tetris.webp",
+        "site/assets/img/Icones/tetris.webp"
+      ]
+    },
     {
       "type": "image",
       "sha256": "9f9d94ca4a0fbfbf1c7c691d9bba723ba13be5e3d2374d37c7693ff2dd11e0ca",
@@ -112,6 +136,12 @@
     },
     {
       "pathA": "media/app-icons/pdf-page-10.jpg",
+      "pathB": "reference/legacy-source-trees/cobrinha/assets/img/Icones/cobrinha.webp",
+      "averageHashDistance": 1,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/app-icons/pdf-page-10.jpg",
       "pathB": "site/assets/img/Icones/cobrinha.webp",
       "averageHashDistance": 1,
       "note": "Visual similarity candidate only; both original files are retained."
@@ -119,6 +149,12 @@
     {
       "pathA": "media/app-icons/pdf-page-11.jpg",
       "pathB": "media/app-icons/pdf-page-12.jpg",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "media/images/branding/pdf-page-01.jpg",
+      "pathB": "reference/legacy-source-trees/cobrinha/apps/cobrinha/game.webp",
       "averageHashDistance": 0,
       "note": "Visual similarity candidate only; both original files are retained."
     },
@@ -347,6 +383,18 @@
     {
       "pathA": "media/images/scenes/pdf-page-27.jpg",
       "pathB": "site/apps/galeria/img/Wallpapers/2.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "reference/legacy-source-trees/cobrinha/apps/cobrinha/game.webp",
+      "pathB": "site/assets/img/icon.webp",
+      "averageHashDistance": 0,
+      "note": "Visual similarity candidate only; both original files are retained."
+    },
+    {
+      "pathA": "reference/legacy-source-trees/cobrinha/apps/cobrinha/game.webp",
+      "pathB": "site/assets/img/logo/logotest.png",
       "averageHashDistance": 0,
       "note": "Visual similarity candidate only; both original files are retained."
     },
@@ -738,6 +786,33 @@
       "bytes": 91007,
       "sha256": "0556f0064d1d794b4015035f9f09d3c8b9dc59770f345c1b63c4bcfc818efbf4",
       "averageHash8x8": "000038ddff00fdff"
+    },
+    {
+      "path": "reference/legacy-source-trees/cobrinha/apps/cobrinha/game.webp",
+      "type": "image",
+      "extension": ".webp",
+      "mimeType": "image/webp",
+      "bytes": 76,
+      "sha256": "f12ea3bed48c05587b4d2c5b05f3c54b092fb52ca3b3646aeecabe7689743bad",
+      "averageHash8x8": "ffffffffffffffff"
+    },
+    {
+      "path": "reference/legacy-source-trees/cobrinha/assets/img/Icones/cobrinha.webp",
+      "type": "image",
+      "extension": ".webp",
+      "mimeType": "image/webp",
+      "bytes": 4734,
+      "sha256": "b310496af877aba9ec9e9171f15b9e387e31dec7c632656a39459f0b36efc6bb",
+      "averageHash8x8": "7e81fd813f81817e"
+    },
+    {
+      "path": "reference/legacy-source-trees/frutris/assets/img/Icones/tetris.webp",
+      "type": "image",
+      "extension": ".webp",
+      "mimeType": "image/webp",
+      "bytes": 69100,
+      "sha256": "a4d87199f94e2df1b3f5724dc5f7e3d5f6dae17c6f1b955af8f3e507c7479221",
+      "averageHash8x8": "ffffff003c180081"
     },
     {
       "path": "site/apps/cobrinha/game.webp",
